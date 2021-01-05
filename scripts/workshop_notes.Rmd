@@ -1,0 +1,997 @@
+---
+title: "R for Cognitive Psychologists"
+author:
+  - name: "Omid Ghasemi"
+    affiliation: Macquarie University
+    email: omidreza.ghasemi@hdr.mq.edu.au
+  - name: "Mahdi Mazidi"
+    affiliation: University of Western Australia
+    email: mahdi.mazidisharafabadi@research.uwa.edu.au
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    keep_md: yes
+    number_sections: true
+    theme: cerulean
+    code_download: true
+    #code_folding: hide
+    toc: true
+    toc_float: true
+    df_print: "kable"
+---
+
+This document is the summary of the **R for Cognitive Psychologists** workshop. 
+
+All correspondence related to this document should be addressed to: 
+
+<center>
+Omid Ghasemi (Macquarie University, Sydney, NSW, 2109, AUSTRALIA) 
+
+Email: omidreza.ghasemi@hdr.mq.edu.au 
+</center>
+
+
+
+<style>
+
+body{ /* Normal  */
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.6;
+      font-family: "Times New Roman", Times, serif;
+}
+code.r{ /* Code block */
+    font-size: 14px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.align="center")
+```
+
+
+
+```{r libraries, message=FALSE, echo=F}
+# load libraries
+library(tidyverse)
+library(here)
+library(janitor)
+library(broom)
+library(afex)
+library(emmeans)
+library(knitr)
+library(kableExtra)
+library(ggsci)
+library(patchwork)
+library(skimr)
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+library("correlation")
+options(scipen=999) # turn off scientific notations
+options(contrasts = c('contr.sum','contr.poly')) # set the contrast sum globally 
+options(knitr.kable.NA = '')
+```
+
+
+# Research Question
+
+
+The aim of the study is to test if simple arguments are more effective in belief revision than more complex arguments. To that end, we present participants with an imaginary scenario (two alien creatures on a planet) and a theory (one creature is predator and the other one is prey) and we ask them to rate the likelihood truth of the theory based on a simple fact (We adapted this method from Gregg et al.,2017; see the original study [here](https://journals.sagepub.com/doi/10.1080/17470218.2015.1099162)). Then, in a between-subject manipulation, participants will be presented with either 6 simple arguments (Modus Ponens conditionals) or 6 more complex arguments (Modus Tollens conditionals), and they will be asked to rate the likelihood truth of the initial theory on 7 stages. 
+
+The first stage is the base rating stage. The next three stages include supportive arguments of the theory and the last three arguments include disproving arguments of the theory. We hypothesized that the group with simple arguments shows better persuasion (as it reflects in higher ratings for the supportive arguments) and better dissuasion (as it reflects in lower ratings for the opposing arguments).
+
+In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including CRT, AOT-E, mindware, and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
+ 
+
+```{r fig.align='center', echo=FALSE}
+knitr::include_graphics(here('inputs','exp_design.png'))
+```
+
+Thus, our hypotheses for this experiment are as follows:
+
+- Participants in the group with simple arguments have higher ratings for supportive arguments (They are more easily persuaded than those in the group with complex arguments).
+
+- Participants in the group with simple arguments have lower ratings for opposing arguments (They are more easily dissuaded than those in the group with complex arguments).
+
+- There are significant associations between CRT, AOT-E, Numeracy, and mindware with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
+
+
+```{r echo=FALSE, out.width="550px", out.height="400px"}
+knitr::include_graphics(here('inputs','prediction_plot.png'))
+```
+
+
+# Getting Ready
+
+First, we need to design the experiment. For this experiment, we use online platforms for data collection. There are several options such as Gorilla, JSpsych, Qualtrics, psychoJS (pavlovia), etc. Since we do not need any reaction time data, we simply use Qualtrics. For an overview of different lab-based and online platforms, see [here](https://omidghasemi21.github.io/human_data/Scripts/behavioral_data.html). 
+
+Next, we need to decide on the number of participants (sample size). For this study, we do not sue power analysis since we cannot access more than 120 participants. However, it is highly suggested calculate sample size using power estimation. You can find some nice tutorials on how to do that [here](https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/), [here](https://nickch-k.github.io/EconometricsSlides/Week_08/Power_Simulations.html), and [here](https://cran.r-project.org/web/packages/paramtest/vignettes/Simulating-Power.html).
+
+After we created the experiment and decided on the sample size, the next step is to preresigter the study. However, it would be better to do a pilot with 4 or 5 participants, clean all the data, do the desired analysis, and then pre-register the analysis and those codes. You can find the preregistration form for the current study [here](https://osf.io/79r6e).
+
+Finally, we need to restructure our project in a tidy folder with different sub-folders. Having a clean and tidy folder structure can save us! There are different formats of folder structure (for example, see [here](http://nikola.me/folder_structure.html) and [here](https://slides.com/djnavarro/workflow)), but for now, we use the following structure:
+
+```{r echo=FALSE, out.width="700px", out.height="200px"}
+knitr::include_graphics(here('inputs','folder_structure.png'))
+```
+
+
+# Introduction to R
+```{r message=FALSE, eval=F}
+# load libraries
+library(tidyverse)
+library(here)
+library(janitor)
+library(broom)
+library(afex)
+library(emmeans)
+library(knitr)
+library(kableExtra)
+library(ggsci)
+library(patchwork)
+library(skimr)
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+library("correlation")
+options(scipen=999) # turn off scientific notations
+options(contrasts = c('contr.sum','contr.poly')) # set the contrast sum globally 
+options(knitr.kable.NA = '')
+```
+
+R can be used as a calculator. For mathematical purposes, be careful of the order in which R executes the commands.
+
+```{r}
+10 + 10
+
+4 ^ 2
+
+(250 / 500) * 100
+```
+
+R is a bit flexible with spacing (but no spacing in the name of variables and words)
+
+```{r}
+10+10
+
+10                 +           10
+```
+
+R can sometimes tell that you're not finished yet
+
+```{r eval=F}
+10 +
+```
+
+How to create a *variable*? Variable assignment using `<-` and `=`. Note that R is case sensitive for everything
+
+```{r}
+pay <- 250
+
+month = 12
+
+pay * month
+
+salary <- pay * month
+```
+
+
+Few points in naming variables and vectors: use short, informative words, keep same method (e.g., not using capital words, use only _ or . ).
+
+## Function 
+Function is a set of statements combined together to perform a specific task. When we use a block of code repeatedly, we can convert it to a function. To write a function, first, you need to *define* it:
+
+```{r}
+my_multiplier <- function(a,b){
+  result = a * b
+  return (result)
+}
+```
+
+This code do nothing. To get a result, you need to *call* it:
+
+```{r}
+my_multiplier (2,4)
+```
+
+Fortunately, you do not need to write everything from scratch. R has lots of built-in functions that you can use:
+```{r}
+round(54.6787)
+round(54.5787, digits = 2)
+```
+
+Use `?` before the function name to get some help. For example, `?round`. You will see many functions in the rest of the workshop.
+
+## Basic Data Types in R:
+
+function `class()` is used to show what is the type of a variable.
+
+
+1. *Logical*: `TRUE`, `FALSE` can be abbreviated as `T`, `F`.  They has to be capital, 'true' is not a logical data:
+```{r}
+class(TRUE)
+class(F)
+```
+
+2. *Numeric*: all numbers e.g. 5,  10.5,  11,37;  a special type of numeric is "integer" which is numbers without decimal. Integers are always numeric, but numeric is not always integer:
+```{r}
+class(2)
+class(13.46)
+```
+
+3. *Character*: text for example, "I love R" or "4" or "4.5":
+```{r}
+class("ha ha ha ha")
+class("56.6")
+class("TRUE")
+```
+
+Can we change the type of data in a variable? Yes, you need to use the function `as.---()`
+
+```{r}
+as.numeric(TRUE)
+as.character(4)
+as.numeric("4.5")
+as.numeric("Hello")
+```
+
+
+## Data Structures in R
+
+
+**Vector**: when there are more than one number or letter stored. Use the combine function c() for that.
+
+```{r}
+sale <- c(1, 2, 3,4, 5, 6, 7, 8, 9, 10) # also sale <- c(1:10)
+
+sale <- c(1:10)
+
+sale * sale
+```
+
+*Subsetting a vector*:
+
+```{r}
+days <- c("Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+days[2]
+days[-2]
+
+days[c(2, 3, 4)]
+```
+
+
+### Exercise:
+
+Create a vector named `my_vector` with numbers from 0 to 1000 in it:
+
+```{r}
+my_vector <- (0:1000)
+
+mean(my_vector)
+median(my_vector)
+min(my_vector)
+range(my_vector)
+class(my_vector)
+sum(my_vector)
+sd(my_vector)
+```
+
+**List**: allows you to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other list.
+
+```{r}
+my_list = list(sale, 1, 3, 4:7, "HELLO", "hello", FALSE)
+my_list
+```
+
+**Factor**: Factors store the vector along with the distinct values of the elements in the vector as labels. The labels are always character irrespective of whether it is numeric or character. For example, variable gender with "male" and "female" entries:
+
+```{r}
+gender <- c("male", "male", "male", "female", "female", "female")
+gender <- factor(gender)
+```
+
+R now treats gender as a nominal (categorical) variable: 1=female, 2=male internally (alphabetically).
+```{r}
+summary(gender)
+```
+
+*Question*: why when we ran the above function i.e. summary(), it showed three and not two levels of the data? *Hint*: run 'gender'.
+
+```{r}
+gender
+```
+
+So, be careful of spaces!
+
+### Exercise:
+Create a gender factor with 30 male and 40 females (*Hint*: use the `rep()` function):
+```{r}
+gender <- c(rep("male",30), rep("female", 40))
+gender <- factor(gender)
+gender
+```
+
+There are two types of categorical variables: nominal and ordinal. How to create ordered factors (when the variable is nominal and values can be ordered)? We should add two additional arguments to the `factor()` function: `ordered = TRUE`, and `levels = c("level1", "level2")`. For example, we have a vector that shows participants' education level.
+
+```{r}
+edu<-c(3,2,3,4,1,2,2,3,4)
+
+education<-factor(edu, ordered = TRUE)
+levels(education) <- c("Primary school","high school","College","Uni graduated")
+education
+```
+
+### Exercise:
+We have a factor with `patient` and `control` values. Here, the first level is control and the second level is patient. Change the order of levels, so patient would be the first level:
+
+```{r}
+health_status <- factor(c(rep('patient',5),rep('control',5)))
+health_status
+
+health_status_reordered <- factor(health_status, levels = c('patient','control'))
+health_status_reordered
+```
+
+Finally, can you relabel both levels to uppercase characters? (*Hint*: check `?factor`)
+
+```{r}
+health_status_relabeled <- factor(health_status, levels = c('patient','control'), labels = c('Patient','Control'))
+health_status_relabeled
+```
+
+
+**Matrices**: All columns in a matrix must have the same mode(numeric, character, etc.) and the same length. It can be created using a vector input to the matrix function.
+
+```{r}
+my_matrix = matrix(c(1,2,3,4,5,6,7,8,9), nrow = 3, ncol = 3)
+
+my_matrix
+```
+
+**Data frames**: (two-dimensional objects) can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type. Let's create a dataframe:
+
+```{r}
+id <- 1:200
+group <- c(rep("Psychotherapy", 100), rep("Medication", 100))
+response <- c(rnorm(100, mean = 30, sd = 5),
+             rnorm(100, mean = 25, sd = 5))
+
+my_dataframe <-data.frame(Patient = id,
+                          Treatment = group,
+                          Response = response)
+```
+
+We also could have done the below
+
+```{r}
+my_dataframe <-data.frame(Patient = c(1:200),
+                          Treatment = c(rep("Psychotherapy", 100), rep("Medication", 100)),
+                          Response = c(rnorm(100, mean = 30, sd = 5),
+                                       rnorm(100, mean = 25, sd = 5)))
+```
+
+In large data sets, the function head() enables you to show the first observations of a data frames. Similarly, the function tail() prints out the last observations in your data set.
+
+```{r eval=F}
+head(my_dataframe) 
+tail(my_dataframe)
+```
+
+```{r echo=F}
+head(my_dataframe) %>%
+  knitr::kable() %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+tail(my_dataframe)%>%
+  knitr::kable() %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+Similar to vectors and matrices, brackets [] are used to selects data from rows and columns in data.frames:
+
+```{r}
+my_dataframe[35, 3]
+```
+
+### Exercise
+
+How can we get all columns, but only for the first 10 participants?
+
+```{r eval=F}
+my_dataframe[1:10, ]
+```
+
+```{r echo=F}
+knitr::kable(my_dataframe[1:10, ]) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+
+```
+How to get only the Response column for all participants?
+
+```{r}
+my_dataframe[ , 3]
+```
+
+Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
+```{r eval=F}
+my_dataframe[ , "Response"]
+# OR:
+my_dataframe$Response
+
+```
+
+
+# Data Cleaning
+
+Now, suppose we tested 141 students. First, let's read and check the uncleaned data:
+```{r message=F, warning=F, eval=F}
+# read the raw data
+raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
+head(raw_data)
+```
+
+```{r message=F, warning=F, echo=F}
+# read the raw data
+raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
+
+knitr::kable(head(raw_data)) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+```
+
+Now, let's do some cleanining using `dplyr`, `tidyr` and other `tidyverse` libraries. Finally, we will check the data:
+```{r message=F, warning=F, eval=F}
+cleaned_data <- raw_data %>% 
+  filter(progress == 100) %>% # filter out unfinished participants
+  select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
+  mutate(aote_total= aote1+aote2+aote3+aote4+aote5+aote6+aote7+aote8, # create a total score for our questionnaire
+         attentive= case_when(attention_correct >= 2~ 'Yes',T~ 'No')) %>%
+  mutate(crt1= case_when(crt1=='4'~ 1,T~0),
+         crt2= case_when(crt2=='10'~ 1,T~0),
+         crt3= case_when(crt3=='39'~ 1,T~0),
+         crt_total= crt1 + crt2 + crt3) %>%
+  select(-attention1:-aote8) %>%
+  pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
+  #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
+  filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
+  mutate(stage= gsub("_.*", "", stage)) %>%
+  rename(consent= consent_form) %>% # rename a column
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         attentive = factor(attentive),
+         stage = factor(stage))
+```
+
+
+```{r message=F, warning=F, echo=F}
+cleaned_data <- raw_data %>% 
+  filter(progress == 100) %>% # filter out unfinished participants
+  select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
+  mutate(aote_total= aote1+aote2+aote3+aote4+aote5+aote6+aote7+aote8, # create a total score for our questionnaire
+         attentive= case_when(attention_correct >= 2~ 'Yes',T~ 'No')) %>%
+  mutate(crt1= case_when(crt1=='4'~ 1,T~0),
+         crt2= case_when(crt2=='10'~ 1,T~0),
+         crt3= case_when(crt3=='39'~ 1,T~0),
+         crt_total= crt1 + crt2 + crt3) %>%
+  select(-attention1:-aote8) %>%
+  pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
+  #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
+  filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
+  mutate(stage= gsub("_.*", "", stage)) %>%
+  rename(consent= consent_form) %>% # rename a column
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         attentive = factor(attentive),
+         stage = factor(stage))
+
+knitr::kable(head(cleaned_data)) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+```
+
+Ok, now the data is clean and tidy which means:
+
+> 1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table ([Wickham](https://vita.had.co.nz/papers/tidy-data.pdf), 2014).
+
+Check the dataframe and all the data types:
+```{r}
+str(cleaned_data)
+```
+
+Finally, we save our data to the `cleaned_data` folder.
+
+```{r}
+write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
+```
+
+# Descriptive Statistics
+
+> Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
+
+Now, let's do some descriptive statistics. First, we can open a new script called `analysis_exp1.r` and read the cleaned data again. 
+
+```{r message=F, warning=F,}
+data_exp1 <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+```
+
+How many participants in total?
+
+```{r message=F, warning=F, eval=F}
+data_exp1 %>% summarise(n= n_distinct(subject))
+```
+
+
+```{r message=F, warning=F, echo=F}
+data_exp1 %>% summarise(n= n_distinct(subject))%>%
+  knitr::kable() %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), full_width = F)
+```
+
+how many participants in each group?
+```{r message=F, warning=F, eval=F}
+data_exp1 %>% 
+  group_by(subject) %>% 
+  filter(row_number()==1) %>% 
+  ungroup () %>% 
+  group_by(group) %>% 
+  count() 
+```
+
+```{r message=F, warning=F, echo=F}
+data_exp1 %>% group_by(subject) %>% filter(row_number()==1) %>% ungroup () %>% group_by(group) %>% count() %>%
+  knitr::kable() %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T)
+```
+
+Find the mean and sd for numeric variables using base R `summary` function:
+
+```{r}
+data_exp1 %>% 
+  group_by(subject) %>% 
+  filter(row_number()==1) %>% 
+  ungroup () %>%
+  summary()
+```
+
+Alternatively, we can use `base R `summary` function`skimr` library:
+```{r eval=F}
+data_exp1 %>% 
+  group_by(subject) %>% 
+  filter(row_number()==1) %>% 
+  ungroup () %>% 
+  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  skimr::skim()
+```
+
+```{r echo=F}
+data_exp1 %>% 
+  group_by(subject) %>% 
+  filter(row_number()==1) %>% 
+  ungroup () %>% 
+  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  skimr::skim() %>%
+  knitr::kable() %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+```
+
+
+### Exercise
+
+For this exercise, we use a dataset of one of my own studies. In this study, we asked participants to guess the physical brightness of reasoning arguments and then we gave a cognitive ability test. (See the original study [here](https://osf.io/ebxnf/)). Open `ghasemi_brightness_exp4.csv` file and answer to the following questions:
+
+1. How many participants did we test in total?
+2. Find out how many male and female we tested.
+3. Calculate mean and sd for age and cognitive ability (`ah4`).
+
+
+```{r warning=F, message=F}
+ghasemi_data <- read_csv(here("cleaned_data","ghasemi_brightness_exp4.csv"))
+
+ghasemi_data %>% summarise(n = n_distinct(participant)) # number of participants:200
+
+ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_by (gender) %>% summarise(n= n()) %>% ungroup() # 183 female, 17 male
+
+ghasemi_data %>% dplyr::select (age, ah4) %>% skimr::skim() # mean and sd for age and cognitive ability
+```
+
+
+# Data Visualization
+
+First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+
+aggregated_data_exp1 <- data_exp1 %>%
+  group_by(stage, group) %>%
+  mutate(truth_estimate = mean(truth_estimate)) %>%
+  ungroup()
+
+barplot_exp1 <- aggregated_data_exp1 %>%
+  ggplot(aes(x=stage, y= truth_estimate, fill=group)) +
+  geom_bar(stat = "identity", position= "dodge")+
+  # stat_summary(fun= mean, geom = "bar", position = "dodge")+ # can be used instead of geom_bar() for long dataframes
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_bw() + 
+  scale_fill_jama() 
+
+barplot_exp1
+
+
+barplot_facet_exp1 <- aggregated_data_exp1 %>%
+  ggplot(aes(x=group, y= truth_estimate, fill=stage)) +
+  geom_bar(stat = "identity", position= "dodge")+
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_bw() + 
+  theme(legend.position = "none",
+        axis.text=element_text(size=11),
+        axis.title = element_text(size = 12)) +
+  facet_wrap(~stage)+
+  scale_fill_jco() 
+
+barplot_facet_exp1
+
+
+lineplot_exp1 <- aggregated_data_exp1 %>%
+  ggplot(aes(x=factor(stage), y= truth_estimate, group= group, color= group)) +
+  geom_line(aes(linetype= group)) +
+  geom_point(size= 5)+
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_classic() +
+  theme(legend.position = "bottom",
+        axis.text=element_text(size=11),
+        axis.title = element_text(size = 12)) +
+  scale_color_nejm() 
+
+lineplot_exp1
+
+
+violinplot_exp1 <- data_exp1 %>%
+  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
+  geom_violin()+
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_bw() + 
+  theme(legend.position = "bottom",
+        axis.text=element_text(size=11),
+        axis.title = element_text(size = 12)) +
+  scale_fill_d3() 
+
+violinplot_exp1
+
+
+boxplot_exp1 <- data_exp1 %>%
+  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
+  geom_boxplot()+
+  #geom_point(position = position_dodge(width=0.75), alpha= .5)+
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_bw() + 
+  theme(legend.position = "bottom",
+        axis.text=element_text(size=11),
+        axis.title = element_text(size = 12)) +
+  scale_fill_simpsons() 
+
+boxplot_exp1
+
+
+boxplot_facet_exp1 <- data_exp1 %>%
+  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
+  geom_boxplot()+
+  labs (x= '', y= "Truth Likelihhod Estimate") + 
+  theme_bw() + 
+  theme(legend.position = "bottom",
+        axis.text=element_text(size=11),
+        axis.title = element_text(size = 12),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  facet_wrap(~group)+
+  scale_color_simpsons() 
+
+boxplot_facet_exp1
+
+
+```
+
+How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+```{r dpi= 300, fig.height=7, fig.width=9}
+
+combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxplot_exp1)
+combined_plot_exp1
+```
+
+How to save a plot?
+```{rmessage=F}
+ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), dpi=300)
+```
+
+# Data Analysis
+
+
+## t-test
+
+Is there a difference between groups at the first stage? Ideally, we want participants' ratings at the first stage be similar for both groups because we have not done any manipulations. Previous graphs showed us that ratings of simple and complex group at this stage are pretty close. Let's test that using an **independent t-test** (because we have 2 independent groups):
+
+```{r}
+# Is there a difference between groups at the first stage?
+data_exp1 %>% 
+  group_by(group) %>% 
+  filter(stage=='stage1') %>% 
+  ungroup () %>%
+  t.test(truth_estimate~group, data = ., paired=FALSE)
+```
+
+Now, we wonder if opposing arguments were effective at all, regardless of participants' group. So, we would like to test if ratings at the final stage are lower than ratings at the stage 4? Since a pair of score at stage 4 and stage 7 is coming from a same person, we use **paired t-test**.
+
+```{r}
+# Is there a difference between ratings of stage4 and stage7?
+data_exp1 %>% 
+  filter(stage=='stage4' | stage=='stage7') %>% 
+  ungroup () %>%
+  t.test(truth_estimate~stage, data = ., paired=TRUE)
+```
+
+
+### Exercise
+
+John et al. (2019) investigated the consequences of backing down (changing one's mind in lights of evidence)and how other people view someone who change their mind. In their second experiments, they presented participants either with a person who changes their mind or a person who refuses to back down. Then, they asked participants to rate how intelligent and confident the person is (See the original study [here](https://www.hbs.edu/faculty/Publication%20Files/John%20et%20al%20-%20self-presentational%20consequences_b85b2c43-a5b5-474c-9e2c-e9853b10727e.pdf)). They reported that: 
+
+> "Relative to the entrepreneur who did not back down, participants judged the entrepreneur who backed down as more intelligent (M_backed_down=5.13 out of 7, SD=1.09; M_did_not_back_down=3.97, SD=1.54; t(271.12)=−7.59, p < .001) but less confident (M_backed_down=4.50 out of 7, SD=1.36; M_did_not_back_down=5.65, SD=1.10; t(291.01)=8.08, p < .001).".
+
+Open the `john_backdown_exp2.csv` file and try to reproduce their results. Run two separate independent t-test, one with `intelligent` as the dependent variable and one with `confident` as the dependent variable. For both t-test, use `back_down` as the between-subject independent variable.
+
+```{r message=F, warning=F}
+john_data <- read_csv(here("cleaned_data","john_backdown_exp2.csv"))
+
+
+t.test(intelligent~back_down, data = john_data, paired=FALSE)
+t.test(confident~back_down, data = john_data, paired=FALSE)
+```
+
+
+## Analysis of Variance (ANOVA)
+
+Now, let's answer our main question: Do participants in the simple group show higher ratings for supportive arguments (stage 2 to 4) and lower ratings for opposing arguments (stage 5 to 7), compared to participants in the complex group? If this is the case. we expect an interaction in the traditional **Analysis of Variance (AONVA)** test.
+
+```{r message=F, warning=F}
+aov_m1 <- aov_car (truth_estimate ~ group*stage +
+                     Error(subject/stage), data = data_exp1)
+```
+
+```{r echo=F}
+knitr::kable(nice(aov_m1)) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+As you can see, we found a significant main effect of stage and a significant group by stage interaction. We can use the `emmeans` package to do post-hoc tests.
+
+```{r warning=F, message=F}
+# main effect of stage
+emmeans(aov_m1, 'stage')
+pairs(emmeans(aov_m1, 'stage'), adjust= 'holm')
+```
+
+
+```{r warning=F, message=F}
+# group by stage interaction
+emmeans(aov_m1, "group", by= "stage")
+update(pairs(emmeans(aov_m1, "group", by= "stage")), by = NULL, adjust = "holm") 
+```
+
+You can use the `afex_plot` function from afex to create beautiful plots. Those plots interacts nicely with ggplot:
+```{r message=F, warning=F, dpi= 300}
+afex_plot(aov_m1, x = "stage", trace = "group", error='between',
+          line_arg = list(size=1),
+          point_arg = list(size=3.5),
+          data_arg = list(size= 1, color= 'grey', width=.4),
+          data_geom = geom_boxplot,
+          mapping = c("linetype", "shape", "fill"),
+          legend_title = "Group") +
+  labs(y = "Truth Likelihhod Estimate", x = "") +
+  theme_bw()+ # remove the grey background and grid
+  theme(axis.text=element_text(size=13),
+        axis.title = element_text(size = 13),
+        legend.text=element_text(size=13),
+        legend.title=element_text(size=13),
+        legend.position='bottom',
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(colour = 'black', fill = 'white', linetype='solid'))+
+  scale_color_simpsons() +
+  scale_fill_simpsons()
+```
+
+
+If you are interested in this topic, check out this nice tutorial about [using afex to run ANOVA](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html), and also this interesting tutorial on the [emmeans package](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/).
+
+### Exercise
+
+Rotello et al. (2018) investigated the association between the race (White vs. Black faces) and the gun-tool judgments. In their first experiments, they presented participants with 16 White male faces and 16 Black male faces, and following that 8 images of guns and 8 images of tools. They asked participants to judge if the object is a tool or a gun by pressing keyboard buttons. Then, they ran an ANOVA to see if participants' gun responses are higher for any of the races. So, they included prime race (Black, White) and target identity (gun, tool) as independent variables and participants' gun responses as dependent variable into their linear model (See the original study [here](https://psyarxiv.com/a7k96)). They found that: 
+
+> "Participants made more gun responses to guns than to tools, F(1,45) = 53243, p < 0.0001, η2g = 0.998. However, the race of the prime face did not matter, F(1,45) = 0.287, p > 0.59, η2g = 0.001, nor was there an interaction of prime race with target object, F(1,45) = 0.022, p > 0.88, η2g = 0.000)".
+
+Open the `rotello_shooter_exp1.csv` file and try to reproduce their results. Run an ANOVA (type III) with `resp` as the dependent variable and target, prime, and their interaction as independent variables.
+
+
+```{r message=F, warning=F}
+# load the general data file
+rotello_data <- read_csv(here("cleaned_data","rotello_shooter_exp1.csv"))
+
+# ANOVA
+rotello_aov <- aov_car (resp ~ target*prime +
+           Error(subject/target*prime), data = rotello_data)
+```
+
+```{r echo=F}
+knitr::kable(nice(rotello_aov)) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+
+
+## Correlation
+
+Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and cognitive style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
+
+```{r message=F, eval=F, fig.align='center', dpi=300}
+cor_data_exp1 <- data_exp1 %>% 
+  pivot_wider(names_from = stage, values_from = truth_estimate) %>%
+  group_by(subject) %>%
+  mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
+         dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
+  ungroup()%>%
+  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+
+#---------- Base R:
+cor(cor_data_exp1, method = "pearson",  use = "complete.obs")
+
+#---------- Psych library:
+cor_data_exp1 %>% 
+  psych::pairs.panels(method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#---------- Correlation library:
+correlation::correlation(cor_data_exp1) %>% summary()
+
+#---------- apaTables library:
+cor_data_exp1 %>% 
+  apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
+```
+
+```{r message=F, echo=F, fig.align='center', dpi=300}
+cor_data_exp1 <- data_exp1 %>% 
+  pivot_wider(names_from = stage, values_from = truth_estimate) %>%
+  group_by(subject) %>%
+  mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
+         dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
+  ungroup()%>%
+  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+
+#---------- Base R:
+cor(cor_data_exp1, method = "pearson",  use = "complete.obs")%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+
+#---------- Psych library:
+cor_data_exp1 %>% 
+  psych::pairs.panels(method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#---------- Correlation library:
+correlation::correlation(cor_data_exp1) %>% summary()%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+
+```
+
+
+
+### Exercise
+
+Pennycook et al. (2020) investigated the relationship between actively open-minded thinking style about evidence (AOT-E) and different political, scientific, and religious beliefs (see the original paper [here](https://psyarxiv.com/a7k96)). In their first experiment, they calculated the correlation of AOTE and scientific beliefs items (global warming, evolution, etc.) and they found the following results:
+
+```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)"}
+knitr::include_graphics(here('inputs','pennycook_corr.png'))
+```
+
+Open the `pennycook_aote_exp1.csv` file and try to reproduce their results by creating the same correlation matrix.
+
+```{r message=F, eval=F}
+pennycook_data <- read_csv(here("cleaned_data","pennycook_aote_exp1.csv")) 
+
+
+#---------- Base R:
+cor(pennycook_data, method = "pearson",  use = "complete.obs")
+
+#---------- Psych library:
+pennycook_data %>% 
+  psych::pairs.panels(method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#---------- Correlation library:
+correlation::correlation(pennycook_data) %>% summary()
+
+#---------- apaTables library:
+pennycook_data %>% 
+  apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
+```
+
+
+```{r message=F, eval=T, echo=F, fig.align='center', dpi=300}
+pennycook_data <- read_csv(here("cleaned_data","pennycook_aote_exp1.csv")) %>%
+  clean_names()
+
+correlation::correlation(pennycook_data) %>% summary() %>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+
+```
+
+
+## Linear Regression
+
+In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
+```{r}
+exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_total,
+                  data=cor_data_exp1)
+```
+
+```{r message=F, eval=T, echo=F, fig.align='center', dpi=300}
+broom::tidy(exp1_reg)%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+### Exercise
+
+Trémolière and Djeriouat (2020) examined the role of *cognitive reflection* and *belief in science* in climate change skepticism. In their first study, they revealed that cognitive reflection and belief in science negetively predicted climate change skepticism even after controlling for demographic and cognitive ability variables (see the original paper [here](https://psyarxiv.com/vp8k6/)). 
+
+```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)"}
+knitr::include_graphics(here('inputs','tremoliere_reg.png'))
+```
+
+Open the `tremoliere_data_exp1.csv` file and try to reproduce their results by running a multiple linear regression. Enter age, gender, education, belief in science, literacy, numeracy (Numtotal), and cognitive reflection as predictors and enter climate change skepticism (climato) as the outcome variable.
+
+```{r message=F}
+Tremoliere_data <- read_csv(here("cleaned_data","tremoliere_data_exp1.csv"))
+
+Tremoliere_reg=lm(Climato ~ Age+ Gender+ Education+ BeliefInSciencetotal+ Literacy+ Numtotal+ CognitiveReflection,
+                    data=Tremoliere_data)
+```
+
+
+```{r message=F, eval=T, echo=F, fig.align='center', dpi=300}
+broom::tidy(Tremoliere_reg)%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+
+glance(Tremoliere_reg)%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
+```
+
+
+# Rmarkdown
+
+To be completed...
+
+
+# References
+
+- Ghasemi, O., Handley, S., & Howarth, S. (2020). The Bright Homunculus in our Head: Individual Differences in Intuitive Sensitivity to Logical Validity.
+
+- John, L. K., Jeong, M., Gino, F., & Huang, L. (2019). The self-presentational consequences of upholding one’s stance in spite of the evidence. Organizational Behavior and Human Decision Processes, 154, 1-14.
+
+- Pennycook, G., Cheyne, J. A., Koehler, D. J., & Fugelsang, J. A. (2020). On the belief that beliefs should change according to evidence: Implications for conspiratorial, moral, paranormal, political, religious, and science beliefs. Judgment and Decision Making, 15(4), 476.
+
+- Rotello, C. M., Kelly, L. J., Heit, E., Vazire, S., & Vul, E. (2018). The Shape of ROC Curves in Shooter Tasks: Implications for Best Practices in Analysis. Collabra: Psychology, 4(1).
+
+- Trémolière, B., & Djeriouat, H. (2020). Don’t you see that its cold! Exploring the roles of cognitive reflection, climate science literacy, illusion of knowledge, and political orientation in climate change skepticism.
+
+- Wickham, H. (2014). Tidy data. Journal of Statistical Software, 59(10), 1-23.
