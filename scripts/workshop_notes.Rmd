@@ -292,7 +292,7 @@ my_list
 **Factor**: Factors store the vector along with the distinct values of the elements in the vector as labels. The labels are always character irrespective of whether it is numeric or character. For example, variable gender with "male" and "female" entries:
 
 ```{r}
-gender <- c("male", "male", "male", "female", "female", "female")
+gender <- c("male", "male", "male", " female", "female", "female")
 gender <- factor(gender)
 ```
 

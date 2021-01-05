@@ -149,7 +149,7 @@ my_list
 # variable gender with 20 "male" entries and
 # 30 "female" entries
 
-gender <- c("male", "male", "male", "female", "female", "female")
+gender <- c("male", "male", "male", "female", " female", "female")
 gender <- factor(gender)
 
 # stores gender as 20 1s and 30 2s and associates

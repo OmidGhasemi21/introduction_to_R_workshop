@@ -67,7 +67,7 @@ The first stage is the base rating stage. The next three stages include supporti
 In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including CRT, AOT-E, mindware, and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
  
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/r_for_cognitive_psychologists/4-analysis/inputs/exp_design.png" width="10010" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/exp_design.png" width="10010" style="display: block; margin: auto;" />
 
 Thus, our hypotheses for this experiment are as follows:
 
@@ -78,7 +78,7 @@ Thus, our hypotheses for this experiment are as follows:
 - There are significant associations between CRT, AOT-E, Numeracy, and mindware with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
 
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/r_for_cognitive_psychologists/4-analysis/inputs/prediction_plot.png" width="550px" height="400px" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/prediction_plot.png" width="550px" height="400px" style="display: block; margin: auto;" />
 
 
 # Getting Ready
@@ -91,7 +91,7 @@ After we created the experiment and decided on the sample size, the next step is
 
 Finally, we need to restructure our project in a tidy folder with different sub-folders. Having a clean and tidy folder structure can save us! There are different formats of folder structure (for example, see [here](http://nikola.me/folder_structure.html) and [here](https://slides.com/djnavarro/workflow)), but for now, we use the following structure:
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/r_for_cognitive_psychologists/4-analysis/inputs/folder_structure.png" width="700px" height="200px" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/folder_structure.png" width="700px" height="200px" style="display: block; margin: auto;" />
 
 
 # Introduction to R
@@ -487,7 +487,7 @@ my_list
 
 
 ```r
-gender <- c("male", "male", "male", "female", "female", "female")
+gender <- c("male", "male", "male", " female", "female", "female")
 gender <- factor(gender)
 ```
 
@@ -498,8 +498,8 @@ summary(gender)
 ```
 
 ```
-## female   male 
-##      3      3
+##  female  female    male 
+##       1       2       3
 ```
 
 *Question*: why when we ran the above function i.e. summary(), it showed three and not two levels of the data? *Hint*: run 'gender'.
@@ -510,8 +510,8 @@ gender
 ```
 
 ```
-## [1] male   male   male   female female female
-## Levels: female male
+## [1] male    male    male     female female  female 
+## Levels:  female female male
 ```
 
 So, be careful of spaces!
@@ -655,32 +655,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.58203 </td>
+   <td style="text-align:right;"> 25.72770 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 40.27333 </td>
+   <td style="text-align:right;"> 31.21325 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.84694 </td>
+   <td style="text-align:right;"> 29.99580 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.64339 </td>
+   <td style="text-align:right;"> 27.09983 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 24.86349 </td>
+   <td style="text-align:right;"> 26.81725 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.39090 </td>
+   <td style="text-align:right;"> 26.74217 </td>
   </tr>
 </tbody>
 </table>
@@ -699,37 +699,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.773637 </td>
+   <td style="text-align:right;"> 20.40254 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.842429 </td>
+   <td style="text-align:right;"> 24.84327 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 4.893503 </td>
+   <td style="text-align:right;"> 22.79912 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 21.931324 </td>
+   <td style="text-align:right;"> 33.18292 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 22.290277 </td>
+   <td style="text-align:right;"> 24.58559 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.706925 </td>
+   <td style="text-align:right;"> 25.31449 </td>
   </tr>
 </tbody>
 </table>
@@ -742,7 +742,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 30.45148
+## [1] 28.7423
 ```
 
 ### Exercise
@@ -766,52 +766,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.58203 </td>
+   <td style="text-align:right;"> 25.72770 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 40.27333 </td>
+   <td style="text-align:right;"> 31.21325 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.84694 </td>
+   <td style="text-align:right;"> 29.99580 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.64339 </td>
+   <td style="text-align:right;"> 27.09983 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 24.86349 </td>
+   <td style="text-align:right;"> 26.81725 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.39090 </td>
+   <td style="text-align:right;"> 26.74217 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.37851 </td>
+   <td style="text-align:right;"> 34.86773 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.84487 </td>
+   <td style="text-align:right;"> 36.61779 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.27093 </td>
+   <td style="text-align:right;"> 34.68180 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.60134 </td>
+   <td style="text-align:right;"> 36.49156 </td>
   </tr>
 </tbody>
 </table>
@@ -823,35 +823,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 27.582031 40.273325 27.846937 30.643390 24.863487 34.390905 34.378513
-##   [8] 27.844867 34.270933 29.601343 29.506148 29.591774 34.035551 34.052017
-##  [15] 30.186467 30.736900 30.281547 25.567961 24.268548 25.836347 34.453248
-##  [22] 29.437714 31.406009 34.344625 23.733631 21.401447 32.925396 26.983750
-##  [29] 23.788413 32.290511 28.123706 29.163194 34.794832 24.664896 30.451477
-##  [36] 25.965608 32.092484 30.452763 23.774094 19.098724 32.672453 36.128457
-##  [43] 30.539038 27.464360 32.902303 25.663699 29.585736 23.562940 31.743565
-##  [50] 30.710985 34.355854 36.558037 25.947355 27.333130 25.680726 32.605684
-##  [57] 28.803267 34.088633 27.703104 32.987860 23.595539 33.524749 34.337007
-##  [64] 27.234113 34.133974 29.821562 36.435441 28.147166 31.900628 39.847710
-##  [71] 29.391199 20.430573 32.681213 37.721400 26.520189 28.665497 31.874356
-##  [78] 37.378939 33.330346 35.450458 39.144716 29.823312 34.119826 28.192823
-##  [85] 31.339394 28.938864 24.576777 24.882451 35.256556 26.919815 38.287286
-##  [92] 18.056018 29.773396 19.242731 30.098830 20.144830 35.261219 31.397647
-##  [99] 28.653894 21.759365 22.369556 24.892434 25.576974 22.499292 25.647166
-## [106] 27.286081 33.743770 24.171932 21.432839 28.401660 29.221614 23.390066
-## [113] 23.355919 21.383375 20.334071 26.018469 20.753768 24.505371 19.868771
-## [120] 25.617331 25.176036 28.081208 25.937894 24.780703 26.600039 27.408776
-## [127] 28.610468 29.322549 20.262021 26.509712 31.147991 18.743346 26.307870
-## [134] 24.932444 25.771688 20.257431 17.337364 26.970189 18.663187 27.252974
-## [141] 30.706662 24.922078 26.334771 16.056194 27.647889 22.218585 20.688515
-## [148] 23.967597 18.863167 26.513233 25.214950 22.550512 23.663178 29.522233
-## [155] 21.573905 24.507155 21.314063 28.459504 29.941602 22.509159 26.442839
-## [162] 30.682301 26.727999 34.942770 20.869862 25.425078 29.054723 20.137336
-## [169] 31.184717 25.561216 13.831821 22.361297 15.948068 31.000410 26.183191
-## [176] 28.846184 22.646207 22.017349 25.773211 24.060217 20.087945 25.117872
-## [183] 27.936978 24.895520 24.984349 23.011492 29.108127 24.240005 22.914543
-## [190] 25.762899 19.004092 24.481123 18.539821 20.178304 26.773637 26.842429
-## [197]  4.893503 21.931324 22.290277 24.706925
+##   [1] 25.72770 31.21325 29.99580 27.09983 26.81725 26.74217 34.86773
+##   [8] 36.61779 34.68180 36.49156 30.89007 35.41123 38.85842 30.57155
+##  [15] 30.42493 26.47939 27.50490 31.56233 37.30031 33.42363 29.32580
+##  [22] 32.88187 34.51232 23.88507 26.51493 25.42962 28.44067 29.23889
+##  [29] 25.24702 28.57276 30.52609 35.64100 25.68543 31.01235 28.74230
+##  [36] 25.07624 32.76672 38.24879 16.92928 24.42460 28.02411 34.69037
+##  [43] 30.40711 29.48666 37.96717 24.29767 32.64481 25.84578 29.28556
+##  [50] 44.11920 25.07969 21.43629 27.52244 37.24509 38.36706 35.46408
+##  [57] 23.45111 27.39520 23.59920 29.08243 32.88755 29.34568 36.76027
+##  [64] 30.98235 30.61806 35.48034 27.39239 32.46603 28.87644 33.11735
+##  [71] 28.45200 30.72661 27.58458 30.80198 26.08880 31.74715 34.42052
+##  [78] 36.14018 29.15979 15.75634 33.51822 37.88828 26.47385 33.26013
+##  [85] 34.78432 19.44502 31.93158 31.48073 31.48999 33.27916 28.62990
+##  [92] 29.38271 28.57686 30.40548 34.42423 29.16725 32.40763 37.41949
+##  [99] 28.13617 19.76279 25.79459 34.52733 26.44130 18.30816 27.64192
+## [106] 17.47271 22.26139 24.29191 22.66851 15.63327 28.92695 20.81435
+## [113] 21.88169 20.83022 33.60910 24.55989 17.62970 29.40357 30.38139
+## [120] 24.33577 29.02207 16.05454 18.13544 34.35895 26.43107 20.91289
+## [127] 17.87389 26.99069 25.12145 19.37052 20.88742 22.78649 13.54631
+## [134] 33.21585 17.62122 25.56304 20.15252 27.47051 28.10522 24.03826
+## [141] 29.80794 25.99564 21.25735 17.59239 27.46318 29.03501 30.01122
+## [148] 33.74218 25.65373 26.46268 27.91304 27.24095 28.31243 22.22584
+## [155] 31.01431 20.95776 28.17836 23.07360 20.12716 34.05968 22.96145
+## [162] 15.87866 23.98782 19.77766 28.34237 30.83325 22.29114 24.69355
+## [169] 12.81555 25.69261 23.22378 30.95828 24.23875 20.91039 32.04584
+## [176] 25.42380 26.17715 25.99621 17.85196 23.01855 24.33618 25.42155
+## [183] 16.25279 14.64445 22.04017 23.45330 22.37534 22.12577 24.22884
+## [190] 27.32652 25.11790 18.05474 19.64780 25.75833 20.40254 24.84327
+## [197] 22.79912 33.18292 24.58559 25.31449
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -2419,7 +2419,7 @@ cor_data_exp1 %>%
 Pennycook et al. (2020) investigated the relationship between actively open-minded thinking style about evidence (AOT-E) and different political, scientific, and religious beliefs (see the original paper [here](https://psyarxiv.com/a7k96)). In their first experiment, they calculated the correlation of AOTE and scientific beliefs items (global warming, evolution, etc.) and they found the following results:
 
 <div class="figure" style="text-align: center">
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/r_for_cognitive_psychologists/4-analysis/inputs/pennycook_corr.png" alt="adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)" width="700px" height="350px" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/pennycook_corr.png" alt="adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)" width="700px" height="350px" />
 <p class="caption">adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)</p>
 </div>
 
@@ -2660,7 +2660,7 @@ exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_t
 Trémolière and Djeriouat (2020) examined the role of *cognitive reflection* and *belief in science* in climate change skepticism. In their first study, they revealed that cognitive reflection and belief in science negetively predicted climate change skepticism even after controlling for demographic and cognitive ability variables (see the original paper [here](https://psyarxiv.com/vp8k6/)). 
 
 <div class="figure" style="text-align: center">
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/r_for_cognitive_psychologists/4-analysis/inputs/tremoliere_reg.png" alt="adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)" width="700px" height="350px" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/tremoliere_reg.png" alt="adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)" width="700px" height="350px" />
 <p class="caption">adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)</p>
 </div>
 
