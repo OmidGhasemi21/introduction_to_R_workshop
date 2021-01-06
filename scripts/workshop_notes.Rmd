@@ -266,7 +266,7 @@ days[c(2, 3, 4)]
 ```
 
 
-### Exercise:
+### Exercise
 
 Create a vector named `my_vector` with numbers from 0 to 1000 in it:
 
@@ -309,7 +309,7 @@ gender
 
 So, be careful of spaces!
 
-### Exercise:
+### Exercise
 Create a gender factor with 30 male and 40 females (*Hint*: use the `rep()` function):
 ```{r}
 gender <- c(rep("male",30), rep("female", 40))
@@ -327,7 +327,7 @@ levels(education) <- c("Primary school","high school","College","Uni graduated")
 education
 ```
 
-### Exercise:
+### Exercise
 We have a factor with `patient` and `control` values. Here, the first level is control and the second level is patient. Change the order of levels, so patient would be the first level:
 
 ```{r}
@@ -449,13 +449,12 @@ Now, let's do some cleanining using `dplyr`, `tidyr` and other `tidyverse` libra
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
-  mutate(aote_total= aote1+aote2+aote3+aote4+aote5+aote6+aote7+aote8, # create a total score for our questionnaire
-         attentive= case_when(attention_correct >= 2~ 'Yes',T~ 'No')) %>%
-  mutate(crt1= case_when(crt1=='4'~ 1,T~0),
-         crt2= case_when(crt2=='10'~ 1,T~0),
-         crt3= case_when(crt3=='39'~ 1,T~0),
-         crt_total= crt1 + crt2 + crt3) %>%
-  select(-attention1:-aote8) %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
+  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
+         thinking2= case_when(thinking2=='10'~ 1,T~0),
+         thinking3= case_when(thinking3=='39'~ 1,T~0),
+         thinking_total= thinking1 + thinking2 + thinking3) %>%
+  select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
@@ -464,7 +463,6 @@ cleaned_data <- raw_data %>%
   #mutate_if(is.character, factor) %>%
   mutate(subject= factor(subject), # convert all characters to factor
          group = factor(group),
-         attentive = factor(attentive),
          stage = factor(stage))
 ```
 
@@ -473,13 +471,12 @@ cleaned_data <- raw_data %>%
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
-  mutate(aote_total= aote1+aote2+aote3+aote4+aote5+aote6+aote7+aote8, # create a total score for our questionnaire
-         attentive= case_when(attention_correct >= 2~ 'Yes',T~ 'No')) %>%
-  mutate(crt1= case_when(crt1=='4'~ 1,T~0),
-         crt2= case_when(crt2=='10'~ 1,T~0),
-         crt3= case_when(crt3=='39'~ 1,T~0),
-         crt_total= crt1 + crt2 + crt3) %>%
-  select(-attention1:-aote8) %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
+  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
+         thinking2= case_when(thinking2=='10'~ 1,T~0),
+         thinking3= case_when(thinking3=='39'~ 1,T~0),
+         thinking_total= thinking1 + thinking2 + thinking3) %>%
+  select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
@@ -488,7 +485,6 @@ cleaned_data <- raw_data %>%
   #mutate_if(is.character, factor) %>%
   mutate(subject= factor(subject), # convert all characters to factor
          group = factor(group),
-         attentive = factor(attentive),
          stage = factor(stage))
 
 knitr::kable(head(cleaned_data)) %>%
@@ -568,7 +564,7 @@ data_exp1 %>%
   group_by(subject) %>% 
   filter(row_number()==1) %>% 
   ungroup () %>% 
-  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  dplyr::select (age, numeracy_total, reasoning_total, openminded_total, thinking_total) %>% 
   skimr::skim()
 ```
 
@@ -577,7 +573,7 @@ data_exp1 %>%
   group_by(subject) %>% 
   filter(row_number()==1) %>% 
   ungroup () %>% 
-  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  dplyr::select (age, numeracy_total, reasoning_total, openminded_total, thinking_total) %>% 
   skimr::skim() %>%
   knitr::kable() %>%
   kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
@@ -591,7 +587,7 @@ For this exercise, we use a dataset of one of my own studies. In this study, we 
 
 1. How many participants did we test in total?
 2. Find out how many male and female we tested.
-3. Calculate mean and sd for age and cognitive ability (`ah4`).
+3. Calculate mean and sd for age and cognitive ability (`cog_ability`).
 
 
 ```{r warning=F, message=F}
@@ -601,7 +597,7 @@ ghasemi_data %>% summarise(n = n_distinct(participant)) # number of participants
 
 ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_by (gender) %>% summarise(n= n()) %>% ungroup() # 183 female, 17 male
 
-ghasemi_data %>% dplyr::select (age, ah4) %>% skimr::skim() # mean and sd for age and cognitive ability
+ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and sd for age and cognitive ability
 ```
 
 
@@ -839,13 +835,14 @@ knitr::kable(nice(rotello_aov)) %>%
 Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and cognitive style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
 
 ```{r message=F, eval=F, fig.align='center', dpi=300}
+
 cor_data_exp1 <- data_exp1 %>% 
   pivot_wider(names_from = stage, values_from = truth_estimate) %>%
   group_by(subject) %>%
   mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
          dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
   ungroup()%>%
-  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+  dplyr::select(persuasion_index,dissuasion_index,openminded_total,numeracy_total,thinking_total,reasoning_total)
 
 #---------- Base R:
 cor(cor_data_exp1, method = "pearson",  use = "complete.obs")
@@ -869,7 +866,7 @@ cor_data_exp1 <- data_exp1 %>%
   mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
          dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
   ungroup()%>%
-  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+  dplyr::select(persuasion_index,dissuasion_index,openminded_total,numeracy_total,thinking_total,reasoning_total)
 
 #---------- Base R:
 cor(cor_data_exp1, method = "pearson",  use = "complete.obs")%>%
@@ -937,7 +934,7 @@ correlation::correlation(pennycook_data) %>% summary() %>%
 
 In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
 ```{r}
-exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_total,
+exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
                   data=cor_data_exp1)
 ```
 

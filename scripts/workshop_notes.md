@@ -7,7 +7,7 @@ author:
   - name: "Mahdi Mazidi"
     affiliation: University of Western Australia
     email: mahdi.mazidisharafabadi@research.uwa.edu.au
-date: "05 January, 2021"
+date: "06 January, 2021"
 output: 
   html_document:
     keep_md: yes
@@ -389,7 +389,7 @@ days[c(2, 3, 4)]
 ```
 
 
-### Exercise:
+### Exercise
 
 Create a vector named `my_vector` with numbers from 0 to 1000 in it:
 
@@ -516,7 +516,7 @@ gender
 
 So, be careful of spaces!
 
-### Exercise:
+### Exercise
 Create a gender factor with 30 male and 40 females (*Hint*: use the `rep()` function):
 
 ```r
@@ -554,7 +554,7 @@ education
 ## Levels: Primary school < high school < College < Uni graduated
 ```
 
-### Exercise:
+### Exercise
 We have a factor with `patient` and `control` values. Here, the first level is control and the second level is patient. Change the order of levels, so patient would be the first level:
 
 
@@ -655,32 +655,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.72770 </td>
+   <td style="text-align:right;"> 31.35699 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.21325 </td>
+   <td style="text-align:right;"> 17.37026 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.99580 </td>
+   <td style="text-align:right;"> 27.66831 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.09983 </td>
+   <td style="text-align:right;"> 33.05502 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.81725 </td>
+   <td style="text-align:right;"> 27.08460 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.74217 </td>
+   <td style="text-align:right;"> 31.23526 </td>
   </tr>
 </tbody>
 </table>
@@ -699,37 +699,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 20.40254 </td>
+   <td style="text-align:right;"> 25.98081 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.84327 </td>
+   <td style="text-align:right;"> 32.30670 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 22.79912 </td>
+   <td style="text-align:right;"> 25.84741 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 33.18292 </td>
+   <td style="text-align:right;"> 24.98175 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.58559 </td>
+   <td style="text-align:right;"> 11.82014 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 25.31449 </td>
+   <td style="text-align:right;"> 34.72412 </td>
   </tr>
 </tbody>
 </table>
@@ -742,7 +742,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 28.7423
+## [1] 31.53914
 ```
 
 ### Exercise
@@ -766,52 +766,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.72770 </td>
+   <td style="text-align:right;"> 31.35699 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.21325 </td>
+   <td style="text-align:right;"> 17.37026 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.99580 </td>
+   <td style="text-align:right;"> 27.66831 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.09983 </td>
+   <td style="text-align:right;"> 33.05502 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.81725 </td>
+   <td style="text-align:right;"> 27.08460 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.74217 </td>
+   <td style="text-align:right;"> 31.23526 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.86773 </td>
+   <td style="text-align:right;"> 28.96955 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.61779 </td>
+   <td style="text-align:right;"> 31.13818 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.68180 </td>
+   <td style="text-align:right;"> 37.04042 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.49156 </td>
+   <td style="text-align:right;"> 25.99022 </td>
   </tr>
 </tbody>
 </table>
@@ -823,35 +823,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 25.72770 31.21325 29.99580 27.09983 26.81725 26.74217 34.86773
-##   [8] 36.61779 34.68180 36.49156 30.89007 35.41123 38.85842 30.57155
-##  [15] 30.42493 26.47939 27.50490 31.56233 37.30031 33.42363 29.32580
-##  [22] 32.88187 34.51232 23.88507 26.51493 25.42962 28.44067 29.23889
-##  [29] 25.24702 28.57276 30.52609 35.64100 25.68543 31.01235 28.74230
-##  [36] 25.07624 32.76672 38.24879 16.92928 24.42460 28.02411 34.69037
-##  [43] 30.40711 29.48666 37.96717 24.29767 32.64481 25.84578 29.28556
-##  [50] 44.11920 25.07969 21.43629 27.52244 37.24509 38.36706 35.46408
-##  [57] 23.45111 27.39520 23.59920 29.08243 32.88755 29.34568 36.76027
-##  [64] 30.98235 30.61806 35.48034 27.39239 32.46603 28.87644 33.11735
-##  [71] 28.45200 30.72661 27.58458 30.80198 26.08880 31.74715 34.42052
-##  [78] 36.14018 29.15979 15.75634 33.51822 37.88828 26.47385 33.26013
-##  [85] 34.78432 19.44502 31.93158 31.48073 31.48999 33.27916 28.62990
-##  [92] 29.38271 28.57686 30.40548 34.42423 29.16725 32.40763 37.41949
-##  [99] 28.13617 19.76279 25.79459 34.52733 26.44130 18.30816 27.64192
-## [106] 17.47271 22.26139 24.29191 22.66851 15.63327 28.92695 20.81435
-## [113] 21.88169 20.83022 33.60910 24.55989 17.62970 29.40357 30.38139
-## [120] 24.33577 29.02207 16.05454 18.13544 34.35895 26.43107 20.91289
-## [127] 17.87389 26.99069 25.12145 19.37052 20.88742 22.78649 13.54631
-## [134] 33.21585 17.62122 25.56304 20.15252 27.47051 28.10522 24.03826
-## [141] 29.80794 25.99564 21.25735 17.59239 27.46318 29.03501 30.01122
-## [148] 33.74218 25.65373 26.46268 27.91304 27.24095 28.31243 22.22584
-## [155] 31.01431 20.95776 28.17836 23.07360 20.12716 34.05968 22.96145
-## [162] 15.87866 23.98782 19.77766 28.34237 30.83325 22.29114 24.69355
-## [169] 12.81555 25.69261 23.22378 30.95828 24.23875 20.91039 32.04584
-## [176] 25.42380 26.17715 25.99621 17.85196 23.01855 24.33618 25.42155
-## [183] 16.25279 14.64445 22.04017 23.45330 22.37534 22.12577 24.22884
-## [190] 27.32652 25.11790 18.05474 19.64780 25.75833 20.40254 24.84327
-## [197] 22.79912 33.18292 24.58559 25.31449
+##   [1] 31.35699 17.37026 27.66831 33.05502 27.08460 31.23526 28.96955
+##   [8] 31.13818 37.04042 25.99022 32.89789 21.01751 32.23942 29.55268
+##  [15] 33.36428 31.16846 27.53689 24.92020 33.98118 28.59619 25.38583
+##  [22] 28.14543 29.67363 30.37318 32.06735 25.15376 23.53650 34.78523
+##  [29] 32.55436 26.11533 26.45148 25.14296 28.17931 30.25876 31.53914
+##  [36] 25.89491 29.84044 32.90219 39.83555 30.92877 22.84493 31.82652
+##  [43] 30.76839 27.55345 35.65322 26.65429 35.00244 37.66493 30.75659
+##  [50] 32.01337 28.75305 27.95449 31.27858 36.44214 42.05573 33.18330
+##  [57] 29.77303 35.12052 32.71165 31.93952 26.11662 37.66113 38.37270
+##  [64] 22.57072 26.09388 35.87002 27.74268 28.79670 29.91453 35.72730
+##  [71] 34.56585 33.36723 35.04875 39.79717 29.67588 33.75086 33.77368
+##  [78] 30.82965 30.03522 31.56101 29.14160 29.44815 28.05415 33.18843
+##  [85] 30.15023 20.35407 41.83545 31.85870 27.40575 25.68527 29.23713
+##  [92] 23.38169 16.08802 35.37753 26.86683 32.97288 29.01356 28.31243
+##  [99] 32.41593 17.86219 26.42786 33.96914 23.66792 36.19662 27.89008
+## [106] 25.42286 25.46589 33.46151 32.29972 21.83268 23.60140 22.03046
+## [113] 24.52118 30.85224 21.89321 16.33490 23.67591 26.26932 22.13409
+## [120] 22.75519 24.78282 25.49917 23.30092 26.88841 28.74699 33.98556
+## [127] 20.59231 31.12898 29.91843 26.13807 26.97726 20.88561 18.11783
+## [134] 21.71759 21.94810 24.52481 33.76381 34.83132 35.02739 31.06669
+## [141] 20.07041 28.12268 24.47624 24.62734 21.79531 26.91570 28.00926
+## [148] 29.23406 24.83721 22.70184 33.20434 28.30524 19.04337 20.94663
+## [155] 16.96541 23.97885 28.01662 21.52950 22.91659 27.44801 21.51792
+## [162] 29.16521 26.81353 31.78749 21.20598 27.27509 32.85259 28.28705
+## [169] 24.49561 28.39633 25.95627 22.47094 21.29222 23.33496 13.84319
+## [176] 18.21572 18.75887 21.13496 18.99900 29.06886 19.16813 31.19244
+## [183] 18.02171 17.66510 36.43368 29.36726 26.21250 29.27534 19.69483
+## [190] 25.09819 27.51653 22.36185 28.96405 21.63866 25.98081 32.30670
+## [197] 25.84741 24.98175 11.82014 34.72412
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -905,24 +905,20 @@ head(raw_data)
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> stage5_complex </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> stage6_complex </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> stage7_complex </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> attention1 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> attention2 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> attention3 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt1 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt2 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt3 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote1 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote2 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote3 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote4 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote5 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote6 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote7 </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote8 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking1 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking2 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking3 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded1 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded2 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded3 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded4 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded5 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded6 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded7 </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded8 </th>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> group </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> attention_correct </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> numeracy_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mindware_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> reasoning_total </th>
   </tr>
  </thead>
 <tbody>
@@ -956,9 +952,6 @@ head(raw_data)
    <td style="text-align:right;"> 51 </td>
    <td style="text-align:right;"> 43 </td>
    <td style="text-align:right;"> 41 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 50 </td>
    <td style="text-align:right;"> 20 </td>
@@ -971,7 +964,6 @@ head(raw_data)
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
   </tr>
@@ -1005,9 +997,6 @@ head(raw_data)
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:right;"> 39 </td>
@@ -1020,7 +1009,6 @@ head(raw_data)
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Simple </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 10 </td>
   </tr>
@@ -1054,9 +1042,6 @@ head(raw_data)
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 50 </td>
    <td style="text-align:right;"> 20 </td>
@@ -1069,7 +1054,6 @@ head(raw_data)
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Simple </td>
-   <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:right;"> 8 </td>
   </tr>
@@ -1103,9 +1087,6 @@ head(raw_data)
    <td style="text-align:right;"> 70 </td>
    <td style="text-align:right;"> 80 </td>
    <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 50 </td>
    <td style="text-align:right;"> 20 </td>
@@ -1118,7 +1099,6 @@ head(raw_data)
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 7 </td>
   </tr>
@@ -1152,9 +1132,6 @@ head(raw_data)
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:right;"> 39 </td>
@@ -1167,7 +1144,6 @@ head(raw_data)
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Simple </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 11 </td>
    <td style="text-align:right;"> 11 </td>
   </tr>
@@ -1201,9 +1177,6 @@ head(raw_data)
    <td style="text-align:right;"> 100 </td>
    <td style="text-align:right;"> 50 </td>
    <td style="text-align:right;"> 55 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:right;"> 50 </td>
    <td style="text-align:right;"> 20 </td>
@@ -1216,7 +1189,6 @@ head(raw_data)
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:right;"> 10 </td>
   </tr>
@@ -1229,13 +1201,12 @@ Now, let's do some cleanining using `dplyr`, `tidyr` and other `tidyverse` libra
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
-  mutate(aote_total= aote1+aote2+aote3+aote4+aote5+aote6+aote7+aote8, # create a total score for our questionnaire
-         attentive= case_when(attention_correct >= 2~ 'Yes',T~ 'No')) %>%
-  mutate(crt1= case_when(crt1=='4'~ 1,T~0),
-         crt2= case_when(crt2=='10'~ 1,T~0),
-         crt3= case_when(crt3=='39'~ 1,T~0),
-         crt_total= crt1 + crt2 + crt3) %>%
-  select(-attention1:-aote8) %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
+  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
+         thinking2= case_when(thinking2=='10'~ 1,T~0),
+         thinking3= case_when(thinking3=='39'~ 1,T~0),
+         thinking_total= thinking1 + thinking2 + thinking3) %>%
+  select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
@@ -1244,7 +1215,6 @@ cleaned_data <- raw_data %>%
   #mutate_if(is.character, factor) %>%
   mutate(subject= factor(subject), # convert all characters to factor
          group = factor(group),
-         attentive = factor(attentive),
          stage = factor(stage))
 ```
 
@@ -1258,12 +1228,10 @@ cleaned_data <- raw_data %>%
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> age </th>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> gender </th>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> group </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> attention_correct </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> numeracy_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mindware_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote_total </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> attentive </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> reasoning_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking_total </th>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> stage </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> truth_estimate </th>
   </tr>
@@ -1276,11 +1244,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage1 </td>
    <td style="text-align:right;"> 36 </td>
@@ -1292,11 +1258,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage2 </td>
    <td style="text-align:right;"> 70 </td>
@@ -1308,11 +1272,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage3 </td>
    <td style="text-align:right;"> 68 </td>
@@ -1324,11 +1286,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage4 </td>
    <td style="text-align:right;"> 54 </td>
@@ -1340,11 +1300,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage5 </td>
    <td style="text-align:right;"> 51 </td>
@@ -1356,11 +1314,9 @@ cleaned_data <- raw_data %>%
    <td style="text-align:right;"> 18 </td>
    <td style="text-align:left;"> Female </td>
    <td style="text-align:left;"> Complex </td>
-   <td style="text-align:right;"> 3 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:right;"> 39 </td>
-   <td style="text-align:left;"> Yes </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:left;"> stage6 </td>
    <td style="text-align:right;"> 43 </td>
@@ -1381,21 +1337,19 @@ str(cleaned_data)
 ```
 
 ```
-## tibble [917 × 14] (S3: tbl_df/tbl/data.frame)
-##  $ progress         : num [1:917] 100 100 100 100 100 100 100 100 100 100 ...
-##  $ subject          : Factor w/ 131 levels "subj1","subj10",..: 1 1 1 1 1 1 1 45 45 45 ...
-##  $ consent          : chr [1:917] "I consent" "I consent" "I consent" "I consent" ...
-##  $ age              : num [1:917] 18 18 18 18 18 18 18 18 18 18 ...
-##  $ gender           : chr [1:917] "Female" "Female" "Female" "Female" ...
-##  $ group            : Factor w/ 2 levels "Complex","Simple": 1 1 1 1 1 1 1 2 2 2 ...
-##  $ attention_correct: num [1:917] 3 3 3 3 3 3 3 3 3 3 ...
-##  $ numeracy_total   : num [1:917] 9 9 9 9 9 9 9 9 9 9 ...
-##  $ mindware_total   : num [1:917] 9 9 9 9 9 9 9 10 10 10 ...
-##  $ aote_total       : num [1:917] 39 39 39 39 39 39 39 46 46 46 ...
-##  $ attentive        : Factor w/ 2 levels "No","Yes": 2 2 2 2 2 2 2 2 2 2 ...
-##  $ crt_total        : num [1:917] 0 0 0 0 0 0 0 2 2 2 ...
-##  $ stage            : Factor w/ 7 levels "stage1","stage2",..: 1 2 3 4 5 6 7 1 2 3 ...
-##  $ truth_estimate   : num [1:917] 36 70 68 54 51 43 41 50 55 55 ...
+## tibble [917 × 12] (S3: tbl_df/tbl/data.frame)
+##  $ progress        : num [1:917] 100 100 100 100 100 100 100 100 100 100 ...
+##  $ subject         : Factor w/ 131 levels "subj1","subj10",..: 1 1 1 1 1 1 1 45 45 45 ...
+##  $ consent         : chr [1:917] "I consent" "I consent" "I consent" "I consent" ...
+##  $ age             : num [1:917] 18 18 18 18 18 18 18 18 18 18 ...
+##  $ gender          : chr [1:917] "Female" "Female" "Female" "Female" ...
+##  $ group           : Factor w/ 2 levels "Complex","Simple": 1 1 1 1 1 1 1 2 2 2 ...
+##  $ numeracy_total  : num [1:917] 9 9 9 9 9 9 9 9 9 9 ...
+##  $ reasoning_total : num [1:917] 9 9 9 9 9 9 9 10 10 10 ...
+##  $ openminded_total: num [1:917] 39 39 39 39 39 39 39 46 46 46 ...
+##  $ thinking_total  : num [1:917] 0 0 0 0 0 0 0 2 2 2 ...
+##  $ stage           : Factor w/ 7 levels "stage1","stage2",..: 1 2 3 4 5 6 7 1 2 3 ...
+##  $ truth_estimate  : num [1:917] 36 70 68 54 51 43 41 50 55 55 ...
 ```
 
 Finally, we save our data to the `cleaned_data` folder.
@@ -1486,27 +1440,20 @@ data_exp1 %>%
 ##  Mean   :100                                         Mean   :21.15  
 ##  3rd Qu.:100                                         3rd Qu.:20.00  
 ##  Max.   :100                                         Max.   :63.00  
-##     gender             group           attention_correct numeracy_total  
-##  Length:131         Length:131         Min.   :0.000     Min.   : 0.000  
-##  Class :character   Class :character   1st Qu.:2.000     1st Qu.: 8.000  
-##  Mode  :character   Mode  :character   Median :3.000     Median :10.000  
-##                                        Mean   :2.573     Mean   : 8.779  
-##                                        3rd Qu.:3.000     3rd Qu.:10.000  
-##                                        Max.   :3.000     Max.   :11.000  
-##  mindware_total    aote_total    attentive           crt_total     
-##  Min.   : 4.00   Min.   :19.0   Length:131         Min.   :0.0000  
-##  1st Qu.: 8.00   1st Qu.:33.5   Class :character   1st Qu.:0.0000  
-##  Median : 8.00   Median :39.0   Mode  :character   Median :0.0000  
-##  Mean   : 8.45   Mean   :38.2                      Mean   :0.8092  
-##  3rd Qu.: 9.00   3rd Qu.:43.0                      3rd Qu.:1.0000  
-##  Max.   :12.00   Max.   :48.0                      Max.   :3.0000  
-##     stage           truth_estimate  
-##  Length:131         Min.   :  0.00  
-##  Class :character   1st Qu.: 43.50  
-##  Mode  :character   Median : 61.00  
-##                     Mean   : 57.09  
-##                     3rd Qu.: 75.50  
-##                     Max.   :100.00
+##     gender             group           numeracy_total   reasoning_total
+##  Length:131         Length:131         Min.   : 0.000   Min.   : 4.00  
+##  Class :character   Class :character   1st Qu.: 8.000   1st Qu.: 8.00  
+##  Mode  :character   Mode  :character   Median :10.000   Median : 8.00  
+##                                        Mean   : 8.779   Mean   : 8.45  
+##                                        3rd Qu.:10.000   3rd Qu.: 9.00  
+##                                        Max.   :11.000   Max.   :12.00  
+##  openminded_total thinking_total      stage           truth_estimate  
+##  Min.   :19.0     Min.   :0.0000   Length:131         Min.   :  0.00  
+##  1st Qu.:33.5     1st Qu.:0.0000   Class :character   1st Qu.: 43.50  
+##  Median :39.0     Median :0.0000   Mode  :character   Median : 61.00  
+##  Mean   :38.2     Mean   :0.8092                      Mean   : 57.09  
+##  3rd Qu.:43.0     3rd Qu.:1.0000                      3rd Qu.: 75.50  
+##  Max.   :48.0     Max.   :3.0000                      Max.   :100.00
 ```
 
 Alternatively, we can use `base R `summary` function`skimr` library:
@@ -1516,7 +1463,7 @@ data_exp1 %>%
   group_by(subject) %>% 
   filter(row_number()==1) %>% 
   ungroup () %>% 
-  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  dplyr::select (age, numeracy_total, reasoning_total, openminded_total, thinking_total) %>% 
   skimr::skim()
 ```
 
@@ -1568,7 +1515,7 @@ data_exp1 %>%
   </tr>
   <tr>
    <td style="text-align:left;"> numeric </td>
-   <td style="text-align:left;"> mindware_total </td>
+   <td style="text-align:left;"> reasoning_total </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 8.4503817 </td>
@@ -1582,7 +1529,7 @@ data_exp1 %>%
   </tr>
   <tr>
    <td style="text-align:left;"> numeric </td>
-   <td style="text-align:left;"> aote_total </td>
+   <td style="text-align:left;"> openminded_total </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 38.1984733 </td>
@@ -1596,7 +1543,7 @@ data_exp1 %>%
   </tr>
   <tr>
    <td style="text-align:left;"> numeric </td>
-   <td style="text-align:left;"> crt_total </td>
+   <td style="text-align:left;"> thinking_total </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 0.8091603 </td>
@@ -1618,7 +1565,7 @@ For this exercise, we use a dataset of one of my own studies. In this study, we 
 
 1. How many participants did we test in total?
 2. Find out how many male and female we tested.
-3. Calculate mean and sd for age and cognitive ability (`ah4`).
+3. Calculate mean and sd for age and cognitive ability (`cog_ability`).
 
 
 
@@ -1673,7 +1620,7 @@ ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_b
 </div>
 
 ```r
-ghasemi_data %>% dplyr::select (age, ah4) %>% skimr::skim() # mean and sd for age and cognitive ability
+ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and sd for age and cognitive ability
 ```
 
 
@@ -1756,7 +1703,7 @@ ghasemi_data %>% dplyr::select (age, ah4) %>% skimr::skim() # mean and sd for ag
    <td style="text-align:left;"> ▇▁▁▁▁ </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ah4 </td>
+   <td style="text-align:left;"> cog_ability </td>
    <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 39.55 </td>
@@ -2270,7 +2217,7 @@ cor_data_exp1 <- data_exp1 %>%
   mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
          dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
   ungroup()%>%
-  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+  dplyr::select(persuasion_index,dissuasion_index,openminded_total,numeracy_total,thinking_total,reasoning_total)
 
 #---------- Base R:
 cor(cor_data_exp1, method = "pearson",  use = "complete.obs")
@@ -2293,10 +2240,10 @@ cor_data_exp1 %>%
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">   </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> persuasion_index </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dissuasion_index </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded_total </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> numeracy_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mindware_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> reasoning_total </th>
   </tr>
  </thead>
 <tbody>
@@ -2319,7 +2266,7 @@ cor_data_exp1 %>%
    <td style="text-align:right;"> 0.15 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> aote_total </td>
+   <td style="text-align:left;"> openminded_total </td>
    <td style="text-align:right;"> 0.25 </td>
    <td style="text-align:right;"> -0.03 </td>
    <td style="text-align:right;"> 1.00 </td>
@@ -2337,7 +2284,7 @@ cor_data_exp1 %>%
    <td style="text-align:right;"> 0.15 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> crt_total </td>
+   <td style="text-align:left;"> thinking_total </td>
    <td style="text-align:right;"> 0.16 </td>
    <td style="text-align:right;"> -0.09 </td>
    <td style="text-align:right;"> 0.26 </td>
@@ -2346,7 +2293,7 @@ cor_data_exp1 %>%
    <td style="text-align:right;"> 0.29 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> mindware_total </td>
+   <td style="text-align:left;"> reasoning_total </td>
    <td style="text-align:right;"> 0.11 </td>
    <td style="text-align:right;"> 0.15 </td>
    <td style="text-align:right;"> 0.11 </td>
@@ -2361,10 +2308,10 @@ cor_data_exp1 %>%
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mindware_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> crt_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> reasoning_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> thinking_total </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> numeracy_total </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aote_total </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> openminded_total </th>
    <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dissuasion_index </th>
   </tr>
  </thead>
@@ -2386,7 +2333,7 @@ cor_data_exp1 %>%
    <td style="text-align:right;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> aote_total </td>
+   <td style="text-align:left;"> openminded_total </td>
    <td style="text-align:right;"> 0.11 </td>
    <td style="text-align:right;"> 0.26 </td>
    <td style="text-align:right;"> 0.40 </td>
@@ -2402,7 +2349,7 @@ cor_data_exp1 %>%
    <td style="text-align:right;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> crt_total </td>
+   <td style="text-align:left;"> thinking_total </td>
    <td style="text-align:right;"> 0.29 </td>
    <td style="text-align:right;">  </td>
    <td style="text-align:right;">  </td>
@@ -2602,7 +2549,7 @@ pennycook_data %>%
 In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
 
 ```r
-exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_total,
+exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
                   data=cor_data_exp1)
 ```
 
@@ -2625,7 +2572,7 @@ exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_t
    <td style="text-align:right;"> 0.02 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> aote_total </td>
+   <td style="text-align:left;"> openminded_total </td>
    <td style="text-align:right;"> 1.62 </td>
    <td style="text-align:right;"> 0.72 </td>
    <td style="text-align:right;"> 2.23 </td>
@@ -2639,14 +2586,14 @@ exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_t
    <td style="text-align:right;"> 0.73 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> crt_total </td>
+   <td style="text-align:left;"> thinking_total </td>
    <td style="text-align:right;"> 3.09 </td>
    <td style="text-align:right;"> 4.51 </td>
    <td style="text-align:right;"> 0.68 </td>
    <td style="text-align:right;"> 0.49 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> mindware_total </td>
+   <td style="text-align:left;"> reasoning_total </td>
    <td style="text-align:right;"> 1.77 </td>
    <td style="text-align:right;"> 2.52 </td>
    <td style="text-align:right;"> 0.70 </td>

@@ -50,7 +50,7 @@ data_exp1 %>%
   group_by(subject) %>% 
   filter(row_number()==1) %>% 
   ungroup () %>% 
-  dplyr::select (age, numeracy_total, mindware_total, aote_total, crt_total) %>% 
+  dplyr::select (age, numeracy_total, reasoning_total, openminded_total, thinking_total) %>% 
   skimr::skim()
 
 
@@ -62,7 +62,7 @@ ghasemi_data %>% summarise(n = n_distinct(participant)) # number of participants
 
 ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_by (gender) %>% summarise(n= n()) %>% ungroup() # 183 female, 17 male
 
-ghasemi_data %>% dplyr::select (age, ah4) %>% skimr::skim() # mean and sd for age and cognitive ability
+ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and sd for age and cognitive ability
 
 
 
@@ -286,7 +286,7 @@ cor_data_exp1 <- data_exp1 %>%
   mutate(persuasion_index= stage2+ stage3+ stage4 - stage1,
          dissuasion_index= (101-stage5) + (101-stage6) + (101-stage7) - (101-stage4)) %>%
   ungroup()%>%
-  dplyr::select(persuasion_index,dissuasion_index,aote_total,numeracy_total,crt_total,mindware_total)
+  dplyr::select(persuasion_index,dissuasion_index,openminded_total,numeracy_total,thinking_total,reasoning_total)
 
 #-- Base R:
 cor(cor_data_exp1, method = "pearson",  use = "complete.obs")
@@ -330,7 +330,7 @@ pennycook_data %>%
 
 ###### Multiple Regression
 
-exp1_reg=lm(persuasion_index ~ aote_total+ numeracy_total+ crt_total+ mindware_total,
+exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
                   data=cor_data_exp1)
 summary(exp1_reg)
 broom::tidy(exp1_reg)
