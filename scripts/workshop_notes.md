@@ -67,7 +67,7 @@ The first stage is the base rating stage. The next three stages include supporti
 In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including CRT, AOT-E, mindware, and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
  
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/exp_design.png" width="10010" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/exp_design.png" width="10010" style="display: block; margin: auto;" />
 
 Thus, our hypotheses for this experiment are as follows:
 
@@ -78,7 +78,7 @@ Thus, our hypotheses for this experiment are as follows:
 - There are significant associations between CRT, AOT-E, Numeracy, and mindware with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
 
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/prediction_plot.png" width="550px" height="400px" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/prediction_plot.png" width="550px" height="400px" style="display: block; margin: auto;" />
 
 
 # Getting Ready
@@ -91,7 +91,7 @@ After we created the experiment and decided on the sample size, the next step is
 
 Finally, we need to restructure our project in a tidy folder with different sub-folders. Having a clean and tidy folder structure can save us! There are different formats of folder structure (for example, see [here](http://nikola.me/folder_structure.html) and [here](https://slides.com/djnavarro/workflow)), but for now, we use the following structure:
 
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/folder_structure.png" width="700px" height="200px" style="display: block; margin: auto;" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/folder_structure.png" width="700px" height="200px" style="display: block; margin: auto;" />
 
 
 # Introduction to R
@@ -116,6 +116,13 @@ options(scipen=999) # turn off scientific notations
 options(contrasts = c('contr.sum','contr.poly')) # set the contrast sum globally 
 options(knitr.kable.NA = '')
 ```
+
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/r_first_then.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="700px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
 
 R can be used as a calculator. For mathematical purposes, be careful of the order in which R executes the commands.
 
@@ -655,32 +662,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 17.27828 </td>
+   <td style="text-align:right;"> 33.89745 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.21585 </td>
+   <td style="text-align:right;"> 29.38243 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 32.59044 </td>
+   <td style="text-align:right;"> 39.72931 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.51350 </td>
+   <td style="text-align:right;"> 29.52331 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 24.78736 </td>
+   <td style="text-align:right;"> 31.41551 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.02354 </td>
+   <td style="text-align:right;"> 29.88476 </td>
   </tr>
 </tbody>
 </table>
@@ -699,37 +706,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.87308 </td>
+   <td style="text-align:right;"> 29.56865 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 33.62701 </td>
+   <td style="text-align:right;"> 33.14262 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 23.87150 </td>
+   <td style="text-align:right;"> 18.79003 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.41861 </td>
+   <td style="text-align:right;"> 19.76909 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 21.87547 </td>
+   <td style="text-align:right;"> 27.66853 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 14.81812 </td>
+   <td style="text-align:right;"> 17.03878 </td>
   </tr>
 </tbody>
 </table>
@@ -742,7 +749,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 28.23622
+## [1] 30.05458
 ```
 
 ### Exercise
@@ -766,52 +773,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 17.27828 </td>
+   <td style="text-align:right;"> 33.89745 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.21585 </td>
+   <td style="text-align:right;"> 29.38243 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 32.59044 </td>
+   <td style="text-align:right;"> 39.72931 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.51350 </td>
+   <td style="text-align:right;"> 29.52331 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 24.78736 </td>
+   <td style="text-align:right;"> 31.41551 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.02354 </td>
+   <td style="text-align:right;"> 29.88476 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.18800 </td>
+   <td style="text-align:right;"> 17.48139 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.35790 </td>
+   <td style="text-align:right;"> 30.31757 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 27.90346 </td>
+   <td style="text-align:right;"> 33.51684 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 16.16534 </td>
+   <td style="text-align:right;"> 36.06823 </td>
   </tr>
 </tbody>
 </table>
@@ -823,35 +830,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 17.27828 28.21585 32.59044 26.51350 24.78736 23.02354 27.18800
-##   [8] 25.35790 27.90346 16.16534 29.02583 28.42899 26.01768 21.17097
-##  [15] 22.96488 32.51822 27.86215 23.76444 27.19453 31.21574 24.01656
-##  [22] 32.85923 30.19267 33.65342 33.16264 22.59811 35.49531 18.65914
-##  [29] 19.38852 40.35824 30.15550 33.36147 34.10666 34.67872 28.23622
-##  [36] 35.79737 37.03054 26.95119 35.00379 23.94121 30.76022 32.92460
-##  [43] 19.79349 28.87743 26.63434 36.87437 29.37386 32.93259 37.34053
-##  [50] 31.00992 33.45738 25.90962 32.16475 27.87158 33.60849 28.66175
-##  [57] 30.50260 28.11336 28.97617 33.47659 31.68984 31.02256 32.05707
-##  [64] 32.66971 28.75199 37.12150 32.53307 27.72957 30.72395 34.78095
-##  [71] 30.79057 26.94107 42.73528 19.17643 25.12155 32.51319 31.16573
-##  [78] 28.71231 36.67986 31.79341 30.08395 22.65188 24.25256 32.77380
-##  [85] 27.13873 22.28407 26.29213 24.81352 30.27068 36.91583 34.30821
-##  [92] 36.14205 25.57118 27.38895 35.85694 24.19565 28.70311 26.51289
-##  [99] 22.21769 29.67971 27.95608 22.68031 26.65177 28.46035 29.14500
-## [106] 29.39812 29.21597 23.10617 25.02895 31.48715 19.54007 31.54108
-## [113] 25.01488 22.84381 25.93818 22.49451 27.22332 27.32105 28.18441
-## [120] 20.30164 18.08104 22.97129 16.59963 28.07147 29.47963 21.57659
-## [127] 23.63856 32.57585 33.69816 29.42011 24.65821 23.36800 32.03514
-## [134] 29.55978 23.30426 28.47392 20.83691 35.21757 19.85448 24.60950
-## [141] 28.23138 30.30707 19.24222 24.86249 34.89545 17.71839 28.50023
-## [148] 26.77603 26.65438 26.37316 20.28677 21.37053 23.90232 22.02737
-## [155] 25.99456 25.15348 18.44601 10.20166 23.38740 22.30576 22.80130
-## [162] 30.91630 26.14282 30.27141 26.23709 29.85874 22.14357 24.83422
-## [169] 26.60009 27.47538 23.35859 32.08855 24.45984 28.62049 22.16793
-## [176] 23.18288 18.24877 34.08925 25.57914 25.38059 25.98955 33.63981
-## [183] 29.24742 20.23572 27.44383 32.20631 30.21943 20.38610 23.88014
-## [190] 18.09621 23.97639 31.17328 24.65916 23.68097 24.87308 33.62701
-## [197] 23.87150 26.41861 21.87547 14.81812
+##   [1] 33.897452 29.382434 39.729310 29.523313 31.415508 29.884756 17.481386
+##   [8] 30.317566 33.516836 36.068230 30.792595 21.513371 33.806714 18.348887
+##  [15] 33.054798 22.150448 22.770986 24.989311 30.280924 32.102438 27.821276
+##  [22] 26.642487 24.778134 32.838337 36.324994 25.096328 18.623429 30.757799
+##  [29] 24.465123 26.651556 25.455577 39.112993 30.755474 29.364076 30.054582
+##  [36] 36.027307 28.686847 26.542273 28.128803 33.639594 24.451841 36.527995
+##  [43] 33.022184 29.018652 29.005920 24.002321 31.785710 30.193651 33.266944
+##  [50]  9.567978 22.529740 29.029709 32.251436 35.232829 29.077429 21.544015
+##  [57] 22.646678 28.496008 30.708719 32.321395 31.583349 29.753448 33.300894
+##  [64] 23.080794 20.266951 36.213717 34.179899 25.122828 28.583119 31.192843
+##  [71] 32.969227 30.793463 29.183959 26.246097 31.617254 32.940636 29.067134
+##  [78] 30.850151 24.365055 27.890829 23.704370 24.705611 26.795681 31.307061
+##  [85] 28.631376 33.581304 24.083854 35.427188 35.250856 23.239270 31.822175
+##  [92] 30.034579 24.552505 25.840735 29.761001 26.237582 22.670452 31.562706
+##  [99] 25.293349 35.206560 28.695275 32.431917 21.880925 27.679252 25.653947
+## [106] 22.737201 26.159944 20.220486 20.946632 26.029698  9.289973 26.064451
+## [113] 24.304564 30.683930 26.556266 33.496884 25.841180 19.251002 16.588397
+## [120] 27.000456 16.031283 27.138866 24.147680 27.212913 27.906480 34.292837
+## [127] 35.100470 20.262522 20.990654 29.889986 22.533049 27.803764 26.561682
+## [134] 31.628529 23.884178 21.184369 28.359092 29.159268 24.688478 15.449363
+## [141] 33.893469 24.932828 22.202822 25.509302 19.248512 22.309783 30.230808
+## [148] 21.728482 31.424331 25.274207 31.952769 25.360741 29.267328 36.850071
+## [155] 32.811526 25.011702 22.615376 29.521667 26.174809 29.320354 17.688114
+## [162] 21.223809 21.359619 30.377377 22.715665 26.214662 17.607744 28.204791
+## [169] 25.483327 26.447378 23.768387 19.916506 26.164940 28.353001 17.307596
+## [176] 19.123600 24.856908 16.758004 22.396095 30.393937 17.833034 26.610879
+## [183] 25.258698 34.056139 37.833933 21.690515 12.691301 22.346300 26.041543
+## [190] 21.096730 26.185576 30.638838 26.024942 22.527076 29.568648 33.142622
+## [197] 18.790034 19.769089 27.668529 17.038779
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -865,6 +872,17 @@ my_dataframe$Response
 
 # Data Cleaning
 
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/environmental-data-science-r4ds-general.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/cracked_setwd.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
 Now, suppose we tested 141 students. First, let's read and check the uncleaned data:
 
 ```r
@@ -872,6 +890,11 @@ Now, suppose we tested 141 students. First, let's read and check the uncleaned d
 raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 head(raw_data)
 ```
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tidydata_3.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -1330,6 +1353,13 @@ Ok, now the data is clean and tidy which means:
 2. Each observation forms a row.
 3. Each type of observational unit forms a table ([Wickham](https://vita.had.co.nz/papers/tidy-data.pdf), 2014).
 
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tidydata_1.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
+
 Check the dataframe and all the data types:
 
 ```r
@@ -1360,6 +1390,11 @@ write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
 ```
 
 # Descriptive Statistics
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/not_normal.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
 
 > Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
 
@@ -1721,6 +1756,12 @@ ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and s
 
 # Data Visualization
 
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/ggplot2_masterpiece.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
+
 First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
 
 
@@ -1741,7 +1782,7 @@ barplot_exp1 <- aggregated_data_exp1 %>%
 barplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" />
 
 ```r
 barplot_facet_exp1 <- aggregated_data_exp1 %>%
@@ -1758,7 +1799,7 @@ barplot_facet_exp1 <- aggregated_data_exp1 %>%
 barplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-2.png" style="display: block; margin: auto;" />
 
 ```r
 lineplot_exp1 <- aggregated_data_exp1 %>%
@@ -1775,7 +1816,7 @@ lineplot_exp1 <- aggregated_data_exp1 %>%
 lineplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-3.png" style="display: block; margin: auto;" />
 
 ```r
 violinplot_exp1 <- data_exp1 %>%
@@ -1791,7 +1832,7 @@ violinplot_exp1 <- data_exp1 %>%
 violinplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-4.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-4.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_exp1 <- data_exp1 %>%
@@ -1808,7 +1849,7 @@ boxplot_exp1 <- data_exp1 %>%
 boxplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-5.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-5.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_facet_exp1 <- data_exp1 %>%
@@ -1826,16 +1867,22 @@ boxplot_facet_exp1 <- data_exp1 %>%
 boxplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-52-6.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-59-6.png" style="display: block; margin: auto;" />
 
 How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/patchwork_1.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
 
 ```r
 combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxplot_exp1)
 combined_plot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-53-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-61-1.png" style="display: block; margin: auto;" />
 
 How to save a plot?
 
@@ -2140,7 +2187,7 @@ afex_plot(aov_m1, x = "stage", trace = "group", error='between',
   scale_fill_simpsons()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-61-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" />
 
 
 If you are interested in this topic, check out this nice tutorial about [using afex to run ANOVA](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html), and also this interesting tutorial on the [emmeans package](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/).
@@ -2304,7 +2351,7 @@ cor_data_exp1 %>%
 </tbody>
 </table></div>
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-65-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<img src="workshop_notes_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>
@@ -2366,7 +2413,7 @@ cor_data_exp1 %>%
 Pennycook et al. (2020) investigated the relationship between actively open-minded thinking style about evidence (AOT-E) and different political, scientific, and religious beliefs (see the original paper [here](https://psyarxiv.com/a7k96)). In their first experiment, they calculated the correlation of AOTE and scientific beliefs items (global warming, evolution, etc.) and they found the following results:
 
 <div class="figure" style="text-align: center">
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/pennycook_corr.png" alt="adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)" width="700px" height="350px" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/pennycook_corr.png" alt="adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)" width="700px" height="350px" />
 <p class="caption">adapted from [Pennycook et al. (2020)](https://psyarxiv.com/a7k96)</p>
 </div>
 
@@ -2607,7 +2654,7 @@ exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+
 Trémolière and Djeriouat (2020) examined the role of *cognitive reflection* and *belief in science* in climate change skepticism. In their first study, they revealed that cognitive reflection and belief in science negetively predicted climate change skepticism even after controlling for demographic and cognitive ability variables (see the original paper [here](https://psyarxiv.com/vp8k6/)). 
 
 <div class="figure" style="text-align: center">
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/R_for_cognitive_psychologists/inputs/tremoliere_reg.png" alt="adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)" width="700px" height="350px" />
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tremoliere_reg.png" alt="adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)" width="700px" height="350px" />
 <p class="caption">adapted from [Trémolière and Djeriouat (2020)](https://psyarxiv.com/vp8k6/)</p>
 </div>
 
@@ -2732,6 +2779,17 @@ Tremoliere_reg=lm(Climato ~ Age+ Gender+ Education+ BeliefInSciencetotal+ Litera
 
 To be completed...
 
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/rmarkdown_wizards.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/reproducibility_court.png" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
 
 # References
 
