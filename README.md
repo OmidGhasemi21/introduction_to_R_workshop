@@ -7,6 +7,6 @@ These are the materials for the **Introduction to R** workshop which held on Jan
 
 A nice summary of the workshop can be found here:
 
-- [Workshop Notes](https://omidghasemi21.github.io/introduction_to_R/scripts/workshop_notes.html)
+- [Workshop Notes](https://omidghasemi21.github.io/introduction_to_R_workshop/scripts/workshop_notes.html)
 
 
