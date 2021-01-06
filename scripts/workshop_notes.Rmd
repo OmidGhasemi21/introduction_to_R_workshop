@@ -1,5 +1,5 @@
 ---
-title: "R for Cognitive Psychologists"
+title: "Introduction to R"
 author:
   - name: "Omid Ghasemi"
     affiliation: Macquarie University
@@ -20,7 +20,7 @@ output:
     df_print: "kable"
 ---
 
-This document is the summary of the **R for Cognitive Psychologists** workshop. 
+This document is the summary of the **Introduction to R** workshop. 
 
 All correspondence related to this document should be addressed to: 
 
