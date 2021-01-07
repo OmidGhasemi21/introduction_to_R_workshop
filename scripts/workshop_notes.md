@@ -7,7 +7,7 @@ author:
   - name: "Mahdi Mazidi"
     affiliation: University of Western Australia
     email: mahdi.mazidisharafabadi@research.uwa.edu.au
-date: "06 January, 2021"
+date: "07 January, 2021"
 output: 
   html_document:
     keep_md: yes
@@ -64,7 +64,7 @@ The aim of the study is to test if simple arguments are more effective in belief
 
 The first stage is the base rating stage. The next three stages include supportive arguments of the theory and the last three arguments include disproving arguments of the theory. We hypothesized that the group with simple arguments shows better persuasion (as it reflects in higher ratings for the supportive arguments) and better dissuasion (as it reflects in lower ratings for the opposing arguments).
 
-In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including CRT, AOT-E, mindware, and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
+In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including thinking style (CRT), open-mindedness (AOT-E), reasoning ability (mindware), and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
  
 
 <img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/exp_design.png" width="10010" style="display: block; margin: auto;" />
@@ -75,7 +75,7 @@ Thus, our hypotheses for this experiment are as follows:
 
 - Participants in the group with simple arguments have lower ratings for opposing arguments (They are more easily dissuaded than those in the group with complex arguments).
 
-- There are significant associations between CRT, AOT-E, Numeracy, and mindware with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
+- There are significant associations between thinking style (CRT), open-mindedness (AOT-E), reasoning ability (mindware), and numeracy scales with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
 
 
 <img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/prediction_plot.png" width="550px" height="400px" style="display: block; margin: auto;" />
@@ -662,32 +662,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.89745 </td>
+   <td style="text-align:right;"> 34.93690 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.38243 </td>
+   <td style="text-align:right;"> 30.01989 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 39.72931 </td>
+   <td style="text-align:right;"> 28.45108 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.52331 </td>
+   <td style="text-align:right;"> 16.78878 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.41551 </td>
+   <td style="text-align:right;"> 34.76432 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.88476 </td>
+   <td style="text-align:right;"> 38.39763 </td>
   </tr>
 </tbody>
 </table>
@@ -706,37 +706,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 29.56865 </td>
+   <td style="text-align:right;"> 25.75768 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 33.14262 </td>
+   <td style="text-align:right;"> 31.45794 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 18.79003 </td>
+   <td style="text-align:right;"> 34.15933 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 19.76909 </td>
+   <td style="text-align:right;"> 23.42967 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 27.66853 </td>
+   <td style="text-align:right;"> 22.90244 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 17.03878 </td>
+   <td style="text-align:right;"> 19.87837 </td>
   </tr>
 </tbody>
 </table>
@@ -749,7 +749,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 30.05458
+## [1] 30.62551
 ```
 
 ### Exercise
@@ -773,52 +773,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.89745 </td>
+   <td style="text-align:right;"> 34.93690 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.38243 </td>
+   <td style="text-align:right;"> 30.01989 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 39.72931 </td>
+   <td style="text-align:right;"> 28.45108 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.52331 </td>
+   <td style="text-align:right;"> 16.78878 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.41551 </td>
+   <td style="text-align:right;"> 34.76432 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.88476 </td>
+   <td style="text-align:right;"> 38.39763 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 17.48139 </td>
+   <td style="text-align:right;"> 30.40056 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.31757 </td>
+   <td style="text-align:right;"> 29.94243 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.51684 </td>
+   <td style="text-align:right;"> 30.49206 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.06823 </td>
+   <td style="text-align:right;"> 33.12104 </td>
   </tr>
 </tbody>
 </table>
@@ -830,35 +830,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 33.897452 29.382434 39.729310 29.523313 31.415508 29.884756 17.481386
-##   [8] 30.317566 33.516836 36.068230 30.792595 21.513371 33.806714 18.348887
-##  [15] 33.054798 22.150448 22.770986 24.989311 30.280924 32.102438 27.821276
-##  [22] 26.642487 24.778134 32.838337 36.324994 25.096328 18.623429 30.757799
-##  [29] 24.465123 26.651556 25.455577 39.112993 30.755474 29.364076 30.054582
-##  [36] 36.027307 28.686847 26.542273 28.128803 33.639594 24.451841 36.527995
-##  [43] 33.022184 29.018652 29.005920 24.002321 31.785710 30.193651 33.266944
-##  [50]  9.567978 22.529740 29.029709 32.251436 35.232829 29.077429 21.544015
-##  [57] 22.646678 28.496008 30.708719 32.321395 31.583349 29.753448 33.300894
-##  [64] 23.080794 20.266951 36.213717 34.179899 25.122828 28.583119 31.192843
-##  [71] 32.969227 30.793463 29.183959 26.246097 31.617254 32.940636 29.067134
-##  [78] 30.850151 24.365055 27.890829 23.704370 24.705611 26.795681 31.307061
-##  [85] 28.631376 33.581304 24.083854 35.427188 35.250856 23.239270 31.822175
-##  [92] 30.034579 24.552505 25.840735 29.761001 26.237582 22.670452 31.562706
-##  [99] 25.293349 35.206560 28.695275 32.431917 21.880925 27.679252 25.653947
-## [106] 22.737201 26.159944 20.220486 20.946632 26.029698  9.289973 26.064451
-## [113] 24.304564 30.683930 26.556266 33.496884 25.841180 19.251002 16.588397
-## [120] 27.000456 16.031283 27.138866 24.147680 27.212913 27.906480 34.292837
-## [127] 35.100470 20.262522 20.990654 29.889986 22.533049 27.803764 26.561682
-## [134] 31.628529 23.884178 21.184369 28.359092 29.159268 24.688478 15.449363
-## [141] 33.893469 24.932828 22.202822 25.509302 19.248512 22.309783 30.230808
-## [148] 21.728482 31.424331 25.274207 31.952769 25.360741 29.267328 36.850071
-## [155] 32.811526 25.011702 22.615376 29.521667 26.174809 29.320354 17.688114
-## [162] 21.223809 21.359619 30.377377 22.715665 26.214662 17.607744 28.204791
-## [169] 25.483327 26.447378 23.768387 19.916506 26.164940 28.353001 17.307596
-## [176] 19.123600 24.856908 16.758004 22.396095 30.393937 17.833034 26.610879
-## [183] 25.258698 34.056139 37.833933 21.690515 12.691301 22.346300 26.041543
-## [190] 21.096730 26.185576 30.638838 26.024942 22.527076 29.568648 33.142622
-## [197] 18.790034 19.769089 27.668529 17.038779
+##   [1] 34.936902 30.019891 28.451076 16.788779 34.764321 38.397626 30.400557
+##   [8] 29.942432 30.492058 33.121043 35.960233 43.856997 30.257289 23.792668
+##  [15] 26.847132 34.399715 28.992704 28.539722 31.424931 31.960981 29.085327
+##  [22] 33.043928 29.151188 36.687671 30.160547 32.304617 37.827548 26.511880
+##  [29] 31.923013 29.852818 21.993104 29.389877 29.222368 23.097647 30.625510
+##  [36] 35.124169 31.965693 33.802743 36.912203 28.846452 32.267618 36.150915
+##  [43] 37.884039 25.535940 32.569628 28.468763 37.515084 34.319711 29.778265
+##  [50] 31.530982 34.308667 28.702642 31.054170 34.704510 31.979260 30.449550
+##  [57] 34.728510 38.175960 32.279529 31.605352 30.785407 28.575938 30.569940
+##  [64] 28.138742 35.810172 30.349330 33.789374 29.662094 29.112896 28.083190
+##  [71] 31.266036 28.839851 34.204360 37.392754 30.825257 28.748243 31.541444
+##  [78] 32.280109 32.155604 33.486868 33.005704 33.465904 25.656712 29.557711
+##  [85] 24.370238 25.425667 18.133640 33.977978 32.603560 24.134275 28.672662
+##  [92] 19.531746 35.469681 20.890560 28.342781 25.020278 22.265928 28.411419
+##  [99] 29.324905 29.016933 28.893280 31.319179 18.051113 18.987303 19.682579
+## [106] 32.363673 25.921267 24.271825 23.014966 31.138964 19.957714 28.079621
+## [113] 20.086985 23.722126 26.571251 14.268584 23.767017 26.891219 26.855154
+## [120] 25.968457 29.902259 23.343058 24.094396 27.009040 19.605592 32.373993
+## [127] 25.079271 33.351304 28.129626 10.117571 27.476933 34.666661 27.911842
+## [134] 21.579251 24.433061 21.607498 26.908980 19.983190 16.217947 30.033479
+## [141] 13.470353 28.761415 29.060153 19.486171 28.867402 34.557829 19.909812
+## [148] 40.598040 20.629274 21.597261 28.898420 29.493201 20.287996 21.601376
+## [155] 30.752834 18.699856 25.446973 16.594376 23.732073 16.905455 29.087163
+## [162] 20.650332 27.805995 29.012877 31.583627 20.448182 24.290147 29.442375
+## [169] 29.750634 26.544440 23.455695 21.738820 18.373853 20.762907 28.778202
+## [176] 18.001974 28.213189 30.553555 25.985988 26.631214 21.784432  9.564705
+## [183] 25.855355 32.278676 23.497267 22.239742 19.906562 16.780631 12.608780
+## [190] 26.853161 23.209421 23.205263 30.772465 30.726348 25.757677 31.457944
+## [197] 34.159329 23.429669 22.902441 19.878373
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -890,6 +890,7 @@ Now, suppose we tested 141 students. First, let's read and check the uncleaned d
 raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 head(raw_data)
 ```
+
 
 <div class="figure" style="text-align: center">
 <img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tidydata_3.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
@@ -1218,27 +1219,233 @@ head(raw_data)
 </tbody>
 </table></div>
 
-Now, let's do some cleanining using `dplyr`, `tidyr` and other `tidyverse` libraries. Finally, we will check the data:
+In order to clean the data, we use *tidyverse* which is a collection of packages to work with data. One of the tidyverse packages that we use regularly is `dplyr` which includes several functions:
+
+- `mutate()` adds new variables or change existing ones.
+- `select()` pick variables (columns) based on their names.
+- `filter()` picks cases (rows) based on their values.
+- `summarise()` gives a single single summary of the data (e.g., mean, counts, etc.)
+- `arrange()` changes the ordering of the rows.
+- `group_by()` divides your dataframe into grouped dataframes and allow you to do each of the above operations (except for `arrange`) on every one of them separately.
+
+Pick `subject`, `age`, and `gender` columns:
+
+
+```r
+selected_data <- select(raw_data, subject, age, gender)
+```
+
+Now, do the following tasks: pick all the male participants, pick all the male participants **or** those greater than 25 years old, and finally pick all male participants **and** those greater than 25 years old:
+
+
+```r
+# filter all males
+filtered_data_male <- filter(raw_data, gender == "Male")
+# filter males and older than 25
+filtered_data_male_and_greater25 <- filter(raw_data, gender == "Male" & age > 25 )
+# filter males or older than 25
+filtered_data_male_or_greater25 <- filter(raw_data, gender == "Male" | age > 25 )
+```
+
+Arrange (order) your dataframe based on the age, once in an ascending order (youngers first) and once based on descending order (olders first):
+
+
+```r
+# order participants based on their age
+arranged_data <- arrange(raw_data, age)
+# order participants based on their age (descendeing)
+arranged_data_descending <- arrange(raw_data, desc(age))
+```
+
+Create a column to show if the participant has finished the task or not:
+
+
+```r
+mutated_data <- mutate (raw_data, finished= case_when(progress==100~ "Yes",T~ "No"))
+```
+
+Summarize participants age and sd:
+
+```r
+summarise(raw_data, mean= mean(age, na.rm=T),
+          sd= sd (age, na.rm=T))
+```
+
+<div class="kable-table">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 21.27273 </td>
+   <td style="text-align:right;"> 6.635655 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+
+A new function: **pipe operators** `%>%` pipes a value into the next function:
+
+
+```r
+raw_data %>% 
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T))
+```
+
+<div class="kable-table">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 21.27273 </td>
+   <td style="text-align:right;"> 6.635655 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+
+Calculate the age mean of younger than 25 participants only:
+
+
+```r
+raw_data %>% 
+  filter (age < 25) %>%
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T))
+```
+
+<div class="kable-table">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 19.1913 </td>
+   <td style="text-align:right;"> 1.515393 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+
+Calculate the age mean of younger than 25 participants  for each gender separately:
+
+
+```r
+raw_data %>% 
+  filter (age < 25) %>%
+  group_by(gender) %>%
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T)) %>%
+  ungroup ()
+```
+
+<div class="kable-table">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> gender </th>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 19.21053 </td>
+   <td style="text-align:right;"> 1.556693 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 19.10000 </td>
+   <td style="text-align:right;"> 1.333772 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+
+
+### Exercise
+
+1. Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately:
+
+```r
+raw_data %>%
+  mutate(age_group = case_when(age > 23 ~ "greater than 23", T~ "younger than 23")) %>%
+  group_by(age_group) %>%
+  summarise(reasoning_total = mean(reasoning_total, na.rm=T))
+```
+
+<div class="kable-table">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> age_group </th>
+   <th style="text-align:right;"> reasoning_total </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> greater than 23 </td>
+   <td style="text-align:right;"> 8.800000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> younger than 23 </td>
+   <td style="text-align:right;"> 7.842975 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+
+2. Add the open_mindedness total score (sum) to the dataframe and then convert subject column to factor:
+
+```r
+mutated_openmind_data <- raw_data %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
+  mutate(subject= factor(subject))
+```
+
+
+Now, let's do some cleaning using `dplyr`, `tidyr` and other `tidyverse` libraries: 
 
 ```r
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
   mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
-  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
-         thinking2= case_when(thinking2=='10'~ 1,T~0),
-         thinking3= case_when(thinking3=='39'~ 1,T~0),
+  mutate(thinking1= case_when(thinking1==4~ 1,T~0),
+         thinking2= case_when(thinking2==10~ 1,T~0),
+         thinking3= case_when(thinking3==39~ 1,T~0),
          thinking_total= thinking1 + thinking2 + thinking3) %>%
   select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
   mutate(stage= gsub("_.*", "", stage)) %>%
-  rename(consent= consent_form) %>% # rename a column
-  #mutate_if(is.character, factor) %>%
-  mutate(subject= factor(subject), # convert all characters to factor
-         group = factor(group),
-         stage = factor(stage))
+  rename(consent= consent_form) # rename a column
 ```
 
 
@@ -1369,16 +1576,16 @@ str(cleaned_data)
 ```
 ## tibble [917 × 12] (S3: tbl_df/tbl/data.frame)
 ##  $ progress        : num [1:917] 100 100 100 100 100 100 100 100 100 100 ...
-##  $ subject         : Factor w/ 131 levels "subj1","subj10",..: 1 1 1 1 1 1 1 45 45 45 ...
+##  $ subject         : chr [1:917] "subj1" "subj1" "subj1" "subj1" ...
 ##  $ consent         : chr [1:917] "I consent" "I consent" "I consent" "I consent" ...
 ##  $ age             : num [1:917] 18 18 18 18 18 18 18 18 18 18 ...
 ##  $ gender          : chr [1:917] "Female" "Female" "Female" "Female" ...
-##  $ group           : Factor w/ 2 levels "Complex","Simple": 1 1 1 1 1 1 1 2 2 2 ...
+##  $ group           : chr [1:917] "Complex" "Complex" "Complex" "Complex" ...
 ##  $ numeracy_total  : num [1:917] 9 9 9 9 9 9 9 9 9 9 ...
 ##  $ reasoning_total : num [1:917] 9 9 9 9 9 9 9 10 10 10 ...
 ##  $ openminded_total: num [1:917] 39 39 39 39 39 39 39 46 46 46 ...
 ##  $ thinking_total  : num [1:917] 0 0 0 0 0 0 0 2 2 2 ...
-##  $ stage           : Factor w/ 7 levels "stage1","stage2",..: 1 2 3 4 5 6 7 1 2 3 ...
+##  $ stage           : chr [1:917] "stage1" "stage2" "stage3" "stage4" ...
 ##  $ truth_estimate  : num [1:917] 36 70 68 54 51 43 41 50 55 55 ...
 ```
 
@@ -1402,7 +1609,14 @@ Now, let's do some descriptive statistics. First, we can open a new script calle
 
 
 ```r
-data_exp1 <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+
+
+data_exp1 <- data_exp1_orig%>% 
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         stage = factor(stage))
 ```
 
 How many participants in total?
@@ -1468,27 +1682,30 @@ data_exp1 %>%
 ```
 
 ```
-##     progress     subject            consent               age       
-##  Min.   :100   Length:131         Length:131         Min.   :16.00  
-##  1st Qu.:100   Class :character   Class :character   1st Qu.:18.00  
-##  Median :100   Mode  :character   Mode  :character   Median :19.00  
-##  Mean   :100                                         Mean   :21.15  
-##  3rd Qu.:100                                         3rd Qu.:20.00  
-##  Max.   :100                                         Max.   :63.00  
-##     gender             group           numeracy_total   reasoning_total
-##  Length:131         Length:131         Min.   : 0.000   Min.   : 4.00  
-##  Class :character   Class :character   1st Qu.: 8.000   1st Qu.: 8.00  
-##  Mode  :character   Mode  :character   Median :10.000   Median : 8.00  
-##                                        Mean   : 8.779   Mean   : 8.45  
-##                                        3rd Qu.:10.000   3rd Qu.: 9.00  
-##                                        Max.   :11.000   Max.   :12.00  
-##  openminded_total thinking_total      stage           truth_estimate  
-##  Min.   :19.0     Min.   :0.0000   Length:131         Min.   :  0.00  
-##  1st Qu.:33.5     1st Qu.:0.0000   Class :character   1st Qu.: 43.50  
-##  Median :39.0     Median :0.0000   Mode  :character   Median : 61.00  
-##  Mean   :38.2     Mean   :0.8092                      Mean   : 57.09  
-##  3rd Qu.:43.0     3rd Qu.:1.0000                      3rd Qu.: 75.50  
-##  Max.   :48.0     Max.   :3.0000                      Max.   :100.00
+##     progress      subject      consent               age       
+##  Min.   :100   subj1  :  1   Length:131         Min.   :16.00  
+##  1st Qu.:100   subj10 :  1   Class :character   1st Qu.:18.00  
+##  Median :100   subj101:  1   Mode  :character   Median :19.00  
+##  Mean   :100   subj102:  1                      Mean   :21.15  
+##  3rd Qu.:100   subj103:  1                      3rd Qu.:20.00  
+##  Max.   :100   subj104:  1                      Max.   :63.00  
+##                (Other):125                                     
+##     gender              group    numeracy_total   reasoning_total
+##  Length:131         Complex:65   Min.   : 0.000   Min.   : 4.00  
+##  Class :character   Simple :66   1st Qu.: 8.000   1st Qu.: 8.00  
+##  Mode  :character                Median :10.000   Median : 8.00  
+##                                  Mean   : 8.779   Mean   : 8.45  
+##                                  3rd Qu.:10.000   3rd Qu.: 9.00  
+##                                  Max.   :11.000   Max.   :12.00  
+##                                                                  
+##  openminded_total thinking_total      stage     truth_estimate  
+##  Min.   :19.0     Min.   :0.0000   stage1:131   Min.   :  0.00  
+##  1st Qu.:33.5     1st Qu.:0.0000   stage2:  0   1st Qu.: 43.50  
+##  Median :39.0     Median :0.0000   stage3:  0   Median : 61.00  
+##  Mean   :38.2     Mean   :0.8092   stage4:  0   Mean   : 57.09  
+##  3rd Qu.:43.0     3rd Qu.:1.0000   stage5:  0   3rd Qu.: 75.50  
+##  Max.   :48.0     Max.   :3.0000   stage6:  0   Max.   :100.00  
+##                                    stage7:  0
 ```
 
 Alternatively, we can use `base R `summary` function`skimr` library:
@@ -1782,7 +1999,7 @@ barplot_exp1 <- aggregated_data_exp1 %>%
 barplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" />
 
 ```r
 barplot_facet_exp1 <- aggregated_data_exp1 %>%
@@ -1799,7 +2016,7 @@ barplot_facet_exp1 <- aggregated_data_exp1 %>%
 barplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-2.png" style="display: block; margin: auto;" />
 
 ```r
 lineplot_exp1 <- aggregated_data_exp1 %>%
@@ -1816,7 +2033,7 @@ lineplot_exp1 <- aggregated_data_exp1 %>%
 lineplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-3.png" style="display: block; margin: auto;" />
 
 ```r
 violinplot_exp1 <- data_exp1 %>%
@@ -1832,7 +2049,7 @@ violinplot_exp1 <- data_exp1 %>%
 violinplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-4.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-4.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_exp1 <- data_exp1 %>%
@@ -1849,7 +2066,7 @@ boxplot_exp1 <- data_exp1 %>%
 boxplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-5.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-5.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_facet_exp1 <- data_exp1 %>%
@@ -1867,7 +2084,7 @@ boxplot_facet_exp1 <- data_exp1 %>%
 boxplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-59-6.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-6.png" style="display: block; margin: auto;" />
 
 How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
 
@@ -1882,7 +2099,7 @@ combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxp
 combined_plot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-61-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" />
 
 How to save a plot?
 
@@ -2187,7 +2404,7 @@ afex_plot(aov_m1, x = "stage", trace = "group", error='between',
   scale_fill_simpsons()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-79-1.png" style="display: block; margin: auto;" />
 
 
 If you are interested in this topic, check out this nice tutorial about [using afex to run ANOVA](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html), and also this interesting tutorial on the [emmeans package](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/).
@@ -2254,7 +2471,7 @@ rotello_aov <- aov_car (resp ~ target*prime +
 
 ## Correlation
 
-Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and cognitive style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
+Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
 
 
 ```r
@@ -2351,7 +2568,7 @@ cor_data_exp1 %>%
 </tbody>
 </table></div>
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<img src="workshop_notes_files/figure-html/unnamed-chunk-83-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>

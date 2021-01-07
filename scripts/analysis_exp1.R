@@ -25,7 +25,17 @@ options(scipen=999) # turn off scientific notations
 # --------------- Descriptive Statistics ----------------- #
 # -------------------------------------------------------- #
 
-data_exp1 <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+
+
+
+data_exp1 <- data_exp1_orig%>% 
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         stage = factor(stage))
+
+
 
 aggregated_data_exp1 <- data_exp1 %>%
   group_by(stage, group) %>%
@@ -35,6 +45,7 @@ aggregated_data_exp1 <- data_exp1 %>%
 
 # how many participants in total? 131
 data_exp1 %>% summarise(n= n_distinct(subject))
+
 # how many participants in each group?
 data_exp1 %>% group_by(subject) %>% filter(row_number()==1) %>% ungroup () %>% group_by(group) %>% count()
 

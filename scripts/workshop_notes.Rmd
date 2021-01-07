@@ -86,7 +86,7 @@ The aim of the study is to test if simple arguments are more effective in belief
 
 The first stage is the base rating stage. The next three stages include supportive arguments of the theory and the last three arguments include disproving arguments of the theory. We hypothesized that the group with simple arguments shows better persuasion (as it reflects in higher ratings for the supportive arguments) and better dissuasion (as it reflects in lower ratings for the opposing arguments).
 
-In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including CRT, AOT-E, mindware, and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
+In the last part of the study, participants will be asked to answer several cognitive capacity/style measures including thinking style (CRT), open-mindedness (AOT-E), reasoning ability (mindware), and numeracy scales. We hypothesized that cognitive ability, cognitive style, and open-mindedness are positive predictors of persuasion and dissuasion. These associations should be more pronounced for participants in the group with complex arguments because the ability and willingness to engage in deliberative thinking may favor participants to assess the underlying logical structure of those arguments. However, for participants in the simple group, the logical structure of arguments is more evident, so participants with lower ability can still assess the logical status of those arguments.
  
 
 ```{r fig.align='center', echo=FALSE}
@@ -99,7 +99,7 @@ Thus, our hypotheses for this experiment are as follows:
 
 - Participants in the group with simple arguments have lower ratings for opposing arguments (They are more easily dissuaded than those in the group with complex arguments).
 
-- There are significant associations between CRT, AOT-E, Numeracy, and mindware with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
+- There are significant associations between thinking style (CRT), open-mindedness (AOT-E), reasoning ability (mindware), and numeracy scales with both persuasion and dissuasion indexes in each group and in the entire sample. The relationship between these measures should be stronger, although not significantly, for participants in the group with complex arguments.
 
 
 ```{r echo=FALSE, out.width="550px", out.height="400px"}
@@ -450,6 +450,7 @@ raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 head(raw_data)
 ```
 
+
 ```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations"}
 knitr::include_graphics(here('inputs','tidydata_3.jpg'))
 ```
@@ -463,26 +464,116 @@ knitr::kable(head(raw_data)) %>%
   scroll_box(width = "780px")
 ```
 
-Now, let's do some cleanining using `dplyr`, `tidyr` and other `tidyverse` libraries. Finally, we will check the data:
+In order to clean the data, we use *tidyverse* which is a collection of packages to work with data. One of the tidyverse packages that we use regularly is `dplyr` which includes several functions:
+
+- `mutate()` adds new variables or change existing ones.
+- `select()` pick variables (columns) based on their names.
+- `filter()` picks cases (rows) based on their values.
+- `summarise()` gives a single single summary of the data (e.g., mean, counts, etc.)
+- `arrange()` changes the ordering of the rows.
+- `group_by()` divides your dataframe into grouped dataframes and allow you to do each of the above operations (except for `arrange`) on every one of them separately.
+
+Pick `subject`, `age`, and `gender` columns:
+
+```{r message=F, warning=F, eval=F}
+selected_data <- select(raw_data, subject, age, gender)
+```
+
+Now, do the following tasks: pick all the male participants, pick all the male participants **or** those greater than 25 years old, and finally pick all male participants **and** those greater than 25 years old:
+
+```{r message=F, warning=F, eval=F}
+# filter all males
+filtered_data_male <- filter(raw_data, gender == "Male")
+# filter males and older than 25
+filtered_data_male_and_greater25 <- filter(raw_data, gender == "Male" & age > 25 )
+# filter males or older than 25
+filtered_data_male_or_greater25 <- filter(raw_data, gender == "Male" | age > 25 )
+```
+
+Arrange (order) your dataframe based on the age, once in an ascending order (youngers first) and once based on descending order (olders first):
+
+```{r message=F, warning=F}
+# order participants based on their age
+arranged_data <- arrange(raw_data, age)
+# order participants based on their age (descendeing)
+arranged_data_descending <- arrange(raw_data, desc(age))
+```
+
+Create a column to show if the participant has finished the task or not:
+
+```{r message=F, warning=F}
+mutated_data <- mutate (raw_data, finished= case_when(progress==100~ "Yes",T~ "No"))
+```
+
+Summarize participants age and sd:
+```{r message=F, warning=F}
+summarise(raw_data, mean= mean(age, na.rm=T),
+          sd= sd (age, na.rm=T))
+```
+
+A new function: **pipe operators** `%>%` pipes a value into the next function:
+
+```{r message=F, warning=F}
+raw_data %>% 
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T))
+```
+
+Calculate the age mean of younger than 25 participants only:
+
+```{r message=F, warning=F}
+raw_data %>% 
+  filter (age < 25) %>%
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T))
+```
+
+Calculate the age mean of younger than 25 participants  for each gender separately:
+
+```{r message=F, warning=F}
+raw_data %>% 
+  filter (age < 25) %>%
+  group_by(gender) %>%
+  summarise(mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T)) %>%
+  ungroup ()
+```         
+
+
+### Exercise
+
+1. Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately:
+```{r message=F, warning=F}
+raw_data %>%
+  mutate(age_group = case_when(age > 23 ~ "greater than 23", T~ "younger than 23")) %>%
+  group_by(age_group) %>%
+  summarise(reasoning_total = mean(reasoning_total, na.rm=T))
+```     
+
+2. Add the open_mindedness total score (sum) to the dataframe and then convert subject column to factor:
+```{r message=F, warning=F}
+mutated_openmind_data <- raw_data %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
+  mutate(subject= factor(subject))
+``` 
+
+
+Now, let's do some cleaning using `dplyr`, `tidyr` and other `tidyverse` libraries: 
 ```{r message=F, warning=F, eval=F}
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
   mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
-  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
-         thinking2= case_when(thinking2=='10'~ 1,T~0),
-         thinking3= case_when(thinking3=='39'~ 1,T~0),
+  mutate(thinking1= case_when(thinking1==4~ 1,T~0),
+         thinking2= case_when(thinking2==10~ 1,T~0),
+         thinking3= case_when(thinking3==39~ 1,T~0),
          thinking_total= thinking1 + thinking2 + thinking3) %>%
   select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
   mutate(stage= gsub("_.*", "", stage)) %>%
-  rename(consent= consent_form) %>% # rename a column
-  #mutate_if(is.character, factor) %>%
-  mutate(subject= factor(subject), # convert all characters to factor
-         group = factor(group),
-         stage = factor(stage))
+  rename(consent= consent_form) # rename a column
 ```
 
 
@@ -491,20 +582,16 @@ cleaned_data <- raw_data %>%
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
   mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
-  mutate(thinking1= case_when(thinking1=='4'~ 1,T~0),
-         thinking2= case_when(thinking2=='10'~ 1,T~0),
-         thinking3= case_when(thinking3=='39'~ 1,T~0),
+  mutate(thinking1= case_when(thinking1==4~ 1,T~0),
+         thinking2= case_when(thinking2==10~ 1,T~0),
+         thinking3= case_when(thinking3==39~ 1,T~0),
          thinking_total= thinking1 + thinking2 + thinking3) %>%
   select(-thinking1:-openminded8) %>%
   pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
   mutate(stage= gsub("_.*", "", stage)) %>%
-  rename(consent= consent_form) %>% # rename a column
-  #mutate_if(is.character, factor) %>%
-  mutate(subject= factor(subject), # convert all characters to factor
-         group = factor(group),
-         stage = factor(stage))
+  rename(consent= consent_form)
 
 knitr::kable(head(cleaned_data)) %>%
   kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
@@ -545,7 +632,14 @@ knitr::include_graphics(here('inputs','not_normal.png'))
 Now, let's do some descriptive statistics. First, we can open a new script called `analysis_exp1.r` and read the cleaned data again. 
 
 ```{r message=F, warning=F,}
-data_exp1 <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+
+
+data_exp1 <- data_exp1_orig%>% 
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         stage = factor(stage))
 ```
 
 How many participants in total?
@@ -871,7 +965,7 @@ knitr::kable(nice(rotello_aov)) %>%
 
 ## Correlation
 
-Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and cognitive style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
+Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
 
 ```{r message=F, eval=F, fig.align='center', dpi=300}
 
