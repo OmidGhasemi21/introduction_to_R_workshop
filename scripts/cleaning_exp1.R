@@ -1,10 +1,4 @@
 
-#########################
-
-# Argumentation and persuasion (2020): Experiment 1 (data cleaning)
-# Omidreza.ghasemi@hdr.mq.edu.au
-#########################
-
 
 library(tidyverse)
 library(janitor)

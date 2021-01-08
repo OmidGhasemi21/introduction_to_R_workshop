@@ -1,10 +1,4 @@
 
-#########################
-
-# Argumentation and persuasion (2020): Experiment 1 (data analysis)
-# Omidreza.ghasemi@hdr.mq.edu.au
-#########################
-
 
 
 library(tidyverse)
@@ -76,94 +70,6 @@ ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_b
 ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and sd for age and cognitive ability
 
 
-
-# -------------------------------------------------------- #
-# ----------------- Data Visualization ------------------- #
-# -------------------------------------------------------- #
-
-barplot_exp1 <- aggregated_data_exp1 %>%
-  ggplot(aes(x=stage, y= truth_estimate, fill=group)) +
-  geom_bar(stat = "identity", position= "dodge")+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_bw() + 
-  scale_fill_jama() 
-
-#ggsave(barplot_exp1, filename = here("outputs","barplot_exp1.png"), dpi=300)
-
-
-barplot_facet_exp1 <- aggregated_data_exp1 %>%
-  ggplot(aes(x=group, y= truth_estimate, fill=stage)) +
-  geom_bar(stat = "identity", position= "dodge")+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_bw() + 
-  theme(legend.position = "none",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
-  facet_wrap(~stage)+
-  scale_fill_jco() 
-
-#ggsave(barplot_facet_exp1, filename = here("outputs","barplot_facet_exp1.png"), dpi=300)
-
-
-lineplot_exp1 <- aggregated_data_exp1 %>%
-  ggplot(aes(x=factor(stage), y= truth_estimate, group= group, color= group)) +
-  geom_line(aes(linetype= group)) +
-  geom_point(size= 5)+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_classic() +
-  theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
-  scale_color_nejm() 
-
-#ggsave(lineplot_exp1, filename = here("outputs","lineplot_exp1.png"), dpi=300)
-
-
-violinplot_exp1 <- data_exp1 %>%
-  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
-  geom_violin()+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_bw() + 
-  theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
-  scale_fill_d3() 
-
-#ggsave(violinplot_exp1, filename = here("outputs","violinplot_exp1.png"), dpi=300)
-
-
-boxplot_exp1 <- data_exp1 %>%
-  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
-  geom_boxplot()+
-  #geom_point(position = position_dodge(width=0.75), alpha= .5)+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_bw() + 
-  theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
-  scale_fill_simpsons() 
-
-#ggsave(boxplot_exp1, filename = here("outputs","boxplot_exp1.png"), dpi=300)
-
-
-boxplot_facet_exp1 <- data_exp1 %>%
-  ggplot(aes(x=factor(stage), y= truth_estimate, fill= group)) +
-  geom_boxplot()+
-  labs (x= '', y= "Truth Likelihhod Estimate") + 
-  theme_bw() + 
-  theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12),
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-  facet_wrap(~group)+
-  scale_color_simpsons() 
-
-
-#ggsave(boxplot_facet_exp1, filename = here("outputs","boxplot_facet_exp1.png"), dpi=300)
-
-
-combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxplot_exp1)
-#ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), dpi=300)
 
 
 

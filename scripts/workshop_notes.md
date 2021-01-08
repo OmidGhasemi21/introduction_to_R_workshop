@@ -7,7 +7,7 @@ author:
   - name: "Mahdi Mazidi"
     affiliation: University of Western Australia
     email: mahdi.mazidisharafabadi@research.uwa.edu.au
-date: "07 January, 2021"
+date: "08 January, 2021"
 output: 
   html_document:
     keep_md: yes
@@ -662,32 +662,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.93690 </td>
+   <td style="text-align:right;"> 27.31804 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.01989 </td>
+   <td style="text-align:right;"> 35.84457 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.45108 </td>
+   <td style="text-align:right;"> 20.68472 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 16.78878 </td>
+   <td style="text-align:right;"> 21.08129 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.76432 </td>
+   <td style="text-align:right;"> 36.05476 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 38.39763 </td>
+   <td style="text-align:right;"> 27.73674 </td>
   </tr>
 </tbody>
 </table>
@@ -706,37 +706,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 25.75768 </td>
+   <td style="text-align:right;"> 24.94192 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 31.45794 </td>
+   <td style="text-align:right;"> 31.54323 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 34.15933 </td>
+   <td style="text-align:right;"> 31.02051 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 23.42967 </td>
+   <td style="text-align:right;"> 18.61885 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 22.90244 </td>
+   <td style="text-align:right;"> 23.05588 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 19.87837 </td>
+   <td style="text-align:right;"> 28.32948 </td>
   </tr>
 </tbody>
 </table>
@@ -749,7 +749,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 30.62551
+## [1] 27.4569
 ```
 
 ### Exercise
@@ -773,52 +773,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.93690 </td>
+   <td style="text-align:right;"> 27.31804 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.01989 </td>
+   <td style="text-align:right;"> 35.84457 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.45108 </td>
+   <td style="text-align:right;"> 20.68472 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 16.78878 </td>
+   <td style="text-align:right;"> 21.08129 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.76432 </td>
+   <td style="text-align:right;"> 36.05476 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 38.39763 </td>
+   <td style="text-align:right;"> 27.73674 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.40056 </td>
+   <td style="text-align:right;"> 26.42438 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.94243 </td>
+   <td style="text-align:right;"> 31.06812 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.49206 </td>
+   <td style="text-align:right;"> 28.80278 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.12104 </td>
+   <td style="text-align:right;"> 30.83225 </td>
   </tr>
 </tbody>
 </table>
@@ -830,35 +830,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 34.936902 30.019891 28.451076 16.788779 34.764321 38.397626 30.400557
-##   [8] 29.942432 30.492058 33.121043 35.960233 43.856997 30.257289 23.792668
-##  [15] 26.847132 34.399715 28.992704 28.539722 31.424931 31.960981 29.085327
-##  [22] 33.043928 29.151188 36.687671 30.160547 32.304617 37.827548 26.511880
-##  [29] 31.923013 29.852818 21.993104 29.389877 29.222368 23.097647 30.625510
-##  [36] 35.124169 31.965693 33.802743 36.912203 28.846452 32.267618 36.150915
-##  [43] 37.884039 25.535940 32.569628 28.468763 37.515084 34.319711 29.778265
-##  [50] 31.530982 34.308667 28.702642 31.054170 34.704510 31.979260 30.449550
-##  [57] 34.728510 38.175960 32.279529 31.605352 30.785407 28.575938 30.569940
-##  [64] 28.138742 35.810172 30.349330 33.789374 29.662094 29.112896 28.083190
-##  [71] 31.266036 28.839851 34.204360 37.392754 30.825257 28.748243 31.541444
-##  [78] 32.280109 32.155604 33.486868 33.005704 33.465904 25.656712 29.557711
-##  [85] 24.370238 25.425667 18.133640 33.977978 32.603560 24.134275 28.672662
-##  [92] 19.531746 35.469681 20.890560 28.342781 25.020278 22.265928 28.411419
-##  [99] 29.324905 29.016933 28.893280 31.319179 18.051113 18.987303 19.682579
-## [106] 32.363673 25.921267 24.271825 23.014966 31.138964 19.957714 28.079621
-## [113] 20.086985 23.722126 26.571251 14.268584 23.767017 26.891219 26.855154
-## [120] 25.968457 29.902259 23.343058 24.094396 27.009040 19.605592 32.373993
-## [127] 25.079271 33.351304 28.129626 10.117571 27.476933 34.666661 27.911842
-## [134] 21.579251 24.433061 21.607498 26.908980 19.983190 16.217947 30.033479
-## [141] 13.470353 28.761415 29.060153 19.486171 28.867402 34.557829 19.909812
-## [148] 40.598040 20.629274 21.597261 28.898420 29.493201 20.287996 21.601376
-## [155] 30.752834 18.699856 25.446973 16.594376 23.732073 16.905455 29.087163
-## [162] 20.650332 27.805995 29.012877 31.583627 20.448182 24.290147 29.442375
-## [169] 29.750634 26.544440 23.455695 21.738820 18.373853 20.762907 28.778202
-## [176] 18.001974 28.213189 30.553555 25.985988 26.631214 21.784432  9.564705
-## [183] 25.855355 32.278676 23.497267 22.239742 19.906562 16.780631 12.608780
-## [190] 26.853161 23.209421 23.205263 30.772465 30.726348 25.757677 31.457944
-## [197] 34.159329 23.429669 22.902441 19.878373
+##   [1] 27.31804 35.84457 20.68472 21.08129 36.05476 27.73674 26.42438
+##   [8] 31.06812 28.80278 30.83225 28.69892 34.23120 25.68695 26.62705
+##  [15] 29.26783 34.79712 27.19876 19.65816 32.87793 38.97471 26.75085
+##  [22] 35.28736 25.79276 30.84449 28.96959 44.20110 33.11799 34.25937
+##  [29] 27.84891 24.74826 28.38601 33.61794 30.45825 33.49049 27.45690
+##  [36] 34.25322 27.81368 34.88416 25.61717 40.19785 33.02197 25.08778
+##  [43] 39.12054 41.93377 23.39820 29.11160 24.48477 32.38688 28.17932
+##  [50] 38.91675 35.63543 31.25885 30.25368 31.42260 28.17437 29.38538
+##  [57] 27.76183 23.35713 25.99615 32.79334 32.56890 29.93434 20.22851
+##  [64] 38.24406 30.43377 23.44002 24.96360 34.98183 32.51297 24.79457
+##  [71] 36.82528 27.05530 30.84603 37.18845 26.18793 37.22764 26.84363
+##  [78] 28.38186 31.57380 27.10848 32.70446 38.19116 29.46841 35.76251
+##  [85] 26.02002 28.18025 31.43749 33.32285 29.26889 27.76762 26.57931
+##  [92] 32.20624 24.41924 25.71747 38.19318 34.52862 32.62205 24.13347
+##  [99] 26.22020 33.49023 29.94763 18.48571 27.60599 22.42544 32.72898
+## [106] 21.70626 24.59597 20.73390 24.65577 27.14987 23.05558 14.39544
+## [113] 19.98412 24.34217 33.10920 23.27564 36.59287 20.39471 27.59638
+## [120] 28.57659 34.74110 28.82598 24.33464 22.41557 21.15612 31.44633
+## [127] 33.71362 19.62862 27.99025 29.39302 33.32924 14.05683 31.63085
+## [134] 23.77557 18.10297 23.13547 16.32508 29.24927 28.21079 25.57964
+## [141] 20.09687 27.34707 22.42523 32.10369 28.13459 29.46659 14.30588
+## [148] 17.78426 32.43584 21.45324 28.60425 22.71048 21.32945 23.43517
+## [155] 21.07106 35.61454 13.71961 21.60155 20.28978 16.95751 30.87929
+## [162] 27.56248 22.50916 26.21606 29.24120 20.63996 20.88157 26.13374
+## [169] 27.15191 25.22725 29.82304 31.49552 18.73981 27.46560 27.32040
+## [176] 25.61799 28.37246 18.13758 16.60906 33.87783 20.26097 25.35532
+## [183] 22.36039 29.74458 25.96594 16.14290 29.75886 18.43438 14.22434
+## [190] 24.03650 22.27839 30.69100 25.48196 18.25269 24.94192 31.54323
+## [197] 31.02051 18.61885 23.05588 28.32948
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -1979,7 +1979,253 @@ ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and s
 </div>
 
 
-First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
+Before starting the ggplot, lets try a visualization using a function from the Base R the plot() function shows the association of each variable against the other one in a data handy for data with few number of variables to see if there are any patterns
+
+
+```r
+exam_data<- read_csv(here::here("cleaned_data", "exam_data.csv"))
+
+plot(x = exam_data$Anxiety, y = exam_data$Exam)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" />
+
+The code also works without writing x and y, however, writing them is strongly recommended
+
+
+```r
+plot(exam_data$Anxiety, exam_data$Exam)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-70-1.png" style="display: block; margin: auto;" />
+
+`ggplot`, the gg in ggplot stands for grammar of graphics. Grammar of graphics basically says any graphical representation of data, can be produced by a series of layers. You can think of a layer as a plastic transparency. Lets draw the same plot using ggplot. Always, mention the data we are going to work with.
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" />
+
+
+- `aes`: aes which stands for aesthetics is a relationship between a variable in your dataset and an aspect of the plot that is going to visually convey the information to the reader
+
+- Visual elements are known as geoms (short for 'geometric objects') in ggplot 2. When we define a layer, we have to tell R what geom we want displayed on that layer (do we want a bar, line dot, etc.?)
+
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+ geom_point()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-72-1.png" style="display: block; margin: auto;" />
+
+So, lets try some of them here like shape and size. Be careful with the + sign, if you clink enter for the next part of the code, the + sign should not go to the next line
+
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+
+  geom_point(size = 2, shape = 8)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" />
+
+The current plot is not very informative about the patterns for each gender.
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender))+
+  geom_point(size = 2, shape = 10)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-74-1.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gender))+
+  geom_point(size = 2, shape = 10)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-74-2.png" style="display: block; margin: auto;" />
+
+Question: why the above code doesn't make any change?
+
+
+```r
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gender))+
+  geom_point(size = 2)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" />
+
+Can assign the first layer to a variable to reduce the length of codes for next layers.
+
+
+```r
+My_graph <- ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
+
+My_graph + geom_point()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-76-1.png" style="display: block; margin: auto;" />
+
+lets add a line to the current graph
+
+```r
+My_graph + geom_point() + geom_smooth()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-77-1.png" style="display: block; margin: auto;" />
+
+Aesthetics can be set for all layers of the plot (i.e., defined in the plot as a whole) or can be set individually for each geom in a plot.
+
+
+```r
+My_graph + geom_point(aes(color = Gender)) + geom_smooth()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-78-1.png" style="display: block; margin: auto;" />
+
+```r
+My_graph + geom_point(aes(color = Gender)) + geom_smooth(aes(color = Gender))
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-78-2.png" style="display: block; margin: auto;" />
+
+The shaded area around the line is the 95% confidence interval around the line. We can switch this off by  adding `se = F` (which is short for 'standard error = False')
+
+
+```r
+My_graph + geom_point() + geom_smooth(se = F)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-79-1.png" style="display: block; margin: auto;" />
+
+
+What if we want our line to be a direct line?
+
+```r
+My_graph + geom_point() + geom_smooth(se = F, method = lm)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-80-1.png" style="display: block; margin: auto;" />
+How to change the labels of x and y axes?
+
+```r
+My_graph + geom_point() + geom_smooth(se = F, method = lm) +
+  labs(x = "Exam scores %", y = "Anxiety scores")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-81-1.png" style="display: block; margin: auto;" />
+
+Histograms are used to show distributions of variables while bar charts are used to compare variables. Histograms plot quantitative data with ranges of the data grouped into bins or intervals while bar charts plot categorical data.
+
+
+```r
+#ggplot(data = exam_data, aes(x = Anxiety, y = Exam )) + geom_histogram()
+# the code above gives an error as geom_histogram can only have x or y axis in its aes()
+
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-1.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(y = Anxiety)) + geom_histogram()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-2.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-3.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-4.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green", col = "red")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-5.png" style="display: block; margin: auto;" />
+
+Let's stop using the My_graph variable and write the whole code from the start again for a bar chart
+
+```r
+ggplot(data = exam_data, aes(x = Sleep_quality))+
+  geom_bar()
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-83-1.png" style="display: block; margin: auto;" />
+Because we want to plot a summary of the data (the mean) rather than the raw scores themselves, we have to use a stat.
+
+```r
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  geom_bar(stat = "summary", fun = "mean")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-84-1.png" style="display: block; margin: auto;" />
+
+```r
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  geom_bar(stat = "summary", fun = "mean", position = "dodge")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-84-2.png" style="display: block; margin: auto;" />
+
+The other way to get the same plot that the code above gives, is using the stat_summary function that takes the following general form: `stat_summary(function = x, geom = y)`
+
+
+```r
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  stat_summary(fun = mean, geom = "bar", position = "dodge")
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-85-1.png" style="display: block; margin: auto;" />
+How to combine multiple plots? How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+
+
+```r
+p1 = My_graph + geom_point(aes(color = Gender)) + geom_smooth()
+
+p2 = ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31)
+
+p3 = ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  stat_summary(fun = mean, geom = "bar", position = "dodge")
+
+p4 = My_graph + geom_point() + geom_smooth(se = F, method = lm) +
+  labs(x = "Exam scores %", y = "Anxiety scores")
+
+combined = p1 + p2+ p3 + p4 + plot_layout(nrow = 4, byrow = F)
+
+combined
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-86-1.png" style="display: block; margin: auto;" />
+
+```r
+p1 | p2 / p3 / p4
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-86-2.png" style="display: block; margin: auto;" />
+
+```r
+p1 | p2 / (p3 / p4)
+```
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-86-3.png" style="display: block; margin: auto;" />
+
+`ggsave()` function, which is a versatile exporting function that can export as PostScript (.eps/.ps), tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (in Windows only). In its basic form, the structure of the function is very simple: `ggsave(filename)`
+
+
+```r
+ggsave(combined, filename = here("outputs", "combined.png"), dpi=300)
+```
+
+
+Now that we learned the basics of ggplot, let's draw some plot for our experiment data. First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
 
 
 ```r
@@ -1999,7 +2245,7 @@ barplot_exp1 <- aggregated_data_exp1 %>%
 barplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-1.png" style="display: block; margin: auto;" />
 
 ```r
 barplot_facet_exp1 <- aggregated_data_exp1 %>%
@@ -2016,7 +2262,7 @@ barplot_facet_exp1 <- aggregated_data_exp1 %>%
 barplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-2.png" style="display: block; margin: auto;" />
 
 ```r
 lineplot_exp1 <- aggregated_data_exp1 %>%
@@ -2033,7 +2279,7 @@ lineplot_exp1 <- aggregated_data_exp1 %>%
 lineplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-3.png" style="display: block; margin: auto;" />
 
 ```r
 violinplot_exp1 <- data_exp1 %>%
@@ -2049,7 +2295,7 @@ violinplot_exp1 <- data_exp1 %>%
 violinplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-4.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-4.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_exp1 <- data_exp1 %>%
@@ -2066,7 +2312,7 @@ boxplot_exp1 <- data_exp1 %>%
 boxplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-5.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-5.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_facet_exp1 <- data_exp1 %>%
@@ -2084,9 +2330,9 @@ boxplot_facet_exp1 <- data_exp1 %>%
 boxplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-69-6.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-6.png" style="display: block; margin: auto;" />
 
-How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+HLet's combine our plots:
 
 <div class="figure" style="text-align: center">
 <img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/patchwork_1.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
@@ -2099,9 +2345,9 @@ combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxp
 combined_plot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-1.png" style="display: block; margin: auto;" />
 
-How to save a plot?
+And here, we save our plots to the `outputs` folder.
 
 ```rmessage
 ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), dpi=300)
@@ -2404,7 +2650,7 @@ afex_plot(aov_m1, x = "stage", trace = "group", error='between',
   scale_fill_simpsons()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-79-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-98-1.png" style="display: block; margin: auto;" />
 
 
 If you are interested in this topic, check out this nice tutorial about [using afex to run ANOVA](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html), and also this interesting tutorial on the [emmeans package](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/).
@@ -2568,7 +2814,7 @@ cor_data_exp1 %>%
 </tbody>
 </table></div>
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-83-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<img src="workshop_notes_files/figure-html/unnamed-chunk-102-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>

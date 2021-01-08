@@ -731,7 +731,167 @@ knitr::include_graphics(here('inputs','ggplot2_masterpiece.png'))
 ```
 
 
-First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
+Before starting the ggplot, lets try a visualization using a function from the Base R the plot() function shows the association of each variable against the other one in a data handy for data with few number of variables to see if there are any patterns
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+
+exam_data<- read_csv(here::here("cleaned_data", "exam_data.csv"))
+
+plot(x = exam_data$Anxiety, y = exam_data$Exam)
+
+```
+
+The code also works without writing x and y, however, writing them is strongly recommended
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+
+plot(exam_data$Anxiety, exam_data$Exam)
+```
+
+`ggplot`, the gg in ggplot stands for grammar of graphics. Grammar of graphics basically says any graphical representation of data, can be produced by a series of layers. You can think of a layer as a plastic transparency. Lets draw the same plot using ggplot. Always, mention the data we are going to work with.
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
+```
+
+
+- `aes`: aes which stands for aesthetics is a relationship between a variable in your dataset and an aspect of the plot that is going to visually convey the information to the reader
+
+- Visual elements are known as geoms (short for 'geometric objects') in ggplot 2. When we define a layer, we have to tell R what geom we want displayed on that layer (do we want a bar, line dot, etc.?)
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+ geom_point()
+```
+
+So, lets try some of them here like shape and size. Be careful with the + sign, if you clink enter for the next part of the code, the + sign should not go to the next line
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+
+  geom_point(size = 2, shape = 8)
+```
+
+The current plot is not very informative about the patterns for each gender.
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender))+
+  geom_point(size = 2, shape = 10)
+
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gender))+
+  geom_point(size = 2, shape = 10)
+```
+
+Question: why the above code doesn't make any change?
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gender))+
+  geom_point(size = 2)
+```
+
+Can assign the first layer to a variable to reduce the length of codes for next layers.
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph <- ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
+
+My_graph + geom_point()
+```
+
+lets add a line to the current graph
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph + geom_point() + geom_smooth()
+```
+
+Aesthetics can be set for all layers of the plot (i.e., defined in the plot as a whole) or can be set individually for each geom in a plot.
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph + geom_point(aes(color = Gender)) + geom_smooth()
+
+My_graph + geom_point(aes(color = Gender)) + geom_smooth(aes(color = Gender))
+```
+
+The shaded area around the line is the 95% confidence interval around the line. We can switch this off by  adding `se = F` (which is short for 'standard error = False')
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph + geom_point() + geom_smooth(se = F)
+```
+
+
+What if we want our line to be a direct line?
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph + geom_point() + geom_smooth(se = F, method = lm)
+
+```
+How to change the labels of x and y axes?
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+My_graph + geom_point() + geom_smooth(se = F, method = lm) +
+  labs(x = "Exam scores %", y = "Anxiety scores")
+```
+
+Histograms are used to show distributions of variables while bar charts are used to compare variables. Histograms plot quantitative data with ranges of the data grouped into bins or intervals while bar charts plot categorical data.
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+#ggplot(data = exam_data, aes(x = Anxiety, y = Exam )) + geom_histogram()
+# the code above gives an error as geom_histogram can only have x or y axis in its aes()
+
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram()
+
+ggplot(data = exam_data, aes(y = Anxiety)) + geom_histogram()
+
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31)
+
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green")
+
+ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green", col = "red")
+```
+
+Let's stop using the My_graph variable and write the whole code from the start again for a bar chart
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Sleep_quality))+
+  geom_bar()
+```
+Because we want to plot a summary of the data (the mean) rather than the raw scores themselves, we have to use a stat.
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  geom_bar(stat = "summary", fun = "mean")
+
+
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  geom_bar(stat = "summary", fun = "mean", position = "dodge")
+```
+
+The other way to get the same plot that the code above gives, is using the stat_summary function that takes the following general form: `stat_summary(function = x, geom = y)`
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  stat_summary(fun = mean, geom = "bar", position = "dodge")
+```
+How to combine multiple plots? How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+p1 = My_graph + geom_point(aes(color = Gender)) + geom_smooth()
+
+p2 = ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31)
+
+p3 = ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
+  stat_summary(fun = mean, geom = "bar", position = "dodge")
+
+p4 = My_graph + geom_point() + geom_smooth(se = F, method = lm) +
+  labs(x = "Exam scores %", y = "Anxiety scores")
+
+combined = p1 + p2+ p3 + p4 + plot_layout(nrow = 4, byrow = F)
+
+combined
+
+p1 | p2 / p3 / p4
+
+p1 | p2 / (p3 / p4)
+```
+
+`ggsave()` function, which is a versatile exporting function that can export as PostScript (.eps/.ps), tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (in Windows only). In its basic form, the structure of the function is very simple: `ggsave(filename)`
+
+```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
+ggsave(combined, filename = here("outputs", "combined.png"), dpi=300)
+```
+
+
+Now that we learned the basics of ggplot, let's draw some plot for our experiment data. First, we need to create a dataset with aggregated `truth estimate` scores over `group` and `stage`. We will use this dataset for line and bar graphs.
 
 ```{r message=F, warning=F, dpi= 300, fig.height=3, fig.width=5}
 
@@ -823,7 +983,7 @@ boxplot_facet_exp1
 
 ```
 
-How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
+HLet's combine our plots:
 
 ```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations"}
 knitr::include_graphics(here('inputs','patchwork_1.jpg'))
@@ -835,7 +995,7 @@ combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxp
 combined_plot_exp1
 ```
 
-How to save a plot?
+And here, we save our plots to the `outputs` folder.
 ```{rmessage=F}
 ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), dpi=300)
 ```
