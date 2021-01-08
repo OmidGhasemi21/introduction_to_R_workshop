@@ -2,10 +2,13 @@
 
 # Introduction to R Workshop
 
-## Omid Ghasemi
-Department of Cognitive Science, Macquarie University
-## Mahdi Mazidi
-Department of Psychological Sciences, University of Western Australia
+**Omid Ghasemi**
+
+*Department of Cognitive Science, Macquarie University*
+
+**Mahdi Mazidi**
+
+*Department of Psychological Sciences, University of Western Australia*
 
 
 
