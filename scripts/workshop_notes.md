@@ -662,32 +662,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.70092 </td>
+   <td style="text-align:right;"> 29.33880 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 41.88797 </td>
+   <td style="text-align:right;"> 29.04539 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.08800 </td>
+   <td style="text-align:right;"> 29.42942 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.26310 </td>
+   <td style="text-align:right;"> 28.60653 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.60971 </td>
+   <td style="text-align:right;"> 30.50306 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.99579 </td>
+   <td style="text-align:right;"> 30.93849 </td>
   </tr>
 </tbody>
 </table>
@@ -706,37 +706,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 22.22749 </td>
+   <td style="text-align:right;"> 27.34764 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.01247 </td>
+   <td style="text-align:right;"> 21.88196 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 30.17011 </td>
+   <td style="text-align:right;"> 24.01917 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 22.59494 </td>
+   <td style="text-align:right;"> 15.78429 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 29.29573 </td>
+   <td style="text-align:right;"> 30.85827 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.04027 </td>
+   <td style="text-align:right;"> 17.21666 </td>
   </tr>
 </tbody>
 </table>
@@ -749,7 +749,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 29.23672
+## [1] 22.91956
 ```
 
 ### Exercise
@@ -773,52 +773,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.70092 </td>
+   <td style="text-align:right;"> 29.33880 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 41.88797 </td>
+   <td style="text-align:right;"> 29.04539 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.08800 </td>
+   <td style="text-align:right;"> 29.42942 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.26310 </td>
+   <td style="text-align:right;"> 28.60653 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.60971 </td>
+   <td style="text-align:right;"> 30.50306 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.99579 </td>
+   <td style="text-align:right;"> 30.93849 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.36041 </td>
+   <td style="text-align:right;"> 37.83544 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.53295 </td>
+   <td style="text-align:right;"> 29.40139 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.17176 </td>
+   <td style="text-align:right;"> 17.50681 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.93721 </td>
+   <td style="text-align:right;"> 34.75695 </td>
   </tr>
 </tbody>
 </table>
@@ -830,35 +830,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 34.70092 41.88797 25.08800 33.26310 31.60971 23.99579 30.36041
-##   [8] 36.53295 28.17176 30.93721 30.92142 38.82162 34.95608 33.78289
-##  [15] 31.88302 23.98487 32.68682 34.24377 26.14660 23.97673 27.78229
-##  [22] 30.64321 30.23933 33.35966 37.52429 31.95826 36.68059 30.90489
-##  [29] 37.50605 30.00930 27.77501 30.93168 29.62510 28.90410 29.23672
-##  [36] 19.71450 36.45978 42.75902 35.29394 28.78575 27.28674 31.11260
-##  [43] 30.35200 30.17337 29.70474 37.36315 37.85181 26.18070 22.46728
-##  [50] 20.98786 21.03127 31.18289 38.03898 33.04688 24.15885 40.13446
-##  [57] 24.91924 21.37063 37.34523 16.65720 43.27116 28.75091 21.52645
-##  [64] 27.22263 30.45472 36.87326 31.66936 28.75838 30.19378 22.61372
-##  [71] 39.30732 31.91143 29.46254 34.18536 28.93321 39.27136 26.77799
-##  [78] 37.06550 26.80027 28.38800 29.67149 28.68350 28.27039 23.16943
-##  [85] 34.55464 26.39095 22.83425 27.70849 34.12862 25.99384 33.75201
-##  [92] 30.40326 39.22291 17.82195 21.73108 30.36474 32.27294 25.91730
-##  [99] 38.25061 23.02575 33.26268 27.02132 25.06723 15.31837 20.32768
-## [106] 28.64088 20.46997 22.36860 12.41242 28.72662 21.63816 33.31252
-## [113] 24.13434 31.63015 24.83955 31.39216 22.59675 30.06282 22.85433
-## [120] 31.03004 26.33620 20.87316 30.45489 33.65588 20.39493 26.50646
-## [127] 15.60010 29.82494 28.72798 26.47358 23.24629 17.42689 34.86608
-## [134] 18.76335 24.14146 17.77577 29.89969 27.97703 21.10715 22.32984
-## [141] 26.00448 25.83052 21.32632 35.88054 31.72849 21.08781 31.07852
-## [148] 28.72310 27.50717 18.73048 31.32646 26.68313 15.87932 22.78849
-## [155] 14.61576 27.78017 15.01873 27.97408 24.97825 23.41314 15.38537
-## [162] 28.25309 21.69138 28.28512 27.71101 35.10529 25.53642 21.64751
-## [169] 26.12292 34.16566 20.20791 29.58093 21.16437 27.11175 26.59794
-## [176] 18.82553 20.86012 28.93838 22.24265 23.54466 28.71413 30.29684
-## [183] 27.90121 21.13579 26.59486 26.54909 18.04762 23.35257 22.58064
-## [190] 30.80603 22.76379 26.11364 29.48092 22.20632 22.22749 26.01247
-## [197] 30.17011 22.59494 29.29573 26.04027
+##   [1] 29.33880 29.04539 29.42942 28.60653 30.50306 30.93849 37.83544
+##   [8] 29.40139 17.50681 34.75695 31.35813 33.65639 25.53590 37.57608
+##  [15] 31.31691 29.54266 29.71047 38.31286 26.21947 32.26382 26.50245
+##  [22] 34.71294 23.62526 26.69715 34.33098 30.39921 31.50005 33.45303
+##  [29] 30.24174 36.12268 24.47764 28.24003 27.08510 28.12076 22.91956
+##  [36] 32.23087 25.11534 29.77199 23.34438 23.95160 31.57061 27.46609
+##  [43] 29.77943 24.75907 31.12372 35.29385 29.42630 37.33090 27.86225
+##  [50] 29.15896 25.79285 24.97481 32.73731 38.64154 29.97535 28.00618
+##  [57] 30.33081 27.61340 22.32286 31.36031 34.81418 24.50591 21.49797
+##  [64] 28.04902 25.53702 31.17193 26.04975 25.81283 30.14459 38.30252
+##  [71] 27.39544 33.43284 33.78805 28.97254 23.05480 29.09959 29.82267
+##  [78] 43.41636 35.61809 37.65561 27.39195 35.85190 37.08226 24.07814
+##  [85] 34.51841 31.74390 37.08256 32.69440 28.63921 29.28099 24.86621
+##  [92] 26.47702 30.95217 28.99093 33.91155 28.69188 34.32301 29.84054
+##  [99] 26.58818 35.38726 42.07179 28.01028 27.10762 20.44694 11.23646
+## [106] 23.66979 27.34242 34.30978 14.71041 24.82424 21.72212 28.37345
+## [113] 20.92716 23.26870 22.22755 23.98742 28.26148 22.51486 23.42425
+## [120] 25.11480 26.36407 19.29037 12.20373 31.95148 22.71679 27.03511
+## [127] 33.20864 23.37395 24.46956 28.91407 25.44949 18.59792 23.00491
+## [134] 33.33111 19.59739 20.59956 22.06965 21.54432 23.88997 26.51995
+## [141] 21.56339 27.95391 29.71531 28.84253 27.68215 29.13739 16.28183
+## [148] 24.62314 18.21143 27.83460 27.35662 28.59638 28.35563 27.91839
+## [155] 21.39462 29.62328 35.87139 26.14519 29.53364 33.55280 28.26295
+## [162] 28.80108 29.21218 25.29247 36.12032 32.80811 24.72078 29.75031
+## [169] 24.30425 15.64228 20.24308 23.64338 30.12310 21.45499 32.64240
+## [176] 20.13246 21.19054 22.31078 28.06280 21.42484 25.84816 28.11297
+## [183] 17.22196 23.83372 22.98554 21.10372 20.20799 20.01787 31.93418
+## [190] 29.31837 18.05967 33.30776 23.66329 26.66443 27.34764 21.88196
+## [197] 24.01917 15.78429 30.85827 17.21666
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -1494,6 +1494,7 @@ unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015
 unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
 ```
 
+*Note*: The codes for the previous exercise were taken from [this blog post](https://sejdemyr.github.io/r-tutorials/basics/wide-and-long/) written by Simon Ejdemyr.
 
 Now, let's do some cleaning using `dplyr`, `tidyr` and other `tidyverse` libraries: 
 

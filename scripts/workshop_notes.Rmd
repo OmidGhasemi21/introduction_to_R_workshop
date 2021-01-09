@@ -600,6 +600,7 @@ unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015
 unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
 ```
 
+*Note*: The codes for the previous exercise were taken from [this blog post](https://sejdemyr.github.io/r-tutorials/basics/wide-and-long/) written by Simon Ejdemyr.
 
 Now, let's do some cleaning using `dplyr`, `tidyr` and other `tidyverse` libraries: 
 ```{r message=F, warning=F, eval=F}
