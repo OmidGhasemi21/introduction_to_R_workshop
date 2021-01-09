@@ -21,6 +21,8 @@ A summary of the workshop (including all the codes in a markdown format) can be 
 
 - [Workshop Notes](https://omidghasemi21.github.io/introduction_to_R_workshop/scripts/workshop_notes.html)
 
+All the recordings (in Farsi) are available [here](https://osf.io/fcnq4/).
+
 <br>
 <hr>
 <br>

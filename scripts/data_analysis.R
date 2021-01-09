@@ -210,6 +210,9 @@ cor_data_exp1 %>%
   psych::pairs.panels(method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
 
 #-- Correlation library:
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+#library("correlation")
 correlation::correlation(cor_data_exp1) %>% summary()
 
 #-- apaTables library:
@@ -230,9 +233,7 @@ cor(pennycook_data, method = "pearson",  use = "complete.obs")
 pennycook_data %>% 
   psych::pairs.panels(method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
 
-# install.packages("devtools")
-# devtools::install_github("easystats/correlation")
-#library("correlation")
+
 correlation::correlation(pennycook_data) %>% summary()
 
 # install.packages("apaTables",dep=T)

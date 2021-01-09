@@ -7,6 +7,7 @@
 #########################
 
 
+
 library(tidyverse)
 
 
@@ -55,6 +56,7 @@ my_multiplier <- function(a,b){
   result = a * b
   return (result)
 }
+
 # This code do nothing. To get a result, you need to *call* it:
 my_multiplier (2,4)
 
@@ -200,7 +202,7 @@ my_matrix
 # Data frames: (two-dimensional objects) can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.
 
 # lets create a dataframe
-id <- 1:200
+id <- c(1:200)
 group <- c(rep("Psychotherapy", 100), rep("Medication", 100))
 response <- c(rnorm(100, mean = 30, sd = 5),
              rnorm(100, mean = 25, sd = 5))
@@ -208,6 +210,8 @@ response <- c(rnorm(100, mean = 30, sd = 5),
 my_dataframe <-data.frame(Patient = id,
                           Treatment = group,
                           Response = response)
+
+
 
 # We also could have done the below
 
@@ -218,6 +222,7 @@ my_dataframe <-data.frame(Patient = c(1:200),
 
 str(my_dataframe)
 summary(my_dataframe)
+
 
 # in large data sets, the function head() enables you to show the first observations of a data frames. Similarly, the function tail() prints out the last observations in your data set.
 head(my_dataframe)
@@ -238,7 +243,7 @@ my_dataframe[ , 3]
 my_dataframe[ , "Response"]
 
 my_dataframe$Response
-
+my_dataframe[35:50,2:3]
 
 
 
