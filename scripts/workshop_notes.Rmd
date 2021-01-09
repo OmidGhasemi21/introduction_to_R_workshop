@@ -450,6 +450,12 @@ raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 head(raw_data)
 ```
 
+### Exercise
+
+There is a dataset in the `cleaned_data` folder named `unicef_u5mr.csv`. Read the dataset using `read_csv` and `here`.
+```{r message=F, warning=F}
+unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
+```
 
 ```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations"}
 knitr::include_graphics(here('inputs','tidydata_3.jpg'))
@@ -515,6 +521,13 @@ A new function: **pipe operators** `%>%` pipes a value into the next function:
 
 ```{r message=F, warning=F}
 raw_data %>% 
+  summarise(., mean= mean(age, na.rm=T),
+            sd= sd (age, na.rm=T))
+```
+
+
+```{r message=F, warning=F}
+raw_data %>% 
   summarise(mean= mean(age, na.rm=T),
             sd= sd (age, na.rm=T))
 ```
@@ -542,7 +555,7 @@ raw_data %>%
 
 ### Exercise
 
-1. Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately:
+1. Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`) mean for each group separately:
 ```{r message=F, warning=F}
 raw_data %>%
   mutate(age_group = case_when(age > 23 ~ "greater than 23", T~ "younger than 23")) %>%
@@ -556,6 +569,36 @@ mutated_openmind_data <- raw_data %>%
   mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
   mutate(subject= factor(subject))
 ``` 
+
+
+Next, we want to pivot our data to switch between long and wide format:
+
+```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations"}
+knitr::include_graphics(here('inputs','tidydata_1.jpg'))
+```
+
+```{r message=F, warning=F}
+# pivoting your data
+
+# Make you data long
+long_data <- raw_data %>%
+  select(subject, stage1_simple:stage7_simple,stage1_complex:stage7_complex) %>%
+  pivot_longer(cols = c(stage1_simple:stage7_complex), names_to = 'stage', values_to = 'truth_estimate')
+
+
+# Make you data wide
+wide_data <- long_data %>%
+  pivot_wider(names_from = stage, values_from= truth_estimate)
+
+```
+
+### Exercise
+
+Convert the UNICEF dataset to long and wide formats:
+```{r message=F, warning=F}
+unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015`), names_to = 'year', values_to = 'u5mr')
+unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
+```
 
 
 Now, let's do some cleaning using `dplyr`, `tidyr` and other `tidyverse` libraries: 
@@ -603,11 +646,6 @@ Ok, now the data is clean and tidy which means:
 > 1. Each variable forms a column.
 2. Each observation forms a row.
 3. Each type of observational unit forms a table ([Wickham](https://vita.had.co.nz/papers/tidy-data.pdf), 2014).
-
-
-```{r echo=FALSE, out.width="700px", out.height="350px", fig.cap= "Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations"}
-knitr::include_graphics(here('inputs','tidydata_1.jpg'))
-```
 
 
 Check the dataframe and all the data types:

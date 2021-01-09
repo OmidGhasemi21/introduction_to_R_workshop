@@ -12,6 +12,10 @@ options(scipen=999) # turn off scientific notations
 # read the raw data
 raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 
+# Exercise: read the UNICEF data
+unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
+
+
 head(raw_data)
 
 # Pick 3 columns
@@ -30,13 +34,14 @@ arranged_data_descending <- arrange(raw_data, desc(age))
 mutated_data <- mutate (raw_data, finished= case_when(progress==100~ "Yes",T~ "No"))
 
 # summarize participants age and sd:
-summarised_data <- summarise(raw_data, mean= mean(age, na.rm=T),
-          sd= sd (age, na.rm=T))
+summarised_data <- summarise(raw_data, mean= mean(age, na.rm=T))
 
 # pipe functions %>%
 raw_data %>% 
-  summarise(mean= mean(age, na.rm=T),
-            sd= sd (age, na.rm=T))
+  summarise(., mean= mean(age, na.rm=T))
+
+raw_data %>% 
+  summarise(mean= mean(age, na.rm=T))
 
 # calculate the mean of younger than 25 participants only
 raw_data %>% 
@@ -52,19 +57,39 @@ raw_data %>%
             sd= sd (age, na.rm=T)) %>%
   ungroup ()
 
-# exercise: Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately
+# exercise1: Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately
 raw_data %>%
   mutate(age_group = case_when(age > 23 ~ "greater than 23", T~ "younger than 23")) %>%
   group_by(age_group) %>%
   summarise(reasoning_total = mean(reasoning_total, na.rm=T))
 
-# add the open_mindedness total score (sum) to the dataframe and then convert subject column to factor
+# exercise2: add the open_mindedness total score (sum) to the dataframe and then convert subject column to factor
 mutated_openmind_data <- raw_data %>%
   mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
   mutate(subject= factor(subject))
 
 str(mutated_openmind_data)
 
+
+# pivoting your data
+long_data <- raw_data %>%
+  select(subject, stage1_simple:stage7_simple,stage1_complex:stage7_complex) %>%
+  pivot_longer(cols = c(stage1_simple:stage7_complex), names_to = 'stage', values_to = 'truth_estimate')
+
+wide_data <- long_data %>%
+  pivot_wider(names_from = stage, values_from= truth_estimate)
+  
+
+# Exercise: pivot
+#unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
+
+head(unicef_data)
+# backtick `
+unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015`), names_to = 'year', values_to = 'u5mr')
+unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
+
+
+  
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
