@@ -1,16 +1,12 @@
 
 
 library(tidyverse)
-library(janitor)
 library (here)
-library(afex)
-library(knitr)
-library(ggsci)
 options(scipen=999) # turn off scientific notations
 
 
 # read the raw data
-raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
+raw_data <- read_csv(here("raw_data","raw_data_exp1.csv"))
 
 # Exercise: read the UNICEF data
 unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
@@ -57,7 +53,8 @@ raw_data %>%
             sd= sd (age, na.rm=T)) %>%
   ungroup ()
 
-# exercise1: Create a column to show if participant is older than 23 or not and then calculate reasoning ability (`reasoning_total`)mean for each group separately
+# exercise1: Create a column to show if participant is older than 23 or not and then calculate 
+#reasoning ability (`reasoning_total`) mean for each group separately
 raw_data %>%
   mutate(age_group = case_when(age > 23 ~ "greater than 23", T~ "younger than 23")) %>%
   group_by(age_group) %>%
@@ -93,13 +90,15 @@ unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', value
 cleaned_data <- raw_data %>% 
   filter(progress == 100) %>% # filter out unfinished participants
   select(-end_date, -status,-ip_address, -duration_in_seconds, -recorded_date:-user_language) %>% #remove some useless columns
-  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%# create a total score for our questionnaire
+  # create a total score for our questionnaire
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
   mutate(thinking1= case_when(thinking1==4~ 1,T~0),
          thinking2= case_when(thinking2==10~ 1,T~0),
          thinking3= case_when(thinking3==39~ 1,T~0),
          thinking_total= thinking1 + thinking2 + thinking3) %>%
   select(-thinking1:-openminded8) %>%
-  pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% # make our dataframe long
+  # make our dataframe long
+  pivot_longer(cols = c(stage1_simple:stage7_simple,stage1_complex:stage7_complex),names_to = 'stage',values_to = 'truth_estimate') %>% 
   #pivot_wider(names_from = stage, values_from= truth_estimate) # this code change our dataframe back to wide
   filter(!is.na(truth_estimate)) %>% #remove rows with truth_estimate == NA
   mutate(stage= gsub("_.*", "", stage)) %>%
@@ -109,5 +108,5 @@ cleaned_data <- raw_data %>%
 str(cleaned_data)
 dim(cleaned_data)
 
-write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
+write_csv(cleaned_data, here("cleaned_data","cleaned_data_exp1.csv"))
 

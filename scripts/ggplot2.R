@@ -174,6 +174,21 @@ ggsave(combined, filename = here("outputs", "combined.png"), dpi=300)
 # ----------------- Data Visualization ------------------- #
 # -------------------------------------------------------- #
 
+data_exp1_orig <- read_csv(here("cleaned_data","cleaned_data_exp1.csv"))
+
+data_exp1 <- data_exp1_orig%>% 
+  #mutate_if(is.character, factor) %>%
+  mutate(subject= factor(subject), # convert all characters to factor
+         group = factor(group),
+         stage = factor(stage))
+
+
+aggregated_data_exp1 <- data_exp1 %>%
+  group_by(stage, group) %>%
+  mutate(truth_estimate = mean(truth_estimate)) %>%
+  ungroup()
+
+
 barplot_exp1 <- aggregated_data_exp1 %>%
   ggplot(aes(x=stage, y= truth_estimate, fill=group)) +
   geom_bar(stat = "identity", position= "dodge")+
@@ -218,8 +233,7 @@ violinplot_exp1 <- data_exp1 %>%
   labs (x= '', y= "Truth Likelihhod Estimate") + 
   theme_bw() + 
   theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
+        axis.text=element_text(size=11)) +
   scale_fill_d3() 
 
 #ggsave(violinplot_exp1, filename = here("outputs","violinplot_exp1.png"), dpi=300)
@@ -232,8 +246,7 @@ boxplot_exp1 <- data_exp1 %>%
   labs (x= '', y= "Truth Likelihhod Estimate") + 
   theme_bw() + 
   theme(legend.position = "bottom",
-        axis.text=element_text(size=11),
-        axis.title = element_text(size = 12)) +
+        axis.text=element_text(size=11)) +
   scale_fill_simpsons() 
 
 #ggsave(boxplot_exp1, filename = here("outputs","boxplot_exp1.png"), dpi=300)
@@ -246,7 +259,6 @@ boxplot_facet_exp1 <- data_exp1 %>%
   theme_bw() + 
   theme(legend.position = "bottom",
         axis.text=element_text(size=11),
-        axis.title = element_text(size = 12),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   facet_wrap(~group)+
   scale_color_simpsons() 

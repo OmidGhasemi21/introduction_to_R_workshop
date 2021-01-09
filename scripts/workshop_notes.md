@@ -662,32 +662,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.33880 </td>
+   <td style="text-align:right;"> 27.18813 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.04539 </td>
+   <td style="text-align:right;"> 30.77725 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.42942 </td>
+   <td style="text-align:right;"> 23.28473 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.60653 </td>
+   <td style="text-align:right;"> 31.29284 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.50306 </td>
+   <td style="text-align:right;"> 34.30820 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.93849 </td>
+   <td style="text-align:right;"> 27.13006 </td>
   </tr>
 </tbody>
 </table>
@@ -706,37 +706,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 27.34764 </td>
+   <td style="text-align:right;"> 24.94144 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 21.88196 </td>
+   <td style="text-align:right;"> 29.23121 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.01917 </td>
+   <td style="text-align:right;"> 18.28316 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 15.78429 </td>
+   <td style="text-align:right;"> 29.72068 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 30.85827 </td>
+   <td style="text-align:right;"> 20.40847 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 17.21666 </td>
+   <td style="text-align:right;"> 25.52196 </td>
   </tr>
 </tbody>
 </table>
@@ -749,7 +749,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 22.91956
+## [1] 26.66354
 ```
 
 ### Exercise
@@ -773,52 +773,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.33880 </td>
+   <td style="text-align:right;"> 27.18813 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.04539 </td>
+   <td style="text-align:right;"> 30.77725 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.42942 </td>
+   <td style="text-align:right;"> 23.28473 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.60653 </td>
+   <td style="text-align:right;"> 31.29284 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.50306 </td>
+   <td style="text-align:right;"> 34.30820 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 30.93849 </td>
+   <td style="text-align:right;"> 27.13006 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 37.83544 </td>
+   <td style="text-align:right;"> 29.75732 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.40139 </td>
+   <td style="text-align:right;"> 24.90917 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 17.50681 </td>
+   <td style="text-align:right;"> 27.64901 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.75695 </td>
+   <td style="text-align:right;"> 25.00871 </td>
   </tr>
 </tbody>
 </table>
@@ -830,35 +830,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 29.33880 29.04539 29.42942 28.60653 30.50306 30.93849 37.83544
-##   [8] 29.40139 17.50681 34.75695 31.35813 33.65639 25.53590 37.57608
-##  [15] 31.31691 29.54266 29.71047 38.31286 26.21947 32.26382 26.50245
-##  [22] 34.71294 23.62526 26.69715 34.33098 30.39921 31.50005 33.45303
-##  [29] 30.24174 36.12268 24.47764 28.24003 27.08510 28.12076 22.91956
-##  [36] 32.23087 25.11534 29.77199 23.34438 23.95160 31.57061 27.46609
-##  [43] 29.77943 24.75907 31.12372 35.29385 29.42630 37.33090 27.86225
-##  [50] 29.15896 25.79285 24.97481 32.73731 38.64154 29.97535 28.00618
-##  [57] 30.33081 27.61340 22.32286 31.36031 34.81418 24.50591 21.49797
-##  [64] 28.04902 25.53702 31.17193 26.04975 25.81283 30.14459 38.30252
-##  [71] 27.39544 33.43284 33.78805 28.97254 23.05480 29.09959 29.82267
-##  [78] 43.41636 35.61809 37.65561 27.39195 35.85190 37.08226 24.07814
-##  [85] 34.51841 31.74390 37.08256 32.69440 28.63921 29.28099 24.86621
-##  [92] 26.47702 30.95217 28.99093 33.91155 28.69188 34.32301 29.84054
-##  [99] 26.58818 35.38726 42.07179 28.01028 27.10762 20.44694 11.23646
-## [106] 23.66979 27.34242 34.30978 14.71041 24.82424 21.72212 28.37345
-## [113] 20.92716 23.26870 22.22755 23.98742 28.26148 22.51486 23.42425
-## [120] 25.11480 26.36407 19.29037 12.20373 31.95148 22.71679 27.03511
-## [127] 33.20864 23.37395 24.46956 28.91407 25.44949 18.59792 23.00491
-## [134] 33.33111 19.59739 20.59956 22.06965 21.54432 23.88997 26.51995
-## [141] 21.56339 27.95391 29.71531 28.84253 27.68215 29.13739 16.28183
-## [148] 24.62314 18.21143 27.83460 27.35662 28.59638 28.35563 27.91839
-## [155] 21.39462 29.62328 35.87139 26.14519 29.53364 33.55280 28.26295
-## [162] 28.80108 29.21218 25.29247 36.12032 32.80811 24.72078 29.75031
-## [169] 24.30425 15.64228 20.24308 23.64338 30.12310 21.45499 32.64240
-## [176] 20.13246 21.19054 22.31078 28.06280 21.42484 25.84816 28.11297
-## [183] 17.22196 23.83372 22.98554 21.10372 20.20799 20.01787 31.93418
-## [190] 29.31837 18.05967 33.30776 23.66329 26.66443 27.34764 21.88196
-## [197] 24.01917 15.78429 30.85827 17.21666
+##   [1] 27.188126 30.777253 23.284726 31.292836 34.308199 27.130061 29.757324
+##   [8] 24.909171 27.649012 25.008706 29.404166 23.268888 32.642239 25.665492
+##  [15] 32.688967 23.728734 33.438426 29.227611 25.100626 27.441264 32.821064
+##  [22] 29.089883 24.758246 28.054203 26.842840 35.034423 38.382492 22.512905
+##  [29] 27.165009 30.901339 28.444171 26.189879 24.366393 22.861877 26.663542
+##  [36] 32.881681 25.600396 32.844674 25.332858 36.813089 26.939681 33.194629
+##  [43] 24.394595 28.249130 34.452274 32.760293 31.838643 28.933429 28.123214
+##  [50] 33.227934 26.928414 25.758564 35.985862 24.497804 33.595179 38.379838
+##  [57] 38.312211 17.521292 34.668226 28.943036 27.116053 23.293048 32.439473
+##  [64] 25.738447 29.837958 20.592843 26.754394 33.437326 20.045950 23.131255
+##  [71] 19.809381 36.086198 36.003911 34.430729 32.851844 28.116000 27.403396
+##  [78] 28.358421 27.721485 36.395176 27.819444 35.244008 19.941209 30.296163
+##  [85] 29.734636 31.296918 32.184261 19.298451 28.209186 34.043898 34.110418
+##  [92] 33.966079 29.794997 33.549395 33.550190 35.598820 27.951357 35.407784
+##  [99] 27.490922 26.300815 18.609819 16.529805 25.528157 39.126264 18.133777
+## [106] 16.990457 26.196786 21.368884 26.850982 18.047324 22.599537 21.818001
+## [113] 16.749515 22.013183 23.585421 31.190250 30.474315 18.308010 22.334016
+## [120] 23.815240 20.729545 16.023402 19.396540 24.865730 27.707688 23.789597
+## [127] 32.152586 27.547219 24.882735 23.200173 38.652595 30.623339 24.800595
+## [134] 24.364645 30.318903 30.892900 22.652342 28.482825 18.787570 18.797272
+## [141] 29.301656  9.405295 30.745603 34.779409 28.458336 18.379039 24.746245
+## [148] 26.365894 25.614790 19.497229 22.633527 20.036444 18.892125 28.465954
+## [155] 25.940818 28.956663 24.647856 24.121596 30.138271 25.449607 19.229854
+## [162] 23.228124 21.151571 27.708903 18.777325 21.279991 28.266972 27.302461
+## [169] 17.732701 30.240098 24.446121 22.412089 20.034263 24.806594 21.042250
+## [176] 18.654422 22.054471 21.464672 24.615761 35.970194 20.100450 24.561692
+## [183] 24.941381 25.967291 30.430921 26.250760 19.291365 30.255276 24.191861
+## [190] 32.343982 20.052122 24.993945 32.255221 33.965813 24.941444 29.231208
+## [197] 18.283163 29.720682 20.408468 25.521963
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -887,22 +887,9 @@ Now, suppose we tested 141 students. First, let's read and check the uncleaned d
 
 ```r
 # read the raw data
-raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
+raw_data <- read_csv(here("raw_data","raw_data_exp1.csv"))
 head(raw_data)
 ```
-
-### Exercise
-
-There is a dataset in the `cleaned_data` folder named `unicef_u5mr.csv`. Read the dataset using `read_csv` and `here`.
-
-```r
-unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
-```
-
-<div class="figure" style="text-align: center">
-<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tidydata_3.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
-<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
-</div>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -1225,6 +1212,21 @@ unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
   </tr>
 </tbody>
 </table></div>
+
+### Exercise
+
+There is a dataset in the `cleaned_data` folder named `unicef_u5mr.csv`. Read the dataset using `read_csv` and `here`.
+
+```r
+unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
+```
+
+<div class="figure" style="text-align: center">
+<img src="/Users/45050007/OneDrive - Macquarie University/Educational/Desktop/My Talks/introduction_to_R/inputs/tidydata_3.jpg" alt="Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations" width="700px" height="350px" />
+<p class="caption">Artwork by Allison Horst: https://github.com/allisonhorst/stats-illustrations</p>
+</div>
+
+
 
 In order to clean the data, we use *tidyverse* which is a collection of packages to work with data. One of the tidyverse packages that we use regularly is `dplyr` which includes several functions:
 
@@ -1654,7 +1656,7 @@ Finally, we save our data to the `cleaned_data` folder.
 
 
 ```r
-write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
+write_csv(cleaned_data, here("cleaned_data","cleaned_data_exp1.csv"))
 ```
 
 # Descriptive Statistics
@@ -1666,11 +1668,11 @@ write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
 
 > Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
 
-Now, let's do some descriptive statistics. First, we can open a new script called `analysis_exp1.r` and read the cleaned data again. 
+Now, let's do some descriptive statistics. First, we can open a new script called `data_analysis.r` and read the cleaned data again. 
 
 
 ```r
-data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+data_exp1_orig <- read_csv(here("cleaned_data","cleaned_data_exp1.csv"))
 
 
 data_exp1 <- data_exp1_orig%>% 

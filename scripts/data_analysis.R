@@ -2,10 +2,8 @@
 
 
 library(tidyverse)
-library(janitor)
 library (here)
 library(afex)
-library(knitr)
 library(ggsci)
 library(afex)
 library("ggsci")
@@ -19,8 +17,7 @@ options(scipen=999) # turn off scientific notations
 # --------------- Descriptive Statistics ----------------- #
 # -------------------------------------------------------- #
 
-data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
-
+data_exp1_orig <- read_csv(here("cleaned_data","cleaned_data_exp1.csv"))
 
 
 data_exp1 <- data_exp1_orig%>% 

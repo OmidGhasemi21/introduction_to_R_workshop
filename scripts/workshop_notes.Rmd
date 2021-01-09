@@ -446,8 +446,17 @@ knitr::include_graphics(here('inputs','cracked_setwd.png'))
 Now, suppose we tested 141 students. First, let's read and check the uncleaned data:
 ```{r message=F, warning=F, eval=F}
 # read the raw data
-raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
+raw_data <- read_csv(here("raw_data","raw_data_exp1.csv"))
 head(raw_data)
+```
+
+```{r message=F, warning=F, echo=F}
+# read the raw data
+raw_data <- read_csv(here("raw_data","raw_data_exp1.csv"))
+
+knitr::kable(head(raw_data)) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
+  scroll_box(width = "780px")
 ```
 
 ### Exercise
@@ -461,14 +470,7 @@ unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
 knitr::include_graphics(here('inputs','tidydata_3.jpg'))
 ```
 
-```{r message=F, warning=F, echo=F}
-# read the raw data
-raw_data <- read_csv(here("raw_data","raw_argumentative_exp1.csv"))
 
-knitr::kable(head(raw_data)) %>%
-  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)%>%
-  scroll_box(width = "780px")
-```
 
 In order to clean the data, we use *tidyverse* which is a collection of packages to work with data. One of the tidyverse packages that we use regularly is `dplyr` which includes several functions:
 
@@ -657,7 +659,7 @@ str(cleaned_data)
 Finally, we save our data to the `cleaned_data` folder.
 
 ```{r}
-write_csv(cleaned_data, here("cleaned_data","argumentative_exp1.csv"))
+write_csv(cleaned_data, here("cleaned_data","cleaned_data_exp1.csv"))
 ```
 
 # Descriptive Statistics
@@ -668,10 +670,10 @@ knitr::include_graphics(here('inputs','not_normal.png'))
 
 > Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
 
-Now, let's do some descriptive statistics. First, we can open a new script called `analysis_exp1.r` and read the cleaned data again. 
+Now, let's do some descriptive statistics. First, we can open a new script called `data_analysis.r` and read the cleaned data again. 
 
 ```{r message=F, warning=F,}
-data_exp1_orig <- read_csv(here("cleaned_data","argumentative_exp1.csv"))
+data_exp1_orig <- read_csv(here("cleaned_data","cleaned_data_exp1.csv"))
 
 
 data_exp1 <- data_exp1_orig%>% 
