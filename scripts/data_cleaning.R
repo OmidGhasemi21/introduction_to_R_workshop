@@ -62,7 +62,8 @@ raw_data %>%
 
 # exercise2: add the open_mindedness total score (sum) to the dataframe and then convert subject column to factor
 mutated_openmind_data <- raw_data %>%
-  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+openminded5+openminded6+openminded7+openminded8) %>%
+  mutate(openminded_total= openminded1+openminded2+openminded3+openminded4+
+                           openminded5+openminded6+openminded7+openminded8) %>%
   mutate(subject= factor(subject))
 
 str(mutated_openmind_data)
@@ -78,12 +79,21 @@ wide_data <- long_data %>%
   
 
 # Exercise: pivot
-#unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
-
+library(janitor)
 head(unicef_data)
+colnames(unicef_data)
+
+unicef_data_cleaned <- unicef_data %>%
+  clean_names()
+
+head(unicef_data_cleaned)
+colnames(unicef_data_cleaned) 
+
 # backtick `
-unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015`), names_to = 'year', values_to = 'u5mr')
-unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
+unicef_long_data <- unicef_data_cleaned %>% 
+  pivot_longer(cols = c(u5mr_1950:u5mr_2015), names_to = 'year', values_to = 'u5mr')
+unicef_wideg_data <- unicef_long_data %>% 
+  pivot_wider(names_from = 'year', values_from = 'u5mr')
 
 
   

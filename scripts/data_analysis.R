@@ -12,7 +12,6 @@ library(patchwork)
 options(scipen=999) # turn off scientific notations
 
 
-
 # -------------------------------------------------------- #
 # --------------- Descriptive Statistics ----------------- #
 # -------------------------------------------------------- #
@@ -62,13 +61,13 @@ ghasemi_data <- read_csv(here("cleaned_data","ghasemi_brightness_exp4.csv"))
 
 ghasemi_data %>% summarise(n = n_distinct(participant)) # number of participants:200
 
-ghasemi_data %>% group_by (participant) %>% filter (row_number()==1) %>% group_by (gender) %>% summarise(n= n()) %>% ungroup() # 183 female, 17 male
+ghasemi_data %>% group_by (participant) %>% 
+  filter (row_number()==1) %>% 
+  group_by (gender) %>% 
+  summarise(n= n()) %>% 
+  ungroup() # 183 female, 17 male
 
 ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and sd for age and cognitive ability
-
-
-
-
 
 
 # -------------------------------------------------------- #
@@ -218,8 +217,6 @@ correlation::correlation(cor_data_exp1) %>% summary()
 #-- apaTables library:
 cor_data_exp1 %>% 
   apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
-
-
 
 #--------- Pennycook AOTE  -----------#
 

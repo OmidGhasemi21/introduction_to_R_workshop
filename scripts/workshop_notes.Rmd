@@ -202,7 +202,21 @@ my_multiplier <- function(a,b){
 This code do nothing. To get a result, you need to *call* it:
 
 ```{r}
-my_multiplier (2,4)
+my_multiplier (a=2, b=4)
+# or: my_multiplier (2, 4)
+```
+
+We can set a default value for our arguments:
+
+```{r}
+my_multiplier2 <- function(a,b=4){
+  result = a * b
+  return (result)
+}
+
+my_multiplier2 (a=2)
+# or: my_multiplier (2)
+# or: my_multiplier (2, 6)
 ```
 
 Fortunately, you do not need to write everything from scratch. R has lots of built-in functions that you can use:
@@ -582,6 +596,7 @@ knitr::include_graphics(here('inputs','tidydata_1.jpg'))
 ```{r message=F, warning=F}
 # pivoting your data
 
+
 # Make you data long
 long_data <- raw_data %>%
   select(subject, stage1_simple:stage7_simple,stage1_complex:stage7_complex) %>%
@@ -598,7 +613,13 @@ wide_data <- long_data %>%
 
 Convert the UNICEF dataset to long and wide formats:
 ```{r message=F, warning=F}
-unicef_long_data <- unicef_data %>% pivot_longer(cols = c(`U5MR 1950`:`U5MR 2015`), names_to = 'year', values_to = 'u5mr')
+unicef_data <- read_csv(here("cleaned_data","unicef_u5mr.csv"))
+
+library(janitor)
+unicef_data_cleaned <- unicef_data %>%
+  clean_names()
+
+unicef_long_data <- unicef_data_cleaned %>% pivot_longer(cols = c(u5mr_1950:u5mr_2015), names_to = 'year', values_to = 'u5mr')
 unicef_wideg_data <- unicef_long_data %>% pivot_wider(names_from = 'year', values_from = 'u5mr')
 ```
 

@@ -58,7 +58,16 @@ my_multiplier <- function(a,b){
 }
 
 # This code do nothing. To get a result, you need to *call* it:
-my_multiplier (2,4)
+my_multiplier (a=2, b=4)
+
+# We can set a default value for our arguments
+my_multiplier2 <- function(a,b=4){
+  result = a * b
+  return (result)
+}
+
+my_multiplier2 (a=2)
+
 
 # Fortunately, you do not need to write everything from scratch. R has lots of built-in functions that you can use:
 round(54.6787)
