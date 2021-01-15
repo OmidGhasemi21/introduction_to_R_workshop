@@ -55,8 +55,23 @@ data_exp1 %>%
   skimr::skim()
 
 
+narcissism_data <- read_csv(here("cleaned_data","narcissism_data.csv"))
+narcissism_data %>% skimr::skim()
+
+
 ### Exercise
 
+#1
+treatment_data <- read_csv(here("cleaned_data","treatment_data.csv"))
+treatment_data %>% skimr::skim()
+
+#2
+memory_data <- read_csv(here("cleaned_data","memory_data.csv"))
+memory_data %>% group_by(time) %>%
+  skimr::skim()
+
+
+#3
 ghasemi_data <- read_csv(here("cleaned_data","ghasemi_brightness_exp4.csv"))
 
 ghasemi_data %>% summarise(n = n_distinct(participant)) # number of participants:200
@@ -78,12 +93,24 @@ ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and s
 
 ############## ----------- t-test  -------------################
 
+
+
+# t.test (indep)
+t.test(anxiety~treatment, data= treatment_data)
+t.test(depression~treatment, data= treatment_data)
+t.test(life_satisfaction~treatment, data= treatment_data)
+
+
 # Is there a difference between groups at the first stage?
 data_exp1 %>% 
   group_by(group) %>% 
   filter(stage=='stage1') %>% 
   ungroup () %>%
   t.test(truth_estimate~group, data = ., paired=FALSE)
+
+# t.test (paired)
+t.test(memory_score~time, data= memory_data, paired= T)
+
 
 # Is there a difference between ratings of stage4 and stage7?
 data_exp1 %>% 
@@ -193,6 +220,27 @@ knitr::kable(nice(rotello_aov))
 
 ############## ----------- Correlation  -------------################
 
+narcissism_data_cor <- narcissism_data %>%
+  select(-subject)
+#-- Base R:
+cor(narcissism_data_cor, method = "pearson",  use = "complete.obs")
+
+#-- Psych library:
+psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#-- Correlation library:
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+#library("correlation")
+correlation::correlation(narcissism_data_cor) %>% summary()
+
+#-- apaTables library:
+narcissism_data_cor %>% 
+  apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
+
+
+
+# second example
 cor_data_exp1 <- data_exp1 %>% 
   pivot_wider(names_from = stage, values_from = truth_estimate) %>%
   group_by(subject) %>%
@@ -241,6 +289,13 @@ pennycook_data %>%
 
 
 ###### Multiple Regression
+
+m1 <- lm(mental_health~narcissism, data= narcissism_data)
+summary(m1)
+
+m2 <- lm(mental_health~narcissism+psychopathy, data= narcissism_data)
+summary(m2)
+
 
 exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
                   data=cor_data_exp1)

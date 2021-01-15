@@ -7,7 +7,7 @@ author:
   - name: "Mahdi Mazidi"
     affiliation: University of Western Australia
     email: mahdi.mazidisharafabadi@research.uwa.edu.au
-date: "10 January, 2021"
+date: "12 January, 2021"
 output: 
   html_document:
     keep_md: yes
@@ -687,32 +687,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.70881 </td>
+   <td style="text-align:right;"> 33.95265 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.80296 </td>
+   <td style="text-align:right;"> 36.59023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.52650 </td>
+   <td style="text-align:right;"> 31.35356 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 22.40651 </td>
+   <td style="text-align:right;"> 31.28723 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.24076 </td>
+   <td style="text-align:right;"> 26.07646 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.40219 </td>
+   <td style="text-align:right;"> 32.55705 </td>
   </tr>
 </tbody>
 </table>
@@ -731,37 +731,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 30.27847 </td>
+   <td style="text-align:right;"> 25.43623 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 27.80703 </td>
+   <td style="text-align:right;"> 29.84969 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 23.65503 </td>
+   <td style="text-align:right;"> 20.78075 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 26.56304 </td>
+   <td style="text-align:right;"> 24.71622 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 17.95121 </td>
+   <td style="text-align:right;"> 19.27959 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 29.54396 </td>
+   <td style="text-align:right;"> 28.21100 </td>
   </tr>
 </tbody>
 </table>
@@ -774,7 +774,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 23.76307
+## [1] 27.07054
 ```
 
 ### Exercise
@@ -798,52 +798,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.70881 </td>
+   <td style="text-align:right;"> 33.95265 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 29.80296 </td>
+   <td style="text-align:right;"> 36.59023 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 23.52650 </td>
+   <td style="text-align:right;"> 31.35356 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 22.40651 </td>
+   <td style="text-align:right;"> 31.28723 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.24076 </td>
+   <td style="text-align:right;"> 26.07646 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.40219 </td>
+   <td style="text-align:right;"> 32.55705 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 22.63793 </td>
+   <td style="text-align:right;"> 28.67988 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.07547 </td>
+   <td style="text-align:right;"> 24.10665 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 34.68674 </td>
+   <td style="text-align:right;"> 39.00802 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 22.50409 </td>
+   <td style="text-align:right;"> 25.32071 </td>
   </tr>
 </tbody>
 </table>
@@ -855,35 +855,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 31.708813 29.802960 23.526499 22.406512 28.240756 33.402191 22.637934
-##   [8] 25.075474 34.686743 22.504094 31.517422 31.264633 26.726864 33.805724
-##  [15] 28.712035 29.206099 32.529914 35.050625 31.384180 33.971724 33.693739
-##  [22] 23.990873 28.518247 26.133280 28.565941 39.463296 29.229717 23.608218
-##  [29] 31.647677 30.622080 32.411563 28.739493 28.645108 34.801284 23.763072
-##  [36] 26.795876 32.982249 28.448125 36.993561 36.064960 24.097104 28.237377
-##  [43] 27.844498 34.312489 27.544267 30.788393 31.458230 26.740752 36.949616
-##  [50] 26.317241 31.908821 25.665635 27.485842 39.576472 35.183187 26.220313
-##  [57] 37.106567 19.481076 36.338665 43.495743 34.346674 29.216833 30.594568
-##  [64] 22.948427 32.447711 24.776949 29.147548 34.796360 21.363509 31.261505
-##  [71] 27.672622 27.813903 30.288316 34.701551 28.777852 29.325077 29.505490
-##  [78] 27.207470 34.332822 27.351041 31.376275 23.737676 30.326625 26.727234
-##  [85] 32.239994 25.803207 28.133668 29.749694 25.755813 25.832310 36.035813
-##  [92] 40.370852 29.732889 33.913627 38.481958 30.521629 36.591710 36.253998
-##  [99] 36.839956 33.890120 28.825717 25.953143 31.525600 25.307904 30.639792
-## [106] 29.586151 28.806757 28.620229 24.976085 23.650821 26.717328 19.819130
-## [113] 26.303396 25.867117 22.057393 23.588511 19.602866 34.365061 29.845442
-## [120] 29.824766 22.578831 27.138616 26.906843 19.468686 20.513763 23.623201
-## [127] 27.112159 21.139209 26.392881 32.285443 28.811703 25.948436 19.244730
-## [134] 20.519502 35.670476 22.532543 19.606732 14.912368 22.798981 29.778866
-## [141] 37.605444 26.703724 22.106022 25.594774 25.625431 24.984104 19.501609
-## [148] 12.321973 26.521236 33.397335 25.515591 30.697933 29.256076 21.368050
-## [155] 34.022232 18.607188 30.729220 24.540642 13.381217 29.403218 20.353568
-## [162]  7.282473 20.463582 30.552557 22.783704 28.032865 24.552576 35.305996
-## [169] 27.477994 22.476527 22.454651 27.698763 31.783351 34.063251 17.934524
-## [176] 31.016026 21.967420 16.280651 19.184221 23.220447 27.296864 29.996700
-## [183] 21.959125 24.456886 20.480283 23.785494 25.151047 26.180715 23.331798
-## [190] 27.081697 30.603483 20.888471 22.475623 24.376636 30.278467 27.807029
-## [197] 23.655029 26.563044 17.951207 29.543957
+##   [1] 33.95265 36.59023 31.35356 31.28723 26.07646 32.55705 28.67988
+##   [8] 24.10665 39.00802 25.32071 29.40034 25.34399 32.76062 24.84760
+##  [15] 28.19872 28.07090 33.18354 36.96603 33.57646 24.70220 27.52271
+##  [22] 26.67792 32.18050 31.79190 31.26808 36.97686 27.28482 21.81082
+##  [29] 27.65397 36.16490 28.24979 27.91537 30.50115 26.67929 27.07054
+##  [36] 32.97979 26.86852 30.00099 30.31407 34.00020 24.11383 27.30582
+##  [43] 33.42166 33.58378 28.59359 25.82842 30.22732 32.52653 25.45891
+##  [50] 28.48568 29.84932 31.79137 26.83967 30.06615 33.60250 32.54311
+##  [57] 26.72521 30.82507 28.43880 32.63311 23.47622 31.74743 28.90358
+##  [64] 25.45604 28.29429 27.07143 29.39342 21.46206 35.40375 28.75179
+##  [71] 40.10787 33.33897 21.38696 23.84687 32.67429 24.74431 27.99605
+##  [78] 31.65217 21.85429 27.63721 28.65842 25.78996 25.96648 36.08914
+##  [85] 30.07535 23.89873 22.34546 43.54409 41.41673 38.58313 39.84696
+##  [92] 33.26880 32.53167 36.67067 24.99626 29.00689 21.53824 34.32791
+##  [99] 28.35649 22.87029 26.81499 28.86468 41.85022 22.29191 19.12864
+## [106] 14.99090 25.58605 27.88090 34.86319 22.19514 14.80459 25.60687
+## [113] 23.95901 23.47584 31.87240 23.42361 25.67122 25.78058 20.18780
+## [120] 20.76465 28.69680 22.73116 28.05487 21.02846 24.61480 13.43809
+## [127] 27.53525 32.95569 25.25064 21.50898 26.96032 24.09697 20.81215
+## [134] 27.54453 17.49910 24.61833 21.66894 23.55843 27.23249 23.71856
+## [141] 27.43508 26.14407 17.80355 30.47530 21.45722 30.94322 26.31791
+## [148] 20.19915 20.74641 20.07306 27.43122 20.07770 29.10473 18.31211
+## [155] 25.30474 14.69377 21.25549 23.84503 31.58354 29.37609 31.40735
+## [162] 22.75052 23.72945 22.89517 15.26411 21.29202 19.44516 24.58160
+## [169] 29.24478 23.47076 32.63926 20.30651 25.76974 24.58956 25.29660
+## [176] 32.78838 24.80085 27.29078 21.09988 21.69405 22.56959 26.02983
+## [183] 27.50900 17.92092 17.90916 25.43834 25.16679 29.05139 26.00173
+## [190] 24.11655 21.03248 26.37766 23.69654 25.15137 25.43623 29.84969
+## [197] 20.78075 24.71622 19.27959 28.21100
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -1700,7 +1700,559 @@ write_csv(cleaned_data, here("cleaned_data","cleaned_data_exp1.csv"))
 
 > Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
 
-Now, let's do some descriptive statistics. First, we can open a new script called `data_analysis.r` and read the cleaned data again. 
+Now, let's do some descriptive statistics. Now, we can open a new script called `data_analysis.r` and read some datasets. Then we use `skimr` package to describe our data.
+
+
+```r
+narcissism_data <- read_csv(here("cleaned_data","narcissism_data.csv"))
+narcissism_data %>% skimr::skim()
+```
+
+
+<table style='width: auto;'
+        class='table table-condensed'>
+<caption>Data summary</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;">   </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Name </td>
+   <td style="text-align:left;"> Piped data </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of rows </td>
+   <td style="text-align:left;"> 131 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of columns </td>
+   <td style="text-align:left;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _______________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Column type frequency: </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:left;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> numeric </td>
+   <td style="text-align:left;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ________________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Group variables </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: character**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> min </th>
+   <th style="text-align:right;"> max </th>
+   <th style="text-align:right;"> empty </th>
+   <th style="text-align:right;"> n_unique </th>
+   <th style="text-align:right;"> whitespace </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> subject </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 131 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: numeric**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+   <th style="text-align:right;"> p0 </th>
+   <th style="text-align:right;"> p25 </th>
+   <th style="text-align:right;"> p50 </th>
+   <th style="text-align:right;"> p75 </th>
+   <th style="text-align:right;"> p100 </th>
+   <th style="text-align:left;"> hist </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> psychopathy </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 8.78 </td>
+   <td style="text-align:right;"> 2.27 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 8.0 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:left;"> ▁▁▁▂▇ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> self_esteem </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 8.45 </td>
+   <td style="text-align:right;"> 1.68 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 8.0 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:left;"> ▁▅▇▆▃ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> narcissism </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 38.20 </td>
+   <td style="text-align:right;"> 6.15 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 33.5 </td>
+   <td style="text-align:right;"> 39 </td>
+   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:right;"> 48 </td>
+   <td style="text-align:left;"> ▁▂▇▇▆ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> mental_health </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3.19 </td>
+   <td style="text-align:right;"> 1.04 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:left;"> ▂▂▁▃▇ </td>
+  </tr>
+</tbody>
+</table>
+
+### Exercise
+
+1. Open the dataset called `treatment_data.csv` in the cleaned_data folder and do a descriptive analysis:
+
+
+```r
+treatment_data <- read_csv(here("cleaned_data","treatment_data.csv"))
+treatment_data %>% skimr::skim()
+```
+
+
+<table style='width: auto;'
+        class='table table-condensed'>
+<caption>Data summary</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;">   </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Name </td>
+   <td style="text-align:left;"> Piped data </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of rows </td>
+   <td style="text-align:left;"> 131 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of columns </td>
+   <td style="text-align:left;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _______________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Column type frequency: </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:left;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> numeric </td>
+   <td style="text-align:left;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ________________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Group variables </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: character**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> min </th>
+   <th style="text-align:right;"> max </th>
+   <th style="text-align:right;"> empty </th>
+   <th style="text-align:right;"> n_unique </th>
+   <th style="text-align:right;"> whitespace </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> subject </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 131 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> gender </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> treatment </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: numeric**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+   <th style="text-align:right;"> p0 </th>
+   <th style="text-align:right;"> p25 </th>
+   <th style="text-align:right;"> p50 </th>
+   <th style="text-align:right;"> p75 </th>
+   <th style="text-align:right;"> p100 </th>
+   <th style="text-align:left;"> hist </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> age </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 21.15 </td>
+   <td style="text-align:right;"> 6.52 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 18.0 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 20.0 </td>
+   <td style="text-align:right;"> 63 </td>
+   <td style="text-align:left;"> ▇▁▁▁▁ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> anxiety </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 62.35 </td>
+   <td style="text-align:right;"> 24.51 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 40.0 </td>
+   <td style="text-align:right;"> 69 </td>
+   <td style="text-align:right;"> 81.0 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:left;"> ▂▆▃▇▆ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> depression </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 52.50 </td>
+   <td style="text-align:right;"> 22.12 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 34.5 </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:right;"> 71.0 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:left;"> ▂▇▇▆▃ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> life_satisfaction </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 41.02 </td>
+   <td style="text-align:right;"> 23.93 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 21.0 </td>
+   <td style="text-align:right;"> 39 </td>
+   <td style="text-align:right;"> 56.5 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:left;"> ▅▇▅▃▂ </td>
+  </tr>
+</tbody>
+</table>
+
+2. Do the same thing for the `memory_data.csv`.
+
+
+```r
+memory_data <- read_csv(here("cleaned_data","memory_data.csv"))
+memory_data %>% group_by(time) %>%
+  skimr::skim()
+```
+
+
+<table style='width: auto;'
+        class='table table-condensed'>
+<caption>Data summary</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;">   </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Name </td>
+   <td style="text-align:left;"> Piped data </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of rows </td>
+   <td style="text-align:left;"> 262 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Number of columns </td>
+   <td style="text-align:left;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _______________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Column type frequency: </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:left;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> numeric </td>
+   <td style="text-align:left;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ________________________ </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Group variables </td>
+   <td style="text-align:left;"> time </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: character**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> min </th>
+   <th style="text-align:right;"> max </th>
+   <th style="text-align:right;"> empty </th>
+   <th style="text-align:right;"> n_unique </th>
+   <th style="text-align:right;"> whitespace </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> subject </td>
+   <td style="text-align:left;"> post_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 131 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> subject </td>
+   <td style="text-align:left;"> pre_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 131 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> gender </td>
+   <td style="text-align:left;"> post_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> gender </td>
+   <td style="text-align:left;"> pre_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+
+**Variable type: numeric**
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> skim_variable </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:right;"> n_missing </th>
+   <th style="text-align:right;"> complete_rate </th>
+   <th style="text-align:right;"> mean </th>
+   <th style="text-align:right;"> sd </th>
+   <th style="text-align:right;"> p0 </th>
+   <th style="text-align:right;"> p25 </th>
+   <th style="text-align:right;"> p50 </th>
+   <th style="text-align:right;"> p75 </th>
+   <th style="text-align:right;"> p100 </th>
+   <th style="text-align:left;"> hist </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> age </td>
+   <td style="text-align:left;"> post_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 21.15 </td>
+   <td style="text-align:right;"> 6.52 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 18.0 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 20.0 </td>
+   <td style="text-align:right;"> 63 </td>
+   <td style="text-align:left;"> ▇▁▁▁▁ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> age </td>
+   <td style="text-align:left;"> pre_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 21.15 </td>
+   <td style="text-align:right;"> 6.52 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 18.0 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 20.0 </td>
+   <td style="text-align:right;"> 63 </td>
+   <td style="text-align:left;"> ▇▁▁▁▁ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> memory_score </td>
+   <td style="text-align:left;"> post_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 52.50 </td>
+   <td style="text-align:right;"> 22.12 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 34.5 </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:right;"> 71.0 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:left;"> ▂▇▇▆▃ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> memory_score </td>
+   <td style="text-align:left;"> pre_test_memory </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 41.02 </td>
+   <td style="text-align:right;"> 23.93 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 21.0 </td>
+   <td style="text-align:right;"> 39 </td>
+   <td style="text-align:right;"> 56.5 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:left;"> ▅▇▅▃▂ </td>
+  </tr>
+</tbody>
+</table>
+
+Now, let's describe our experiment data. Be careful, we need some data reshaping before description:
 
 
 ```r
@@ -2083,7 +2635,7 @@ exam_data<- read_csv(here::here("cleaned_data", "exam_data.csv"))
 plot(x = exam_data$Anxiety, y = exam_data$Exam)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-74-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-77-1.png" style="display: block; margin: auto;" />
 
 The code also works without writing x and y, however, writing them is strongly recommended
 
@@ -2092,7 +2644,7 @@ The code also works without writing x and y, however, writing them is strongly r
 plot(exam_data$Anxiety, exam_data$Exam)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-78-1.png" style="display: block; margin: auto;" />
 
 `ggplot`, the gg in ggplot stands for grammar of graphics. Grammar of graphics basically says any graphical representation of data, can be produced by a series of layers. You can think of a layer as a plastic transparency. Lets draw the same plot using ggplot. Always, mention the data we are going to work with.
 
@@ -2100,7 +2652,7 @@ plot(exam_data$Anxiety, exam_data$Exam)
 ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-76-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-79-1.png" style="display: block; margin: auto;" />
 
 
 - `aes`: aes which stands for aesthetics is a relationship between a variable in your dataset and an aspect of the plot that is going to visually convey the information to the reader
@@ -2112,7 +2664,7 @@ ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
 ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+ geom_point()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-77-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-80-1.png" style="display: block; margin: auto;" />
 
 So, lets try some of them here like shape and size. Be careful with the + sign, if you clink enter for the next part of the code, the + sign should not go to the next line
 
@@ -2122,7 +2674,7 @@ ggplot(data = exam_data, aes(x = Exam, y = Anxiety))+
   geom_point(size = 2, shape = 8)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-78-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-81-1.png" style="display: block; margin: auto;" />
 
 The current plot is not very informative about the patterns for each gender.
 
@@ -2131,14 +2683,14 @@ ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender))+
   geom_point(size = 2, shape = 10)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-79-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-1.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gender))+
   geom_point(size = 2, shape = 10)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-79-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-82-2.png" style="display: block; margin: auto;" />
 
 Question: why the above code doesn't make any change?
 
@@ -2148,7 +2700,7 @@ ggplot(data = exam_data, aes(x = Exam, y = Anxiety, color = Gender, shape = Gend
   geom_point(size = 2)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-80-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-83-1.png" style="display: block; margin: auto;" />
 
 Can assign the first layer to a variable to reduce the length of codes for next layers.
 
@@ -2159,7 +2711,7 @@ My_graph <- ggplot(data = exam_data, aes(x = Exam, y = Anxiety))
 My_graph + geom_point()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-81-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-84-1.png" style="display: block; margin: auto;" />
 
 lets add a line to the current graph
 
@@ -2167,7 +2719,7 @@ lets add a line to the current graph
 My_graph + geom_point() + geom_smooth()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-82-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-85-1.png" style="display: block; margin: auto;" />
 
 Aesthetics can be set for all layers of the plot (i.e., defined in the plot as a whole) or can be set individually for each geom in a plot.
 
@@ -2176,13 +2728,13 @@ Aesthetics can be set for all layers of the plot (i.e., defined in the plot as a
 My_graph + geom_point(aes(color = Gender)) + geom_smooth()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-83-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-86-1.png" style="display: block; margin: auto;" />
 
 ```r
 My_graph + geom_point(aes(color = Gender)) + geom_smooth(aes(color = Gender))
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-83-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-86-2.png" style="display: block; margin: auto;" />
 
 The shaded area around the line is the 95% confidence interval around the line. We can switch this off by  adding `se = F` (which is short for 'standard error = False')
 
@@ -2191,7 +2743,7 @@ The shaded area around the line is the 95% confidence interval around the line. 
 My_graph + geom_point() + geom_smooth(se = F)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-84-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-87-1.png" style="display: block; margin: auto;" />
 
 
 What if we want our line to be a direct line?
@@ -2200,7 +2752,7 @@ What if we want our line to be a direct line?
 My_graph + geom_point() + geom_smooth(se = F, method = lm)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-85-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-88-1.png" style="display: block; margin: auto;" />
 How to change the labels of x and y axes?
 
 ```r
@@ -2208,7 +2760,7 @@ My_graph + geom_point() + geom_smooth(se = F, method = lm) +
   labs(x = "Exam scores %", y = "Anxiety scores")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-86-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-89-1.png" style="display: block; margin: auto;" />
 
 Histograms are used to show distributions of variables while bar charts are used to compare variables. Histograms plot quantitative data with ranges of the data grouped into bins or intervals while bar charts plot categorical data.
 
@@ -2220,31 +2772,31 @@ Histograms are used to show distributions of variables while bar charts are used
 ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-87-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-1.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(y = Anxiety)) + geom_histogram()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-87-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-2.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-87-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-3.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-87-4.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-4.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(x = Anxiety)) + geom_histogram(bins = 31, fill = "green", col = "red")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-87-5.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-90-5.png" style="display: block; margin: auto;" />
 
 Let's stop using the My_graph variable and write the whole code from the start again for a bar chart
 
@@ -2253,7 +2805,7 @@ ggplot(data = exam_data, aes(x = Sleep_quality))+
   geom_bar()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-88-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-91-1.png" style="display: block; margin: auto;" />
 Because we want to plot a summary of the data (the mean) rather than the raw scores themselves, we have to use a stat.
 
 ```r
@@ -2261,14 +2813,14 @@ ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
   geom_bar(stat = "summary", fun = "mean")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-89-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-92-1.png" style="display: block; margin: auto;" />
 
 ```r
 ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
   geom_bar(stat = "summary", fun = "mean", position = "dodge")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-89-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-92-2.png" style="display: block; margin: auto;" />
 
 The other way to get the same plot that the code above gives, is using the stat_summary function that takes the following general form: `stat_summary(function = x, geom = y)`
 
@@ -2278,7 +2830,7 @@ ggplot(data = exam_data, aes(x = Sleep_quality, y = Exam, fill = Gender))+
   stat_summary(fun = mean, geom = "bar", position = "dodge")
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-90-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-93-1.png" style="display: block; margin: auto;" />
 How to combine multiple plots? How to combine multiple plots? We can use the `patchwork` package. A nice tutorial on using this package can be found [here](https://patchwork.data-imaginist.com/articles/patchwork.html)
 
 
@@ -2298,19 +2850,19 @@ combined = p1 + p2+ p3 + p4 + plot_layout(nrow = 4, byrow = F)
 combined
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-91-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-94-1.png" style="display: block; margin: auto;" />
 
 ```r
 p1 | p2 / p3 / p4
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-91-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-94-2.png" style="display: block; margin: auto;" />
 
 ```r
 p1 | p2 / (p3 / p4)
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-91-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-94-3.png" style="display: block; margin: auto;" />
 
 `ggsave()` function, which is a versatile exporting function that can export as PostScript (.eps/.ps), tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (in Windows only). In its basic form, the structure of the function is very simple: `ggsave(filename)`
 
@@ -2340,7 +2892,7 @@ barplot_exp1 <- aggregated_data_exp1 %>%
 barplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-1.png" style="display: block; margin: auto;" />
 
 ```r
 barplot_facet_exp1 <- aggregated_data_exp1 %>%
@@ -2357,7 +2909,7 @@ barplot_facet_exp1 <- aggregated_data_exp1 %>%
 barplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-2.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-2.png" style="display: block; margin: auto;" />
 
 ```r
 lineplot_exp1 <- aggregated_data_exp1 %>%
@@ -2374,7 +2926,7 @@ lineplot_exp1 <- aggregated_data_exp1 %>%
 lineplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-3.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-3.png" style="display: block; margin: auto;" />
 
 ```r
 violinplot_exp1 <- data_exp1 %>%
@@ -2390,7 +2942,7 @@ violinplot_exp1 <- data_exp1 %>%
 violinplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-4.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-4.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_exp1 <- data_exp1 %>%
@@ -2407,7 +2959,7 @@ boxplot_exp1 <- data_exp1 %>%
 boxplot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-5.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-5.png" style="display: block; margin: auto;" />
 
 ```r
 boxplot_facet_exp1 <- data_exp1 %>%
@@ -2425,7 +2977,7 @@ boxplot_facet_exp1 <- data_exp1 %>%
 boxplot_facet_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-93-6.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-96-6.png" style="display: block; margin: auto;" />
 
 HLet's combine our plots:
 
@@ -2440,7 +2992,7 @@ combined_plot_exp1 <- (barplot_facet_exp1+lineplot_exp1) / (violinplot_exp1+boxp
 combined_plot_exp1
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-95-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-98-1.png" style="display: block; margin: auto;" />
 
 And here, we save our plots to the `outputs` folder.
 
@@ -2453,7 +3005,87 @@ ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), 
 
 ## t-test
 
-Is there a difference between groups at the first stage? Ideally, we want participants' ratings at the first stage be similar for both groups because we have not done any manipulations. Previous graphs showed us that ratings of simple and complex group at this stage are pretty close. Let's test that using an **independent t-test** (because we have 2 independent groups):
+Now, we use the treatment data to run three different independent t-tests. Suppose we did an experiment to compare the effectiveness of CBT vs. Psychodynamic therapies in decreasing anxiety, and depression and also in improving life satisfaction:
+
+
+```r
+# t.test (indep)
+t.test(anxiety~treatment, data= treatment_data)
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  anxiety by treatment
+## t = -0.85021, df = 124.18, p-value = 0.3968
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -12.11096   4.83264
+## sample estimates:
+##           mean in group CBT mean in group Psychodynamic 
+##                    60.54545                    64.18462
+```
+
+```r
+t.test(depression~treatment, data= treatment_data)
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  depression by treatment
+## t = -2.8725, df = 123.97, p-value = 0.004792
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -18.21965  -3.35424
+## sample estimates:
+##           mean in group CBT mean in group Psychodynamic 
+##                    47.15152                    57.93846
+```
+
+```r
+t.test(life_satisfaction~treatment, data= treatment_data)
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  life_satisfaction by treatment
+## t = -5.2688, df = 127.11, p-value = 0.0000005699
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -27.61850 -12.53721
+## sample estimates:
+##           mean in group CBT mean in group Psychodynamic 
+##                    31.06061                    51.13846
+```
+
+In another experiment, suppose we have created a method to boost memory. Then, we recruit some participants, do a memory pre-test, implement the method, and do a memory post-test, Now, we want to see whether our method have improved participants' memory: 
+
+
+```r
+# t.test (paired)
+t.test(memory_score~time, data= memory_data, paired= T)
+```
+
+```
+## 
+## 	Paired t-test
+## 
+## data:  memory_score by time
+## t = 5.4761, df = 130, p-value = 0.0000002163
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   7.333171 15.628661
+## sample estimates:
+## mean of the differences 
+##                11.48092
+```
+
+Now that we learned about t-test, let's perform this test on our dataset. Is there a difference between groups at the first stage? Ideally, we want participants' ratings at the first stage be similar for both groups because we have not done any manipulations. Previous graphs showed us that ratings of simple and complex group at this stage are pretty close. Let's test that using an **independent t-test** (because we have 2 independent groups):
 
 
 ```r
@@ -2745,7 +3377,7 @@ afex_plot(aov_m1, x = "stage", trace = "group", error='between',
   scale_fill_simpsons()
 ```
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-103-1.png" style="display: block; margin: auto;" />
+<img src="workshop_notes_files/figure-html/unnamed-chunk-108-1.png" style="display: block; margin: auto;" />
 
 
 If you are interested in this topic, check out this nice tutorial about [using afex to run ANOVA](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html), and also this interesting tutorial on the [emmeans package](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/).
@@ -2812,7 +3444,107 @@ rotello_aov <- aov_car (resp ~ target*prime +
 
 ## Correlation
 
-Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
+Here, we want to check the correlation between variables on the `narcissism_data`. First, we need to remove `subject` column because it is not numeric:
+
+```r
+narcissism_data_cor <- narcissism_data %>%
+  select(-subject)
+```
+
+
+```r
+#-- Base R:
+cor(narcissism_data_cor, method = "pearson",  use = "complete.obs")
+
+#-- Psych library:
+psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#-- Correlation library:
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+#library("correlation")
+correlation::correlation(narcissism_data_cor) %>% summary()
+
+#-- apaTables library:
+narcissism_data_cor %>% 
+  apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
+```
+
+<table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">   </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> psychopathy </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> self_esteem </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> narcissism </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mental_health </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> psychopathy </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.15 </td>
+   <td style="text-align:right;"> 0.40 </td>
+   <td style="text-align:right;"> -0.44 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> self_esteem </td>
+   <td style="text-align:right;"> 0.15 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.11 </td>
+   <td style="text-align:right;"> -0.29 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> narcissism </td>
+   <td style="text-align:right;"> 0.40 </td>
+   <td style="text-align:right;"> 0.11 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> -0.26 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> mental_health </td>
+   <td style="text-align:right;"> -0.44 </td>
+   <td style="text-align:right;"> -0.29 </td>
+   <td style="text-align:right;"> -0.26 </td>
+   <td style="text-align:right;"> 1.00 </td>
+  </tr>
+</tbody>
+</table>
+
+<img src="workshop_notes_files/figure-html/unnamed-chunk-113-1.png" style="display: block; margin: auto;" /><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> mental_health </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> narcissism </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> self_esteem </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> psychopathy </td>
+   <td style="text-align:right;"> -0.44 </td>
+   <td style="text-align:right;"> 0.40 </td>
+   <td style="text-align:right;"> 0.15 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> self_esteem </td>
+   <td style="text-align:right;"> -0.29 </td>
+   <td style="text-align:right;"> 0.11 </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> narcissism </td>
+   <td style="text-align:right;"> -0.26 </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+</tbody>
+</table>
+
+
+Now that we learned about correlation test, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
 
 
 ```r
@@ -2909,7 +3641,7 @@ cor_data_exp1 %>%
 </tbody>
 </table></div>
 
-<img src="workshop_notes_files/figure-html/unnamed-chunk-107-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<img src="workshop_notes_files/figure-html/unnamed-chunk-115-1.png" style="display: block; margin: auto;" /><div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:780px; "><table class="table table-striped table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Parameter </th>
@@ -3151,7 +3883,82 @@ pennycook_data %>%
 
 ## Linear Regression
 
-In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
+Here, we do single and multiple linear regreassion on the `narcissism_data`:
+
+
+```r
+m1 <- lm(mental_health~narcissism, data= narcissism_data)
+```
+
+<table class="table table-striped table-bordered table-condensed" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> term </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> estimate </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> std.error </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> statistic </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> p.value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 4.86 </td>
+   <td style="text-align:right;"> 0.56 </td>
+   <td style="text-align:right;"> 8.75 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> narcissism </td>
+   <td style="text-align:right;"> -0.04 </td>
+   <td style="text-align:right;"> 0.01 </td>
+   <td style="text-align:right;"> -3.04 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+
+```r
+m2 <- lm(mental_health~narcissism+psychopathy, data= narcissism_data)
+```
+
+<table class="table table-striped table-bordered table-condensed" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> term </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> estimate </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> std.error </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> statistic </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> p.value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 5.43 </td>
+   <td style="text-align:right;"> 0.53 </td>
+   <td style="text-align:right;"> 10.27 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> narcissism </td>
+   <td style="text-align:right;"> -0.02 </td>
+   <td style="text-align:right;"> 0.01 </td>
+   <td style="text-align:right;"> -1.09 </td>
+   <td style="text-align:right;"> 0.28 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> psychopathy </td>
+   <td style="text-align:right;"> -0.19 </td>
+   <td style="text-align:right;"> 0.04 </td>
+   <td style="text-align:right;"> -4.71 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+</tbody>
+</table>
+
+Now, let's perform regression analyses on our own dataset. In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
 
 ```r
 exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,

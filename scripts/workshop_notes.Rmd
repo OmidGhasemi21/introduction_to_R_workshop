@@ -691,7 +691,31 @@ knitr::include_graphics(here('inputs','not_normal.png'))
 
 > Note: All the data that we use here is manipulated (fabricated) for teaching purpuses. In our study, we failed to find such beautiful and interesting results.
 
-Now, let's do some descriptive statistics. First, we can open a new script called `data_analysis.r` and read the cleaned data again. 
+Now, let's do some descriptive statistics. Now, we can open a new script called `data_analysis.r` and read some datasets. Then we use `skimr` package to describe our data.
+
+```{r message=F, warning=F,}
+narcissism_data <- read_csv(here("cleaned_data","narcissism_data.csv"))
+narcissism_data %>% skimr::skim()
+```
+
+### Exercise
+
+1. Open the dataset called `treatment_data.csv` in the cleaned_data folder and do a descriptive analysis:
+
+```{r message=F, warning=F}
+treatment_data <- read_csv(here("cleaned_data","treatment_data.csv"))
+treatment_data %>% skimr::skim()
+```
+
+2. Do the same thing for the `memory_data.csv`.
+
+```{r message=F, warning=F}
+memory_data <- read_csv(here("cleaned_data","memory_data.csv"))
+memory_data %>% group_by(time) %>%
+  skimr::skim()
+```
+
+Now, let's describe our experiment data. Be careful, we need some data reshaping before description:
 
 ```{r message=F, warning=F,}
 data_exp1_orig <- read_csv(here("cleaned_data","cleaned_data_exp1.csv"))
@@ -1067,7 +1091,23 @@ ggsave(combined_plot_exp1, filename = here("outputs","combined_plot_exp1.png"), 
 
 ## t-test
 
-Is there a difference between groups at the first stage? Ideally, we want participants' ratings at the first stage be similar for both groups because we have not done any manipulations. Previous graphs showed us that ratings of simple and complex group at this stage are pretty close. Let's test that using an **independent t-test** (because we have 2 independent groups):
+Now, we use the treatment data to run three different independent t-tests. Suppose we did an experiment to compare the effectiveness of CBT vs. Psychodynamic therapies in decreasing anxiety, and depression and also in improving life satisfaction:
+
+```{r}
+# t.test (indep)
+t.test(anxiety~treatment, data= treatment_data)
+t.test(depression~treatment, data= treatment_data)
+t.test(life_satisfaction~treatment, data= treatment_data)
+```
+
+In another experiment, suppose we have created a method to boost memory. Then, we recruit some participants, do a memory pre-test, implement the method, and do a memory post-test, Now, we want to see whether our method have improved participants' memory: 
+
+```{r}
+# t.test (paired)
+t.test(memory_score~time, data= memory_data, paired= T)
+```
+
+Now that we learned about t-test, let's perform this test on our dataset. Is there a difference between groups at the first stage? Ideally, we want participants' ratings at the first stage be similar for both groups because we have not done any manipulations. Previous graphs showed us that ratings of simple and complex group at this stage are pretty close. Let's test that using an **independent t-test** (because we have 2 independent groups):
 
 ```{r}
 # Is there a difference between groups at the first stage?
@@ -1187,7 +1227,53 @@ knitr::kable(nice(rotello_aov)) %>%
 
 ## Correlation
 
-Now, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
+Here, we want to check the correlation between variables on the `narcissism_data`. First, we need to remove `subject` column because it is not numeric:
+```{r message=F, warning=F}
+narcissism_data_cor <- narcissism_data %>%
+  select(-subject)
+```
+
+```{r message=F, eval=F, fig.align='center', dpi=300}
+
+#-- Base R:
+cor(narcissism_data_cor, method = "pearson",  use = "complete.obs")
+
+#-- Psych library:
+psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#-- Correlation library:
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+#library("correlation")
+correlation::correlation(narcissism_data_cor) %>% summary()
+
+#-- apaTables library:
+narcissism_data_cor %>% 
+  apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
+```
+
+```{r message=F, echo=F, fig.align='center', dpi=300}
+
+#-- Base R:
+cor(narcissism_data_cor, method = "pearson",  use = "complete.obs")%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)
+
+#-- Psych library:
+psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+
+#-- Correlation library:
+# install.packages("devtools")
+# devtools::install_github("easystats/correlation")
+#library("correlation")
+correlation::correlation(narcissism_data_cor) %>% summary()%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = F)
+
+```
+
+
+Now that we learned about correlation test, let's answer to another question of this study: does persuasion and dissuasion is related to open-mindedness, cognitive ability, reasoning abilities, and thinking style? To answer this question, we need to create two indexes (scores) one for persuasion and one for dissuasion. Then we can do a correlation test:
 
 ```{r message=F, eval=F, fig.align='center', dpi=300}
 
@@ -1242,7 +1328,6 @@ correlation::correlation(cor_data_exp1) %>% summary()%>%
 ```
 
 
-
 ### Exercise
 
 Pennycook et al. (2020) investigated the relationship between actively open-minded thinking style about evidence (AOT-E) and different political, scientific, and religious beliefs (see the original paper [here](https://psyarxiv.com/a7k96)). In their first experiment, they calculated the correlation of AOTE and scientific beliefs items (global warming, evolution, etc.) and they found the following results:
@@ -1287,7 +1372,29 @@ correlation::correlation(pennycook_data) %>% summary() %>%
 
 ## Linear Regression
 
-In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
+Here, we do single and multiple linear regreassion on the `narcissism_data`:
+
+```{r}
+m1 <- lm(mental_health~narcissism, data= narcissism_data)
+```
+
+```{r message=F, eval=T, echo=F, fig.align='center', dpi=300}
+broom::tidy(m1)%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+```{r}
+m2 <- lm(mental_health~narcissism+psychopathy, data= narcissism_data)
+```
+
+```{r message=F, eval=T, echo=F, fig.align='center', dpi=300}
+broom::tidy(m2)%>%
+  knitr::kable(digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), fixed_thead = T, full_width = T)
+```
+
+Now, let's perform regression analyses on our own dataset. In the previous section, we found that open-mindedness (AOT-E) is correlated with persuasion. Now, one may ask if open-mindedness can predict persuasion after controlling for reasoning and controlling abilities? To answer that, we can run a multiple regression analysis:
 ```{r}
 exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
                   data=cor_data_exp1)
