@@ -7,7 +7,7 @@ author:
   - name: "Mahdi Mazidi"
     affiliation: University of Western Australia
     email: mahdi.mazidisharafabadi@research.uwa.edu.au
-date: "12 January, 2021"
+date: "17 January, 2021"
 output: 
   html_document:
     keep_md: yes
@@ -687,32 +687,32 @@ tail(my_dataframe)
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.95265 </td>
+   <td style="text-align:right;"> 31.46027 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.59023 </td>
+   <td style="text-align:right;"> 25.80691 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.35356 </td>
+   <td style="text-align:right;"> 23.90582 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.28723 </td>
+   <td style="text-align:right;"> 35.24277 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.07646 </td>
+   <td style="text-align:right;"> 36.12894 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 32.55705 </td>
+   <td style="text-align:right;"> 28.88709 </td>
   </tr>
 </tbody>
 </table>
@@ -731,37 +731,37 @@ tail(my_dataframe)
    <td style="text-align:left;"> 195 </td>
    <td style="text-align:right;"> 195 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 25.43623 </td>
+   <td style="text-align:right;"> 29.98481 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 196 </td>
    <td style="text-align:right;"> 196 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 29.84969 </td>
+   <td style="text-align:right;"> 17.56606 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 197 </td>
    <td style="text-align:right;"> 197 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 20.78075 </td>
+   <td style="text-align:right;"> 27.15201 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 198 </td>
    <td style="text-align:right;"> 198 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 24.71622 </td>
+   <td style="text-align:right;"> 25.47396 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 199 </td>
    <td style="text-align:right;"> 199 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 19.27959 </td>
+   <td style="text-align:right;"> 25.41576 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 200 </td>
    <td style="text-align:right;"> 200 </td>
    <td style="text-align:left;"> Medication </td>
-   <td style="text-align:right;"> 28.21100 </td>
+   <td style="text-align:right;"> 26.85049 </td>
   </tr>
 </tbody>
 </table>
@@ -774,7 +774,7 @@ my_dataframe[35, 3]
 ```
 
 ```
-## [1] 27.07054
+## [1] 24.10207
 ```
 
 ### Exercise
@@ -798,52 +798,52 @@ my_dataframe[1:10, ]
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 33.95265 </td>
+   <td style="text-align:right;"> 31.46027 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 36.59023 </td>
+   <td style="text-align:right;"> 25.80691 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 3 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.35356 </td>
+   <td style="text-align:right;"> 23.90582 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 4 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 31.28723 </td>
+   <td style="text-align:right;"> 35.24277 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 5 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 26.07646 </td>
+   <td style="text-align:right;"> 36.12894 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 32.55705 </td>
+   <td style="text-align:right;"> 28.88709 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 7 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 28.67988 </td>
+   <td style="text-align:right;"> 28.13632 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 8 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 24.10665 </td>
+   <td style="text-align:right;"> 26.74151 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 9 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 39.00802 </td>
+   <td style="text-align:right;"> 28.07995 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 10 </td>
    <td style="text-align:left;"> Psychotherapy </td>
-   <td style="text-align:right;"> 25.32071 </td>
+   <td style="text-align:right;"> 25.66144 </td>
   </tr>
 </tbody>
 </table>
@@ -855,35 +855,35 @@ my_dataframe[ , 3]
 ```
 
 ```
-##   [1] 33.95265 36.59023 31.35356 31.28723 26.07646 32.55705 28.67988
-##   [8] 24.10665 39.00802 25.32071 29.40034 25.34399 32.76062 24.84760
-##  [15] 28.19872 28.07090 33.18354 36.96603 33.57646 24.70220 27.52271
-##  [22] 26.67792 32.18050 31.79190 31.26808 36.97686 27.28482 21.81082
-##  [29] 27.65397 36.16490 28.24979 27.91537 30.50115 26.67929 27.07054
-##  [36] 32.97979 26.86852 30.00099 30.31407 34.00020 24.11383 27.30582
-##  [43] 33.42166 33.58378 28.59359 25.82842 30.22732 32.52653 25.45891
-##  [50] 28.48568 29.84932 31.79137 26.83967 30.06615 33.60250 32.54311
-##  [57] 26.72521 30.82507 28.43880 32.63311 23.47622 31.74743 28.90358
-##  [64] 25.45604 28.29429 27.07143 29.39342 21.46206 35.40375 28.75179
-##  [71] 40.10787 33.33897 21.38696 23.84687 32.67429 24.74431 27.99605
-##  [78] 31.65217 21.85429 27.63721 28.65842 25.78996 25.96648 36.08914
-##  [85] 30.07535 23.89873 22.34546 43.54409 41.41673 38.58313 39.84696
-##  [92] 33.26880 32.53167 36.67067 24.99626 29.00689 21.53824 34.32791
-##  [99] 28.35649 22.87029 26.81499 28.86468 41.85022 22.29191 19.12864
-## [106] 14.99090 25.58605 27.88090 34.86319 22.19514 14.80459 25.60687
-## [113] 23.95901 23.47584 31.87240 23.42361 25.67122 25.78058 20.18780
-## [120] 20.76465 28.69680 22.73116 28.05487 21.02846 24.61480 13.43809
-## [127] 27.53525 32.95569 25.25064 21.50898 26.96032 24.09697 20.81215
-## [134] 27.54453 17.49910 24.61833 21.66894 23.55843 27.23249 23.71856
-## [141] 27.43508 26.14407 17.80355 30.47530 21.45722 30.94322 26.31791
-## [148] 20.19915 20.74641 20.07306 27.43122 20.07770 29.10473 18.31211
-## [155] 25.30474 14.69377 21.25549 23.84503 31.58354 29.37609 31.40735
-## [162] 22.75052 23.72945 22.89517 15.26411 21.29202 19.44516 24.58160
-## [169] 29.24478 23.47076 32.63926 20.30651 25.76974 24.58956 25.29660
-## [176] 32.78838 24.80085 27.29078 21.09988 21.69405 22.56959 26.02983
-## [183] 27.50900 17.92092 17.90916 25.43834 25.16679 29.05139 26.00173
-## [190] 24.11655 21.03248 26.37766 23.69654 25.15137 25.43623 29.84969
-## [197] 20.78075 24.71622 19.27959 28.21100
+##   [1] 31.46027 25.80691 23.90582 35.24277 36.12894 28.88709 28.13632
+##   [8] 26.74151 28.07995 25.66144 32.43043 32.90031 28.22010 20.49055
+##  [15] 21.60086 29.88247 28.37732 28.33941 32.99115 35.60892 28.20174
+##  [22] 31.02228 37.67104 26.73629 23.17044 29.62874 27.47495 29.36538
+##  [29] 36.66284 37.21628 33.22692 28.58497 29.40086 30.05996 24.10207
+##  [36] 37.68405 34.11073 35.26914 35.77968 23.37928 29.54027 26.18844
+##  [43] 38.75336 29.88913 35.19795 32.72946 29.27546 31.04248 33.29102
+##  [50] 18.01849 29.91320 30.06106 30.93769 29.09398 31.92382 31.01322
+##  [57] 26.27603 28.00506 29.75021 32.14493 24.69866 31.15726 22.59687
+##  [64] 33.51499 20.87766 24.72480 28.88959 23.23752 22.79437 25.97967
+##  [71] 40.90827 30.38728 38.08255 37.16809 25.73616 25.32099 28.77482
+##  [78] 34.21075 33.13974 29.55064 23.93372 30.95174 28.30632 37.92416
+##  [85] 27.14505 19.64008 34.20583 44.02146 29.18339 35.25485 39.78779
+##  [92] 32.02400 33.92133 31.74780 22.73999 31.02149 24.51421 28.80851
+##  [99] 37.00935 39.01414 24.46241 33.60924 26.14423 19.96034 24.18702
+## [106] 25.42803 26.15863 29.76837 25.03232 25.53612 26.98493 23.44438
+## [113] 14.90449 28.02894 24.57431 22.30127 34.10020 20.91610 33.11796
+## [120] 37.12811 22.89906 31.94684 27.52520 22.31867 13.92906 19.25865
+## [127] 30.37195 24.67580 26.37599 24.65865 28.30528 23.66096 17.49513
+## [134] 23.04172 15.84645 18.23439 26.63121 29.81582 32.55382 25.66231
+## [141] 28.64869 23.77102 32.00628 25.16474 32.48781 25.98615 22.57022
+## [148] 19.36977 28.48540 26.29446 21.81714 24.45360 17.95169 23.09270
+## [155] 21.38275 27.08464 18.66920 27.60698 27.70646 24.17864 22.87044
+## [162] 24.70419 19.10310 21.52611 25.94191 26.26336 27.21419 26.85767
+## [169] 17.14670 24.41177 31.19198 24.97077 24.81557 21.71635 26.72816
+## [176] 24.91654 28.13910 21.55515 19.29760 26.87387 23.21848 26.19222
+## [183] 25.00059 33.82250 27.32508 35.48514 32.61955 32.35353 10.76799
+## [190] 15.55515 23.96873 23.10777 26.09092 21.18117 29.98481 17.56606
+## [197] 27.15201 25.47396 25.41576 26.85049
 ```
 
 Another easier way for selecting particular items is using their names that is more helpful than number of the rows in large data sets:
@@ -3384,7 +3384,7 @@ If you are interested in this topic, check out this nice tutorial about [using a
 
 ### Exercise
 
-Rotello et al. (2018) investigated the association between the race (White vs. Black faces) and the gun-tool judgments. In their first experiments, they presented participants with 16 White male faces and 16 Black male faces, and following that 8 images of guns and 8 images of tools. They asked participants to judge if the object is a tool or a gun by pressing keyboard buttons. Then, they ran an ANOVA to see if participants' gun responses are higher for any of the races. So, they included prime race (Black, White) and target identity (gun, tool) as independent variables and participants' gun responses as dependent variable into their linear model (See the original study [here](https://psyarxiv.com/a7k96)). They found that: 
+Rotello et al. (2018) investigated the association between the race (White vs. Black faces) and the gun-tool judgments. In their first experiments, they presented participants with 16 White male faces and 16 Black male faces, and following that 8 images of guns and 8 images of tools. They asked participants to judge if the object is a tool or a gun by pressing keyboard buttons. Then, they ran an ANOVA to see if participants' gun responses are higher for any of the races. So, they included prime race (Black, White) and target identity (gun, tool) as independent variables and participants' gun responses as dependent variable into their linear model (See the original study [here](https://online.ucpress.edu/collabra/article/4/1/32/112986/The-Shape-of-ROC-Curves-in-Shooter-Tasks)). They found that: 
 
 > "Participants made more gun responses to guns than to tools, F(1,45) = 53243, p < 0.0001, η2g = 0.998. However, the race of the prime face did not matter, F(1,45) = 0.287, p > 0.59, η2g = 0.001, nor was there an interaction of prime race with target object, F(1,45) = 0.022, p > 0.88, η2g = 0.000)".
 
@@ -3695,7 +3695,6 @@ cor_data_exp1 %>%
   </tr>
 </tbody>
 </table></div>
-
 
 
 ### Exercise

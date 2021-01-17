@@ -61,11 +61,12 @@ narcissism_data %>% skimr::skim()
 
 ### Exercise
 
-#1
+#1: Open the dataset called `treatment_data.csv` and do a descriptive analysis:
 treatment_data <- read_csv(here("cleaned_data","treatment_data.csv"))
 treatment_data %>% skimr::skim()
+treatment_data %>% psych::describe()
 
-#2
+#2: Do the same thing for the `memory_data.csv`.
 memory_data <- read_csv(here("cleaned_data","memory_data.csv"))
 memory_data %>% group_by(time) %>%
   skimr::skim()
@@ -90,10 +91,7 @@ ghasemi_data %>% dplyr::select (age, cog_ability) %>% skimr::skim() # mean and s
 # -------------------------------------------------------- #
 
 
-
 ############## ----------- t-test  -------------################
-
-
 
 # t.test (indep)
 t.test(anxiety~treatment, data= treatment_data)
@@ -130,6 +128,7 @@ t.test(confident~back_down, data = john_data, paired=FALSE)
 
 
 ############## ----------- ANOVA  -------------################
+
 
 aov_m1 <- aov_car (truth_estimate ~ group*stage +
                      Error(subject/stage), data = data_exp1)  
@@ -224,17 +223,19 @@ narcissism_data_cor <- narcissism_data %>%
   select(-subject)
 #-- Base R:
 cor(narcissism_data_cor, method = "pearson",  use = "complete.obs")
+cor.test(narcissism_data_cor$psychopathy,narcissism_data_cor$self_esteem, method = "pearson",  use = "complete.obs")
 
 #-- Psych library:
-psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB", density = T, ellipses = F, stars = T)
+psych::pairs.panels(narcissism_data_cor, method = "pearson", hist.col = "#00AFBB",  stars = T)
 
 #-- Correlation library:
 # install.packages("devtools")
 # devtools::install_github("easystats/correlation")
 #library("correlation")
+correlation::correlation(narcissism_data_cor)
 correlation::correlation(narcissism_data_cor) %>% summary()
 
-#-- apaTables library:
+#-- apaTables library: install.packages("apaTables",dep=T)
 narcissism_data_cor %>% 
   apaTables::apa.cor.table(filename="./outputs/CorMatrix.doc", show.conf.interval=T)
 
@@ -281,7 +282,7 @@ pennycook_data %>%
 
 correlation::correlation(pennycook_data) %>% summary()
 
-# install.packages("apaTables",dep=T)
+
 #library(apaTables)
 pennycook_data %>% 
   apaTables::apa.cor.table(filename="./outputs/CorMatrix3.doc", show.conf.interval=T)
@@ -295,6 +296,7 @@ summary(m1)
 
 m2 <- lm(mental_health~narcissism+psychopathy, data= narcissism_data)
 summary(m2)
+
 
 
 exp1_reg=lm(persuasion_index ~ openminded_total+ numeracy_total+ thinking_total+ reasoning_total,
